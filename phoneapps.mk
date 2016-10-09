@@ -25,10 +25,13 @@ private-phone-apps := \
 	WAPPushManager
 
 private-phone-priv-apps := \
+	AudioFX \
 	BackupRestoreConfirmation \
 	Snap \
 	CellBroadcastReceiver \
 	CMSettingsProvider \
+	CMAudioService \
+	ThemeManagerService \
 	DeviceManager \
 	ExternalStorageProvider \
 	FusedLocation \
