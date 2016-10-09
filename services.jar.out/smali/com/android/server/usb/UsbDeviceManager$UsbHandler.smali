@@ -690,7 +690,7 @@
     if-eqz v0, :cond_8
 
     .line 1005
-    invoke-direct {p0}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->publishAdbCustomTile()V
+  #  invoke-direct {p0}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->publishAdbCustomTile()V
 
     .line 994
     :goto_5
@@ -1680,7 +1680,7 @@
     if-lez v7, :cond_d
 
     .line 895
-    invoke-direct {p0}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->publishAdbCustomTile()V
+  #  invoke-direct {p0}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->publishAdbCustomTile()V
 
     .line 835
     :goto_4
