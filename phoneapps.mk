@@ -2,7 +2,6 @@ local-phone-apps = $(private-phone-apps)
 local-phone-priv-apps = $(private-phone-priv-apps)
 
 private-phone-apps := \
-	AntHalService \
 	BasicDreams \
 	Bluetooth \
 	BluetoothExt \
@@ -16,7 +15,6 @@ private-phone-apps := \
 	NoiseField \
 	PacProcessor \
 	PhaseBeam \
-	PhotoTable \
 	PrintSpooler \
 	LatinIME \
 	shutdownlistener \
@@ -32,11 +30,9 @@ private-phone-priv-apps := \
 	CMSettingsProvider \
 	CMAudioService \
 	ThemeManagerService \
-	DeviceManager \
 	ExternalStorageProvider \
 	FusedLocation \
 	InputDevices \
-	ModioFX \
 	ProxyHandler \
 	qcrilmsgtunnel \
 	Screencast \

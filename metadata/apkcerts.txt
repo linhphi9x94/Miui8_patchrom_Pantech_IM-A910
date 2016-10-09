@@ -88,6 +88,8 @@ name="ThemeChooser.apk" certificate="build/target/product/security/platform.x509
 name="ThemeManagerService.apk" certificate="PRESIGNED" private_key=""
 name="ThemesProvider.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
 name="Trebuchet.apk" certificate="PRESIGNED" private_key=""
+name="qcrilmsgtunnel.apk" certificate="build/target/product/security/shared.x509.pem" private_key="build/target/product/security/shared.pk8"
+name="TimeService.apk" certificate="build/target/product/security/shared.x509.pem" private_key="build/target/product/security/shared.pk8"
 name="UserDictionaryProvider.apk" certificate="build/target/product/security/shared.x509.pem" private_key="build/target/product/security/shared.pk8"
 name="VpnDialogs.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
 name="WallpaperCropper.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
