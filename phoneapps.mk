@@ -8,6 +8,7 @@ private-phone-apps := \
 	BluetoothMidiService \
 	CertInstaller \
 	Galaxy4 \
+	Gello \
 	HoloSpiralWallpaper \
 	KeyChain \
 	LiveWallpapers \
@@ -15,10 +16,12 @@ private-phone-apps := \
 	NoiseField \
 	PacProcessor \
 	PhaseBeam \
+	PhotoTable \
 	PrintSpooler \
 	LatinIME \
 	shutdownlistener \
 	Stk \
+	telresources \
 	TimeService \
 	WAPPushManager
 

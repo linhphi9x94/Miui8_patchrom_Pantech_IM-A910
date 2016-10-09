@@ -761,7 +761,7 @@
     .line 1007
     .end local v0    # "enabled":Z
     :cond_8
-    invoke-direct {p0}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->unpublishAdbCustomTile()V
+   # invoke-direct {p0}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->unpublishAdbCustomTile()V
 
     goto :goto_5
 .end method
@@ -1771,7 +1771,7 @@
 
     .line 897
     :cond_d
-    invoke-direct {p0}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->unpublishAdbCustomTile()V
+  #  invoke-direct {p0}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->unpublishAdbCustomTile()V
 
     goto :goto_4
 .end method

@@ -1,5 +1,4 @@
 system 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/build.prop 0 0 664 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/recovery-from-boot.bak 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/addon.d 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/addon.d/50-cm.sh 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0

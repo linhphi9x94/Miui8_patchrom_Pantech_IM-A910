@@ -5590,9 +5590,11 @@
     :cond_4
     sget-object v4, Landroid/content/res/Resources;->sPreloadedColorDrawables:Landroid/util/LongSparseArray;
 
-	invoke-virtual {v0, v10, v11, v1}, Landroid/content/res/Resources;->getPreloadedDrawable(JI)Landroid/graphics/drawable/Drawable$ConstantState;
-	 
+    invoke-virtual {v4, v10, v11}, Landroid/util/LongSparseArray;->get(J)Ljava/lang/Object;
+
     move-result-object v14
+
+    check-cast v14, Landroid/graphics/drawable/Drawable$ConstantState;
 
     .local v14, "cs":Landroid/graphics/drawable/Drawable$ConstantState;
     goto :goto_1
