@@ -45,6 +45,7 @@ Now you can get your own miui ROM, enjoy it!
 
 <b> Thank to </b>
 - @Micode Miui Rom 
-- @wuxianlin for fix phone fc
+- @wuxianlin
+- @garyyiu2015
 - http://xdavn.com
 - @sunghun, @chautruongthinh for based cm13 work fine and twrp
