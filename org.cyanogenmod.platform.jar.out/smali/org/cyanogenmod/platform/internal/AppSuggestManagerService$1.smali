@@ -24,7 +24,7 @@
     .param p1, "this$0"    # Lorg/cyanogenmod/platform/internal/AppSuggestManagerService;
 
     .prologue
-    .line 46
+    .line 45
     iput-object p1, p0, Lorg/cyanogenmod/platform/internal/AppSuggestManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/AppSuggestManagerService;
 
     invoke-direct {p0}, Lcyanogenmod/app/suggest/IAppSuggestManager$Stub;-><init>()V
@@ -50,7 +50,7 @@
     .end annotation
 
     .prologue
-    .line 54
+    .line 53
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/AppSuggestManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/AppSuggestManagerService;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/AppSuggestManagerService;->-get0(Lorg/cyanogenmod/platform/internal/AppSuggestManagerService;)Lorg/cyanogenmod/platform/internal/AppSuggestProviderInterface;
@@ -67,7 +67,7 @@
 
     return-object v0
 
-    .line 56
+    .line 55
     :cond_0
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/AppSuggestManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/AppSuggestManagerService;
 
@@ -87,7 +87,7 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 48
+    .line 47
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/AppSuggestManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/AppSuggestManagerService;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/AppSuggestManagerService;->-get0(Lorg/cyanogenmod/platform/internal/AppSuggestManagerService;)Lorg/cyanogenmod/platform/internal/AppSuggestProviderInterface;
@@ -100,7 +100,7 @@
 
     return v0
 
-    .line 50
+    .line 49
     :cond_0
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/AppSuggestManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/AppSuggestManagerService;
 

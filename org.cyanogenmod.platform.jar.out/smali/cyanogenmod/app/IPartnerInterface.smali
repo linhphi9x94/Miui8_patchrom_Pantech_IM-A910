@@ -9,6 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcyanogenmod/app/IPartnerInterface$NoOp;,
         Lcyanogenmod/app/IPartnerInterface$Stub;
     }
 .end annotation

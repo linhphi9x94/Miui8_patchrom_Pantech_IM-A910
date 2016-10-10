@@ -27,13 +27,13 @@
     .param p1, "remote"    # Landroid/os/IBinder;
 
     .prologue
-    .line 100
+    .line 124
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 102
+    .line 126
     iput-object p1, p0, Lcyanogenmod/weatherservice/IWeatherProviderService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    .line 100
+    .line 124
     return-void
 .end method
 
@@ -43,7 +43,7 @@
     .locals 1
 
     .prologue
-    .line 106
+    .line 130
     iget-object v0, p0, Lcyanogenmod/weatherservice/IWeatherProviderService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object v0
@@ -58,19 +58,19 @@
     .end annotation
 
     .prologue
-    .line 162
+    .line 186
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 164
+    .line 188
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v1, "cyanogenmod.weatherservice.IWeatherProviderService"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 165
+    .line 189
     iget-object v1, p0, Lcyanogenmod/weatherservice/IWeatherProviderService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x4
@@ -83,20 +83,20 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 168
+    .line 192
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 160
+    .line 184
     return-void
 
-    .line 167
+    .line 191
     :catchall_0
     move-exception v1
 
-    .line 168
+    .line 192
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 167
+    .line 191
     throw v1
 .end method
 
@@ -110,22 +110,22 @@
     .end annotation
 
     .prologue
-    .line 173
+    .line 197
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 175
+    .line 199
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v1, "cyanogenmod.weatherservice.IWeatherProviderService"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 176
+    .line 200
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 177
+    .line 201
     iget-object v1, p0, Lcyanogenmod/weatherservice/IWeatherProviderService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x5
@@ -138,20 +138,20 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 180
+    .line 204
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 171
+    .line 195
     return-void
 
-    .line 179
+    .line 203
     :catchall_0
     move-exception v1
 
-    .line 180
+    .line 204
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 179
+    .line 203
     throw v1
 .end method
 
@@ -159,7 +159,7 @@
     .locals 1
 
     .prologue
-    .line 110
+    .line 134
     const-string/jumbo v0, "cyanogenmod.weatherservice.IWeatherProviderService"
 
     return-object v0
@@ -175,32 +175,32 @@
     .end annotation
 
     .prologue
-    .line 132
+    .line 156
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 134
+    .line 158
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v1, "cyanogenmod.weatherservice.IWeatherProviderService"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 135
+    .line 159
     if-eqz p1, :cond_0
 
-    .line 136
+    .line 160
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 137
+    .line 161
     const/4 v1, 0x0
 
     invoke-virtual {p1, v0, v1}, Lcyanogenmod/weather/RequestInfo;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 142
+    .line 166
     :goto_0
     iget-object v1, p0, Lcyanogenmod/weatherservice/IWeatherProviderService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
@@ -214,13 +214,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 145
+    .line 169
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 130
+    .line 154
     return-void
 
-    .line 140
+    .line 164
     :cond_0
     const/4 v1, 0x0
 
@@ -231,14 +231,14 @@
 
     goto :goto_0
 
-    .line 144
+    .line 168
     :catchall_0
     move-exception v1
 
-    .line 145
+    .line 169
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 144
+    .line 168
     throw v1
 .end method
 
@@ -252,32 +252,32 @@
     .end annotation
 
     .prologue
-    .line 114
+    .line 138
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 116
+    .line 140
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v1, "cyanogenmod.weatherservice.IWeatherProviderService"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 117
+    .line 141
     if-eqz p1, :cond_0
 
-    .line 118
+    .line 142
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 119
+    .line 143
     const/4 v1, 0x0
 
     invoke-virtual {p1, v0, v1}, Lcyanogenmod/weather/RequestInfo;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 124
+    .line 148
     :goto_0
     iget-object v1, p0, Lcyanogenmod/weatherservice/IWeatherProviderService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
@@ -291,13 +291,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 127
+    .line 151
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 112
+    .line 136
     return-void
 
-    .line 122
+    .line 146
     :cond_0
     const/4 v1, 0x0
 
@@ -308,14 +308,14 @@
 
     goto :goto_0
 
-    .line 126
+    .line 150
     :catchall_0
     move-exception v1
 
-    .line 127
+    .line 151
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 126
+    .line 150
     throw v1
 .end method
 
@@ -331,19 +331,19 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 150
+    .line 174
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 152
+    .line 176
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v2, "cyanogenmod.weatherservice.IWeatherProviderService"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 153
+    .line 177
     if-eqz p1, :cond_0
 
     invoke-interface {p1}, Lcyanogenmod/weatherservice/IWeatherProviderServiceClient;->asBinder()Landroid/os/IBinder;
@@ -353,7 +353,7 @@
     :cond_0
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 154
+    .line 178
     iget-object v1, p0, Lcyanogenmod/weatherservice/IWeatherProviderService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x3
@@ -366,19 +366,19 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 157
+    .line 181
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 148
+    .line 172
     return-void
 
-    .line 156
+    .line 180
     :catchall_0
     move-exception v1
 
-    .line 157
+    .line 181
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 156
+    .line 180
     throw v1
 .end method

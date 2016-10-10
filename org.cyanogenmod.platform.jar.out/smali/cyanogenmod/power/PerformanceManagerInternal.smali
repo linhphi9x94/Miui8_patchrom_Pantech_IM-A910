@@ -10,5 +10,5 @@
 .method public abstract cpuBoost(I)V
 .end method
 
-.method public abstract launchBoost()V
+.method public abstract launchBoost(ILjava/lang/String;)V
 .end method

@@ -26,6 +26,8 @@
 # static fields
 .field public static final ACTION_DATA_USAGE:Ljava/lang/String; = "cyanogenmod.settings.ACTION_DATA_USAGE"
 
+.field public static final ACTION_LIVEDISPLAY_SETTINGS:Ljava/lang/String; = "cyanogenmod.settings.LIVEDISPLAY_SETTINGS"
+
 .field public static final AUTHORITY:Ljava/lang/String; = "cmsettings"
 
 .field public static final CALL_METHOD_GET_GLOBAL:Ljava/lang/String; = "GET_global"
@@ -98,7 +100,7 @@
     .locals 4
 
     .prologue
-    .line 290
+    .line 300
     new-instance v0, Lcyanogenmod/providers/CMSettings$DiscreteValueValidator;
 
     const/4 v1, 0x2
@@ -119,24 +121,24 @@
 
     invoke-direct {v0, v1}, Lcyanogenmod/providers/CMSettings$DiscreteValueValidator;-><init>([Ljava/lang/String;)V
 
-    .line 289
+    .line 299
     sput-object v0, Lcyanogenmod/providers/CMSettings;->sBooleanValidator:Lcyanogenmod/providers/CMSettings$Validator;
 
-    .line 292
+    .line 302
     new-instance v0, Lcyanogenmod/providers/CMSettings$1;
 
     invoke-direct {v0}, Lcyanogenmod/providers/CMSettings$1;-><init>()V
 
     sput-object v0, Lcyanogenmod/providers/CMSettings;->sNonNegativeIntegerValidator:Lcyanogenmod/providers/CMSettings$Validator;
 
-    .line 303
+    .line 313
     new-instance v0, Lcyanogenmod/providers/CMSettings$2;
 
     invoke-direct {v0}, Lcyanogenmod/providers/CMSettings$2;-><init>()V
 
     sput-object v0, Lcyanogenmod/providers/CMSettings;->sUriValidator:Lcyanogenmod/providers/CMSettings$Validator;
 
-    .line 316
+    .line 326
     new-instance v0, Lcyanogenmod/providers/CMSettings$InclusiveIntegerRangeValidator;
 
     const/high16 v1, -0x80000000
@@ -145,10 +147,10 @@
 
     invoke-direct {v0, v1, v2}, Lcyanogenmod/providers/CMSettings$InclusiveIntegerRangeValidator;-><init>(II)V
 
-    .line 315
+    .line 325
     sput-object v0, Lcyanogenmod/providers/CMSettings;->sColorValidator:Lcyanogenmod/providers/CMSettings$Validator;
 
-    .line 318
+    .line 328
     new-instance v0, Lcyanogenmod/providers/CMSettings$3;
 
     invoke-direct {v0}, Lcyanogenmod/providers/CMSettings$3;-><init>()V

@@ -33,7 +33,7 @@
     .param p3, "val$sbcClone"    # Lcyanogenmod/app/StatusBarPanelCustomTile;
 
     .prologue
-    .line 638
+    .line 637
     iput-object p1, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$CustomTileListeners$3;->this$1:Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$CustomTileListeners;
 
     iput-object p2, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$CustomTileListeners$3;->val$info:Lorg/cyanogenmod/platform/internal/ManagedServices$ManagedServiceInfo;
@@ -51,7 +51,7 @@
     .locals 3
 
     .prologue
-    .line 641
+    .line 640
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$CustomTileListeners$3;->this$1:Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$CustomTileListeners;
 
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$CustomTileListeners$3;->val$info:Lorg/cyanogenmod/platform/internal/ManagedServices$ManagedServiceInfo;
@@ -60,6 +60,6 @@
 
     invoke-static {v0, v1, v2}, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$CustomTileListeners;->-wrap1(Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$CustomTileListeners;Lorg/cyanogenmod/platform/internal/ManagedServices$ManagedServiceInfo;Lcyanogenmod/app/StatusBarPanelCustomTile;)V
 
-    .line 640
+    .line 639
     return-void
 .end method

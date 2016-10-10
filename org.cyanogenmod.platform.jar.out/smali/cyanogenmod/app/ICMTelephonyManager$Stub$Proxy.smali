@@ -27,13 +27,13 @@
     .param p1, "remote"    # Landroid/os/IBinder;
 
     .prologue
-    .line 135
+    .line 180
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 137
+    .line 182
     iput-object p1, p0, Lcyanogenmod/app/ICMTelephonyManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    .line 135
+    .line 180
     return-void
 .end method
 
@@ -43,7 +43,7 @@
     .locals 1
 
     .prologue
-    .line 141
+    .line 186
     iget-object v0, p0, Lcyanogenmod/app/ICMTelephonyManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object v0
@@ -53,7 +53,7 @@
     .locals 1
 
     .prologue
-    .line 145
+    .line 190
     const-string/jumbo v0, "cyanogenmod.app.ICMTelephonyManager"
 
     return-object v0
@@ -78,25 +78,25 @@
     .end annotation
 
     .prologue
-    .line 152
+    .line 197
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 153
+    .line 198
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 156
+    .line 201
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v3, "cyanogenmod.app.ICMTelephonyManager"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 157
+    .line 202
     iget-object v3, p0, Lcyanogenmod/app/ICMTelephonyManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v4, 0x1
@@ -105,10 +105,10 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 158
+    .line 203
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 159
+    .line 204
     sget-object v3, Landroid/telephony/SubscriptionInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {v1, v3}, Landroid/os/Parcel;->createTypedArrayList(Landroid/os/Parcelable$Creator;)Ljava/util/ArrayList;
@@ -117,28 +117,28 @@
 
     move-result-object v2
 
-    .line 162
+    .line 207
     .local v2, "_result":Ljava/util/List;, "Ljava/util/List<Landroid/telephony/SubscriptionInfo;>;"
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 163
+    .line 208
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 165
+    .line 210
     return-object v2
 
-    .line 161
+    .line 206
     .end local v2    # "_result":Ljava/util/List;, "Ljava/util/List<Landroid/telephony/SubscriptionInfo;>;"
     :catchall_0
     move-exception v3
 
-    .line 162
+    .line 207
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 163
+    .line 208
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 161
+    .line 206
     throw v3
 .end method
 
@@ -151,25 +151,25 @@
     .end annotation
 
     .prologue
-    .line 205
+    .line 250
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 206
+    .line 251
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 209
+    .line 254
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v3, "cyanogenmod.app.ICMTelephonyManager"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 210
+    .line 255
     iget-object v3, p0, Lcyanogenmod/app/ICMTelephonyManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v4, 0x4
@@ -178,10 +178,10 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 211
+    .line 256
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 212
+    .line 257
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -192,18 +192,18 @@
 
     const/4 v2, 0x1
 
-    .line 215
+    .line 260
     .local v2, "_result":Z
     :goto_0
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 216
+    .line 261
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 218
+    .line 263
     return v2
 
-    .line 212
+    .line 257
     .end local v2    # "_result":Z
     :cond_0
     const/4 v2, 0x0
@@ -211,18 +211,18 @@
     .restart local v2    # "_result":Z
     goto :goto_0
 
-    .line 214
+    .line 259
     .end local v2    # "_result":Z
     :catchall_0
     move-exception v3
 
-    .line 215
+    .line 260
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 216
+    .line 261
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 214
+    .line 259
     throw v3
 .end method
 
@@ -236,28 +236,28 @@
     .end annotation
 
     .prologue
-    .line 187
+    .line 232
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 188
+    .line 233
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 191
+    .line 236
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v3, "cyanogenmod.app.ICMTelephonyManager"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 192
+    .line 237
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 193
+    .line 238
     iget-object v3, p0, Lcyanogenmod/app/ICMTelephonyManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v4, 0x3
@@ -266,10 +266,10 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 194
+    .line 239
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 195
+    .line 240
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -280,18 +280,18 @@
 
     const/4 v2, 0x1
 
-    .line 198
+    .line 243
     .local v2, "_result":Z
     :goto_0
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 199
+    .line 244
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 201
+    .line 246
     return v2
 
-    .line 195
+    .line 240
     .end local v2    # "_result":Z
     :cond_0
     const/4 v2, 0x0
@@ -299,18 +299,18 @@
     .restart local v2    # "_result":Z
     goto :goto_0
 
-    .line 197
+    .line 242
     .end local v2    # "_result":Z
     :catchall_0
     move-exception v3
 
-    .line 198
+    .line 243
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 199
+    .line 244
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 197
+    .line 242
     throw v3
 .end method
 
@@ -324,28 +324,28 @@
     .end annotation
 
     .prologue
-    .line 169
+    .line 214
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 170
+    .line 215
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 173
+    .line 218
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v3, "cyanogenmod.app.ICMTelephonyManager"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 174
+    .line 219
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 175
+    .line 220
     iget-object v3, p0, Lcyanogenmod/app/ICMTelephonyManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v4, 0x2
@@ -354,10 +354,10 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 176
+    .line 221
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 177
+    .line 222
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -368,18 +368,18 @@
 
     const/4 v2, 0x1
 
-    .line 180
+    .line 225
     .local v2, "_result":Z
     :goto_0
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 181
+    .line 226
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 183
+    .line 228
     return v2
 
-    .line 177
+    .line 222
     .end local v2    # "_result":Z
     :cond_0
     const/4 v2, 0x0
@@ -387,233 +387,22 @@
     .restart local v2    # "_result":Z
     goto :goto_0
 
-    .line 179
+    .line 224
     .end local v2    # "_result":Z
     :catchall_0
     move-exception v3
 
-    .line 180
+    .line 225
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 181
+    .line 226
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 179
+    .line 224
     throw v3
 .end method
 
 .method public setDataConnectionSelectedOnSub(I)V
-    .locals 5
-    .param p1, "subId"    # I
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-
-    .prologue
-    .line 240
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v0
-
-    .line 241
-    .local v0, "_data":Landroid/os/Parcel;
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v1
-
-    .line 243
-    .local v1, "_reply":Landroid/os/Parcel;
-    :try_start_0
-    const-string/jumbo v2, "cyanogenmod.app.ICMTelephonyManager"
-
-    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
-
-    .line 244
-    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 245
-    iget-object v2, p0, Lcyanogenmod/app/ICMTelephonyManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
-
-    const/4 v3, 0x6
-
-    const/4 v4, 0x0
-
-    invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-
-    .line 246
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 249
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    .line 250
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    .line 238
-    return-void
-
-    .line 248
-    :catchall_0
-    move-exception v2
-
-    .line 249
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    .line 250
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    .line 248
-    throw v2
-.end method
-
-.method public setDataConnectionState(Z)V
-    .locals 5
-    .param p1, "state"    # Z
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-
-    .prologue
-    const/4 v2, 0x0
-
-    .line 255
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v0
-
-    .line 256
-    .local v0, "_data":Landroid/os/Parcel;
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v1
-
-    .line 258
-    .local v1, "_reply":Landroid/os/Parcel;
-    :try_start_0
-    const-string/jumbo v3, "cyanogenmod.app.ICMTelephonyManager"
-
-    invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
-
-    .line 259
-    if-eqz p1, :cond_0
-
-    const/4 v2, 0x1
-
-    :cond_0
-    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 260
-    iget-object v2, p0, Lcyanogenmod/app/ICMTelephonyManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
-
-    const/4 v3, 0x7
-
-    const/4 v4, 0x0
-
-    invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-
-    .line 261
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 264
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    .line 265
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    .line 253
-    return-void
-
-    .line 263
-    :catchall_0
-    move-exception v2
-
-    .line 264
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    .line 265
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    .line 263
-    throw v2
-.end method
-
-.method public setDefaultPhoneSub(I)V
-    .locals 5
-    .param p1, "subId"    # I
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-
-    .prologue
-    .line 270
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v0
-
-    .line 271
-    .local v0, "_data":Landroid/os/Parcel;
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v1
-
-    .line 273
-    .local v1, "_reply":Landroid/os/Parcel;
-    :try_start_0
-    const-string/jumbo v2, "cyanogenmod.app.ICMTelephonyManager"
-
-    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
-
-    .line 274
-    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 275
-    iget-object v2, p0, Lcyanogenmod/app/ICMTelephonyManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
-
-    const/16 v3, 0x8
-
-    const/4 v4, 0x0
-
-    invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-
-    .line 276
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 279
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    .line 280
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    .line 268
-    return-void
-
-    .line 278
-    :catchall_0
-    move-exception v2
-
-    .line 279
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    .line 280
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    .line 278
-    throw v2
-.end method
-
-.method public setDefaultSmsSub(I)V
     .locals 5
     .param p1, "subId"    # I
     .annotation system Ldalvik/annotation/Throws;
@@ -647,7 +436,7 @@
     .line 290
     iget-object v2, p0, Lcyanogenmod/app/ICMTelephonyManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    const/16 v3, 0x9
+    const/4 v3, 0x6
 
     const/4 v4, 0x0
 
@@ -681,6 +470,217 @@
     throw v2
 .end method
 
+.method public setDataConnectionState(Z)V
+    .locals 5
+    .param p1, "state"    # Z
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    const/4 v2, 0x0
+
+    .line 300
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    .line 301
+    .local v0, "_data":Landroid/os/Parcel;
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    .line 303
+    .local v1, "_reply":Landroid/os/Parcel;
+    :try_start_0
+    const-string/jumbo v3, "cyanogenmod.app.ICMTelephonyManager"
+
+    invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    .line 304
+    if-eqz p1, :cond_0
+
+    const/4 v2, 0x1
+
+    :cond_0
+    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 305
+    iget-object v2, p0, Lcyanogenmod/app/ICMTelephonyManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+
+    const/4 v3, 0x7
+
+    const/4 v4, 0x0
+
+    invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    .line 306
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 309
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 310
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 298
+    return-void
+
+    .line 308
+    :catchall_0
+    move-exception v2
+
+    .line 309
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 310
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 308
+    throw v2
+.end method
+
+.method public setDefaultPhoneSub(I)V
+    .locals 5
+    .param p1, "subId"    # I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 315
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    .line 316
+    .local v0, "_data":Landroid/os/Parcel;
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    .line 318
+    .local v1, "_reply":Landroid/os/Parcel;
+    :try_start_0
+    const-string/jumbo v2, "cyanogenmod.app.ICMTelephonyManager"
+
+    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    .line 319
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 320
+    iget-object v2, p0, Lcyanogenmod/app/ICMTelephonyManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+
+    const/16 v3, 0x8
+
+    const/4 v4, 0x0
+
+    invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    .line 321
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 324
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 325
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 313
+    return-void
+
+    .line 323
+    :catchall_0
+    move-exception v2
+
+    .line 324
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 325
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 323
+    throw v2
+.end method
+
+.method public setDefaultSmsSub(I)V
+    .locals 5
+    .param p1, "subId"    # I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 330
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    .line 331
+    .local v0, "_data":Landroid/os/Parcel;
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    .line 333
+    .local v1, "_reply":Landroid/os/Parcel;
+    :try_start_0
+    const-string/jumbo v2, "cyanogenmod.app.ICMTelephonyManager"
+
+    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    .line 334
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 335
+    iget-object v2, p0, Lcyanogenmod/app/ICMTelephonyManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+
+    const/16 v3, 0x9
+
+    const/4 v4, 0x0
+
+    invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    .line 336
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 339
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 340
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 328
+    return-void
+
+    .line 338
+    :catchall_0
+    move-exception v2
+
+    .line 339
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 340
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 338
+    throw v2
+.end method
+
 .method public setSubState(IZ)V
     .locals 5
     .param p1, "subId"    # I
@@ -694,28 +694,28 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 224
+    .line 269
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 225
+    .line 270
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 227
+    .line 272
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v3, "cyanogenmod.app.ICMTelephonyManager"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 228
+    .line 273
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 229
+    .line 274
     if-eqz p2, :cond_0
 
     const/4 v2, 0x1
@@ -723,7 +723,7 @@
     :cond_0
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 230
+    .line 275
     iget-object v2, p0, Lcyanogenmod/app/ICMTelephonyManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v3, 0x5
@@ -732,30 +732,30 @@
 
     invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 231
+    .line 276
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 234
+    .line 279
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 235
+    .line 280
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 222
+    .line 267
     return-void
 
-    .line 233
+    .line 278
     :catchall_0
     move-exception v2
 
-    .line 234
+    .line 279
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 235
+    .line 280
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 233
+    .line 278
     throw v2
 .end method

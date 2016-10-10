@@ -223,17 +223,19 @@
 
     .line 87
     :cond_0
+    iget-boolean v6, p0, Lcyanogenmod/externalviews/ExternalViewProperties;->mVisible:Z
+
+    .line 88
+    .local v6, "wasVisible":Z
     iget-object v9, p0, Lcyanogenmod/externalviews/ExternalViewProperties;->mView:Landroid/view/View;
 
     iget-object v10, p0, Lcyanogenmod/externalviews/ExternalViewProperties;->mHitRect:Landroid/graphics/Rect;
 
     invoke-virtual {v9, v10}, Landroid/view/View;->getLocalVisibleRect(Landroid/graphics/Rect;)Z
 
-    move-result v6
+    move-result v9
 
-    .line 88
-    .local v6, "visible":Z
-    iput-boolean v6, p0, Lcyanogenmod/externalviews/ExternalViewProperties;->mVisible:Z
+    iput-boolean v9, p0, Lcyanogenmod/externalviews/ExternalViewProperties;->mVisible:Z
 
     .line 91
     if-ne v4, v0, :cond_1

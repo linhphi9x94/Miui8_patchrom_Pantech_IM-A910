@@ -12,7 +12,7 @@
 
 
 # static fields
-.field public static final PARCELABLE_VERSION:I = 0x5
+.field public static final PARCELABLE_VERSION:I = 0x6
 
 
 # direct methods
@@ -34,7 +34,7 @@
     .line 90
     new-instance v0, Lcyanogenmod/os/Concierge$ParcelInfo;
 
-    const/4 v1, 0x5
+    const/4 v1, 0x6
 
     invoke-direct {v0, p0, v1}, Lcyanogenmod/os/Concierge$ParcelInfo;-><init>(Landroid/os/Parcel;I)V
 

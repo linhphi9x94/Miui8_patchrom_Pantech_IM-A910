@@ -9,6 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcyanogenmod/hardware/IThermalListenerCallback$NoOp;,
         Lcyanogenmod/hardware/IThermalListenerCallback$Stub;
     }
 .end annotation

@@ -9,6 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lorg/cyanogenmod/internal/themes/IIconCacheManager$NoOp;,
         Lorg/cyanogenmod/internal/themes/IIconCacheManager$Stub;
     }
 .end annotation

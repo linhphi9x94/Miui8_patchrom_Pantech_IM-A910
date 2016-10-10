@@ -24,7 +24,7 @@
     .param p1, "this$0"    # Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     .prologue
-    .line 253
+    .line 322
     iput-object p1, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-direct {p0}, Lcyanogenmod/app/IProfileManager$Stub;-><init>()V
@@ -39,31 +39,31 @@
     .param p1, "group"    # Landroid/app/NotificationGroup;
 
     .prologue
-    .line 426
+    .line 495
     iget-object v2, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {v2}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-wrap5(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)V
 
-    .line 427
+    .line 496
     iget-object v2, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {v2, p1}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-wrap2(Lorg/cyanogenmod/platform/internal/ProfileManagerService;Landroid/app/NotificationGroup;)V
 
-    .line 428
+    .line 497
     invoke-static {}, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 429
+    .line 498
     .local v0, "token":J
     iget-object v2, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
-    invoke-static {v2}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-wrap8(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)V
+    invoke-static {v2}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-wrap9(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)V
 
-    .line 430
+    .line 499
     invoke-static {v0, v1}, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->restoreCallingIdentity(J)V
 
-    .line 425
+    .line 494
     return-void
 .end method
 
@@ -72,31 +72,31 @@
     .param p1, "profile"    # Lcyanogenmod/app/Profile;
 
     .prologue
-    .line 311
+    .line 380
     iget-object v2, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {v2}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-wrap5(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)V
 
-    .line 312
+    .line 381
     iget-object v2, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {v2, p1}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-wrap3(Lorg/cyanogenmod/platform/internal/ProfileManagerService;Lcyanogenmod/app/Profile;)V
 
-    .line 313
+    .line 382
     invoke-static {}, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 314
+    .line 383
     .local v0, "token":J
     iget-object v2, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
-    invoke-static {v2}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-wrap8(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)V
+    invoke-static {v2}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-wrap9(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)V
 
-    .line 315
+    .line 384
     invoke-static {v0, v1}, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->restoreCallingIdentity(J)V
 
-    .line 316
+    .line 385
     const/4 v2, 0x1
 
     return v2
@@ -106,14 +106,14 @@
     .locals 1
 
     .prologue
-    .line 346
+    .line 415
     invoke-virtual {p0}, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->isEnabled()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 348
+    .line 417
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-get4(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)Lcyanogenmod/app/Profile;
@@ -122,7 +122,7 @@
 
     return-object v0
 
-    .line 350
+    .line 419
     :cond_0
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
@@ -138,7 +138,7 @@
     .param p1, "uuid"    # Landroid/os/ParcelUuid;
 
     .prologue
-    .line 475
+    .line 544
     invoke-virtual {p1}, Landroid/os/ParcelUuid;->getUuid()Ljava/util/UUID;
 
     move-result-object v0
@@ -159,7 +159,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 476
+    .line 545
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-get9(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)Landroid/app/NotificationGroup;
@@ -168,7 +168,7 @@
 
     return-object v0
 
-    .line 478
+    .line 547
     :cond_0
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
@@ -194,7 +194,7 @@
     .param p1, "pkg"    # Ljava/lang/String;
 
     .prologue
-    .line 465
+    .line 534
     iget-object v2, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {v2}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-get5(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)Ljava/util/Map;
@@ -223,7 +223,7 @@
 
     check-cast v0, Landroid/app/NotificationGroup;
 
-    .line 466
+    .line 535
     .local v0, "group":Landroid/app/NotificationGroup;
     invoke-virtual {v0, p1}, Landroid/app/NotificationGroup;->hasPackage(Ljava/lang/String;)Z
 
@@ -231,10 +231,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 467
+    .line 536
     return-object v0
 
-    .line 470
+    .line 539
     .end local v0    # "group":Landroid/app/NotificationGroup;
     :cond_1
     const/4 v2, 0x0
@@ -246,7 +246,7 @@
     .locals 2
 
     .prologue
-    .line 421
+    .line 490
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-get5(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)Ljava/util/Map;
@@ -283,12 +283,12 @@
     .param p1, "profileParcelUuid"    # Landroid/os/ParcelUuid;
 
     .prologue
-    .line 333
+    .line 402
     invoke-virtual {p1}, Landroid/os/ParcelUuid;->getUuid()Ljava/util/UUID;
 
     move-result-object v0
 
-    .line 334
+    .line 403
     .local v0, "profileUuid":Ljava/util/UUID;
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
@@ -306,7 +306,7 @@
     .end annotation
 
     .prologue
-    .line 322
+    .line 391
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-get7(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)Ljava/util/Map;
@@ -319,7 +319,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 323
+    .line 392
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-get8(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)Ljava/util/Map;
@@ -344,7 +344,7 @@
 
     return-object v0
 
-    .line 324
+    .line 393
     :cond_0
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
@@ -362,7 +362,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 325
+    .line 394
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-get8(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)Ljava/util/Map;
@@ -381,7 +381,7 @@
 
     return-object v0
 
-    .line 327
+    .line 396
     :cond_1
     const/4 v0, 0x0
 
@@ -392,7 +392,7 @@
     .locals 3
 
     .prologue
-    .line 339
+    .line 408
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-virtual {v1}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->getProfileList()Ljava/util/Collection;
@@ -417,11 +417,11 @@
 
     check-cast v0, [Lcyanogenmod/app/Profile;
 
-    .line 340
+    .line 409
     .local v0, "profiles":[Lcyanogenmod/app/Profile;
     invoke-static {v0}, Ljava/util/Arrays;->sort([Ljava/lang/Object;)V
 
-    .line 341
+    .line 410
     return-object v0
 .end method
 
@@ -431,12 +431,12 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 483
+    .line 552
     invoke-static {}, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 485
+    .line 554
     .local v0, "token":J
     :try_start_0
     iget-object v3, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
@@ -449,16 +449,16 @@
 
     move-result-object v3
 
-    .line 486
+    .line 555
     const-string/jumbo v4, "system_profiles_enabled"
 
-    .line 487
+    .line 556
     const/4 v5, 0x1
 
-    .line 488
+    .line 557
     const/4 v6, -0x2
 
-    .line 485
+    .line 554
     invoke-static {v3, v4, v5, v6}, Lcyanogenmod/providers/CMSettings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -467,11 +467,11 @@
 
     if-ne v3, v2, :cond_0
 
-    .line 490
+    .line 559
     :goto_0
     invoke-static {v0, v1}, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->restoreCallingIdentity(J)V
 
-    .line 485
+    .line 554
     return v2
 
     :cond_0
@@ -479,14 +479,14 @@
 
     goto :goto_0
 
-    .line 489
+    .line 558
     :catchall_0
     move-exception v2
 
-    .line 490
+    .line 559
     invoke-static {v0, v1}, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->restoreCallingIdentity(J)V
 
-    .line 489
+    .line 558
     throw v2
 .end method
 
@@ -497,7 +497,7 @@
     .end annotation
 
     .prologue
-    .line 411
+    .line 480
     iget-object v2, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {v2}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-get5(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)Ljava/util/Map;
@@ -526,7 +526,7 @@
 
     check-cast v0, Landroid/app/NotificationGroup;
 
-    .line 412
+    .line 481
     .local v0, "group":Landroid/app/NotificationGroup;
     invoke-virtual {v0}, Landroid/app/NotificationGroup;->getName()Ljava/lang/String;
 
@@ -538,12 +538,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 413
+    .line 482
     const/4 v2, 0x1
 
     return v2
 
-    .line 416
+    .line 485
     .end local v0    # "group":Landroid/app/NotificationGroup;
     :cond_1
     const/4 v2, 0x0
@@ -556,7 +556,7 @@
     .param p1, "profileUuid"    # Landroid/os/ParcelUuid;
 
     .prologue
-    .line 394
+    .line 463
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-get8(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)Ljava/util/Map;
@@ -581,7 +581,7 @@
     .end annotation
 
     .prologue
-    .line 400
+    .line 469
     iget-object v2, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {v2}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-get7(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)Ljava/util/Map;
@@ -610,7 +610,7 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 401
+    .line 470
     .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/UUID;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -624,12 +624,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 402
+    .line 471
     const/4 v2, 0x1
 
     return v2
 
-    .line 405
+    .line 474
     .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/UUID;>;"
     :cond_1
     const/4 v2, 0x0
@@ -642,12 +642,12 @@
     .param p1, "group"    # Landroid/app/NotificationGroup;
 
     .prologue
-    .line 435
+    .line 504
     iget-object v4, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {v4}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-wrap5(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)V
 
-    .line 436
+    .line 505
     iget-object v5, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {v5}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-get3(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)Z
@@ -677,7 +677,7 @@
 
     invoke-static {v5, v4}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-set0(Lorg/cyanogenmod/platform/internal/ProfileManagerService;Z)Z
 
-    .line 439
+    .line 508
     iget-object v4, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {v4}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-get8(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)Ljava/util/Map;
@@ -706,7 +706,7 @@
 
     check-cast v0, Lcyanogenmod/app/Profile;
 
-    .line 440
+    .line 509
     .local v0, "profile":Lcyanogenmod/app/Profile;
     invoke-virtual {p1}, Landroid/app/NotificationGroup;->getUuid()Ljava/util/UUID;
 
@@ -716,7 +716,7 @@
 
     goto :goto_1
 
-    .line 436
+    .line 505
     .end local v0    # "profile":Lcyanogenmod/app/Profile;
     .end local v1    # "profile$iterator":Ljava/util/Iterator;
     :cond_0
@@ -724,23 +724,23 @@
 
     goto :goto_0
 
-    .line 442
+    .line 511
     .restart local v1    # "profile$iterator":Ljava/util/Iterator;
     :cond_1
     invoke-static {}, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 443
+    .line 512
     .local v2, "token":J
     iget-object v4, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
-    invoke-static {v4}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-wrap8(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)V
+    invoke-static {v4}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-wrap9(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)V
 
-    .line 444
+    .line 513
     invoke-static {v2, v3}, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->restoreCallingIdentity(J)V
 
-    .line 434
+    .line 503
     return-void
 .end method
 
@@ -751,12 +751,12 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 355
+    .line 424
     iget-object v2, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {v2}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-wrap5(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)V
 
-    .line 356
+    .line 425
     iget-object v2, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {v2}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-get7(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)Ljava/util/Map;
@@ -773,7 +773,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 357
+    .line 426
     iget-object v2, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {v2}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-get8(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)Ljava/util/Map;
@@ -790,29 +790,29 @@
 
     if-eqz v2, :cond_0
 
-    .line 358
+    .line 427
     iget-object v2, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {v2, v4}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-set0(Lorg/cyanogenmod/platform/internal/ProfileManagerService;Z)Z
 
-    .line 359
+    .line 428
     invoke-static {}, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 360
+    .line 429
     .local v0, "token":J
     iget-object v2, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
-    invoke-static {v2}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-wrap8(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)V
+    invoke-static {v2}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-wrap9(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)V
 
-    .line 361
+    .line 430
     invoke-static {v0, v1}, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->restoreCallingIdentity(J)V
 
-    .line 362
+    .line 431
     return v4
 
-    .line 364
+    .line 433
     .end local v0    # "token":J
     :cond_0
     const/4 v2, 0x0
@@ -824,28 +824,28 @@
     .locals 4
 
     .prologue
-    .line 257
+    .line 326
     invoke-static {}, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 258
+    .line 327
     .local v0, "token":J
     iget-object v2, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {v2}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-wrap5(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)V
 
-    .line 259
+    .line 328
     iget-object v2, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     const/4 v3, 0x1
 
     invoke-static {v2, v3}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-wrap7(Lorg/cyanogenmod/platform/internal/ProfileManagerService;Z)V
 
-    .line 260
+    .line 329
     invoke-static {v0, v1}, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->restoreCallingIdentity(J)V
 
-    .line 256
+    .line 325
     return-void
 .end method
 
@@ -854,32 +854,32 @@
     .param p1, "profileParcelUuid"    # Landroid/os/ParcelUuid;
 
     .prologue
-    .line 293
+    .line 362
     invoke-virtual {p0}, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->isEnabled()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 294
+    .line 363
     const-string/jumbo v1, "CMProfileService"
 
     const-string/jumbo v4, "Unable to set active profile because profiles are disabled."
 
     invoke-static {v1, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 295
+    .line 364
     const/4 v1, 0x0
 
     return v1
 
-    .line 303
+    .line 372
     :cond_0
     invoke-static {}, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 304
+    .line 373
     .local v2, "token":J
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
@@ -893,11 +893,11 @@
 
     move-result v0
 
-    .line 305
+    .line 374
     .local v0, "ret":Z
     invoke-static {v2, v3}, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->restoreCallingIdentity(J)V
 
-    .line 306
+    .line 375
     return v0
 .end method
 
@@ -912,24 +912,24 @@
 
     const/4 v5, 0x0
 
-    .line 266
+    .line 335
     invoke-virtual {p0}, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->isEnabled()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 267
+    .line 336
     const-string/jumbo v2, "CMProfileService"
 
     const-string/jumbo v3, "Unable to set active profile because profiles are disabled."
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 268
+    .line 337
     return v5
 
-    .line 270
+    .line 339
     :cond_0
     iget-object v2, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
@@ -943,7 +943,7 @@
 
     if-nez v2, :cond_1
 
-    .line 272
+    .line 341
     const-string/jumbo v2, "CMProfileService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -966,16 +966,16 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 273
+    .line 342
     return v5
 
-    .line 285
+    .line 354
     :cond_1
     invoke-static {}, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 286
+    .line 355
     .local v0, "token":J
     iget-object v3, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
@@ -1003,10 +1003,10 @@
 
     invoke-virtual {v3, v2, v6}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->setActiveProfileInternal(Lcyanogenmod/app/Profile;Z)V
 
-    .line 287
+    .line 356
     invoke-static {v0, v1}, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->restoreCallingIdentity(J)V
 
-    .line 288
+    .line 357
     return v6
 .end method
 
@@ -1015,12 +1015,12 @@
     .param p1, "group"    # Landroid/app/NotificationGroup;
 
     .prologue
-    .line 449
+    .line 518
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {v1}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-wrap5(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)V
 
-    .line 450
+    .line 519
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {v1}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-get5(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)Ljava/util/Map;
@@ -1037,14 +1037,14 @@
 
     check-cast v0, Landroid/app/NotificationGroup;
 
-    .line 451
+    .line 520
     .local v0, "old":Landroid/app/NotificationGroup;
     if-nez v0, :cond_0
 
-    .line 452
+    .line 521
     return-void
 
-    .line 455
+    .line 524
     :cond_0
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
@@ -1058,21 +1058,21 @@
 
     invoke-interface {v1, v4, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 458
+    .line 527
     invoke-static {}, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 459
+    .line 528
     .local v2, "token":J
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
-    invoke-static {v1}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-wrap8(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)V
+    invoke-static {v1}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-wrap9(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)V
 
-    .line 460
+    .line 529
     invoke-static {v2, v3}, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->restoreCallingIdentity(J)V
 
-    .line 448
+    .line 517
     return-void
 .end method
 
@@ -1081,12 +1081,12 @@
     .param p1, "profile"    # Lcyanogenmod/app/Profile;
 
     .prologue
-    .line 370
+    .line 439
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {v1}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-wrap5(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)V
 
-    .line 371
+    .line 440
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {v1}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-get8(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)Ljava/util/Map;
@@ -1103,14 +1103,14 @@
 
     check-cast v0, Lcyanogenmod/app/Profile;
 
-    .line 373
+    .line 442
     .local v0, "old":Lcyanogenmod/app/Profile;
     if-nez v0, :cond_0
 
-    .line 374
+    .line 443
     return-void
 
-    .line 377
+    .line 446
     :cond_0
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
@@ -1124,7 +1124,7 @@
 
     invoke-interface {v1, v4}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 378
+    .line 447
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {v1}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-get7(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)Ljava/util/Map;
@@ -1141,7 +1141,7 @@
 
     invoke-interface {v1, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 379
+    .line 448
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {v1}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-get8(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)Ljava/util/Map;
@@ -1154,18 +1154,18 @@
 
     invoke-interface {v1, v4, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 382
+    .line 451
     invoke-static {}, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 383
+    .line 452
     .local v2, "token":J
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
-    invoke-static {v1}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-wrap8(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)V
+    invoke-static {v1}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-wrap9(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)V
 
-    .line 386
+    .line 455
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {v1}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-get0(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)Lcyanogenmod/app/Profile;
@@ -1194,17 +1194,17 @@
 
     if-eqz v1, :cond_1
 
-    .line 387
+    .line 456
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     const/4 v4, 0x1
 
     invoke-virtual {v1, p1, v4}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->setActiveProfileInternal(Lcyanogenmod/app/Profile;Z)V
 
-    .line 389
+    .line 458
     :cond_1
     invoke-static {v2, v3}, Lorg/cyanogenmod/platform/internal/ProfileManagerService$5;->restoreCallingIdentity(J)V
 
-    .line 369
+    .line 438
     return-void
 .end method

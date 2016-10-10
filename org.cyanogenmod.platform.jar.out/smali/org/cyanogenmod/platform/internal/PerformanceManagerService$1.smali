@@ -24,7 +24,7 @@
     .param p1, "this$0"    # Lorg/cyanogenmod/platform/internal/PerformanceManagerService;
 
     .prologue
-    .line 304
+    .line 294
     iput-object p1, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/PerformanceManagerService;
 
     invoke-direct {p0}, Lcyanogenmod/power/IPerformanceManager$Stub;-><init>()V
@@ -39,12 +39,12 @@
     .param p1, "duration"    # I
 
     .prologue
-    .line 319
+    .line 309
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/PerformanceManagerService;
 
     invoke-static {v0, p1}, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->-wrap4(Lorg/cyanogenmod/platform/internal/PerformanceManagerService;I)V
 
-    .line 318
+    .line 308
     return-void
 .end method
 
@@ -52,7 +52,7 @@
     .locals 1
 
     .prologue
-    .line 329
+    .line 319
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/PerformanceManagerService;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->-get3(Lorg/cyanogenmod/platform/internal/PerformanceManagerService;)I
@@ -66,7 +66,7 @@
     .locals 1
 
     .prologue
-    .line 324
+    .line 314
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/PerformanceManagerService;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->-wrap2(Lorg/cyanogenmod/platform/internal/PerformanceManagerService;)I
@@ -81,7 +81,7 @@
     .param p1, "profile"    # I
 
     .prologue
-    .line 334
+    .line 324
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/PerformanceManagerService;
 
     invoke-static {v0, p1}, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->-wrap0(Lorg/cyanogenmod/platform/internal/PerformanceManagerService;I)Z
@@ -96,7 +96,7 @@
     .param p1, "profile"    # I
 
     .prologue
-    .line 308
+    .line 298
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/PerformanceManagerService;
 
     const/4 v1, 0x1

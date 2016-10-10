@@ -27,7 +27,7 @@
     .param p1, "this$0"    # Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     .prologue
-    .line 107
+    .line 115
     iput-object p1, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$2;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 111
+    .line 119
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$2;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {p2}, Lcom/android/internal/policy/IKeyguardService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/policy/IKeyguardService;
@@ -52,7 +52,7 @@
 
     invoke-static {v0, v1}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-set1(Lorg/cyanogenmod/platform/internal/ProfileManagerService;Lcom/android/internal/policy/IKeyguardService;)Lcom/android/internal/policy/IKeyguardService;
 
-    .line 109
+    .line 117
     return-void
 .end method
 
@@ -61,14 +61,14 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 117
+    .line 125
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$2;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-set1(Lorg/cyanogenmod/platform/internal/ProfileManagerService;Lcom/android/internal/policy/IKeyguardService;)Lcom/android/internal/policy/IKeyguardService;
 
-    .line 119
+    .line 127
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$2;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-get6(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)Landroid/os/Handler;
@@ -83,7 +83,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 120
+    .line 128
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$2;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-get6(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)Landroid/os/Handler;
@@ -100,6 +100,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 115
+    .line 123
     return-void
 .end method

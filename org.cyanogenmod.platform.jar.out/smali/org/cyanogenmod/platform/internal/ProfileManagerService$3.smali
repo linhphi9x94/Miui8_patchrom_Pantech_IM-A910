@@ -24,7 +24,7 @@
     .param p1, "this$0"    # Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     .prologue
-    .line 124
+    .line 132
     iput-object p1, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$3;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +40,12 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 127
+    .line 135
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 128
+    .line 136
     .local v0, "action":Ljava/lang/String;
     const-string/jumbo v1, "android.intent.action.LOCALE_CHANGED"
 
@@ -55,22 +55,22 @@
 
     if-eqz v1, :cond_1
 
-    .line 129
+    .line 137
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$3;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
-    invoke-static {v1}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-wrap8(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)V
+    invoke-static {v1}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-wrap9(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)V
 
-    .line 130
+    .line 138
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$3;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {v1}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-wrap6(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)V
 
-    .line 126
+    .line 134
     :cond_0
     :goto_0
     return-void
 
-    .line 131
+    .line 139
     :cond_1
     const-string/jumbo v1, "android.intent.action.ACTION_SHUTDOWN"
 
@@ -80,10 +80,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 132
+    .line 140
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$3;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
-    invoke-static {v1}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-wrap8(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)V
+    invoke-static {v1}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-wrap9(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)V
 
     goto :goto_0
 .end method

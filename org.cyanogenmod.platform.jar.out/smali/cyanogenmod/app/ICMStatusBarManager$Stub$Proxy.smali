@@ -27,13 +27,13 @@
     .param p1, "remote"    # Landroid/os/IBinder;
 
     .prologue
-    .line 138
+    .line 169
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 140
+    .line 171
     iput-object p1, p0, Lcyanogenmod/app/ICMStatusBarManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    .line 138
+    .line 169
     return-void
 .end method
 
@@ -43,7 +43,7 @@
     .locals 1
 
     .prologue
-    .line 144
+    .line 175
     iget-object v0, p0, Lcyanogenmod/app/ICMStatusBarManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object v0
@@ -65,57 +65,57 @@
     .end annotation
 
     .prologue
-    .line 156
+    .line 187
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 157
+    .line 188
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 159
+    .line 190
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v2, "cyanogenmod.app.ICMStatusBarManager"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 160
+    .line 191
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 161
+    .line 192
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 162
+    .line 193
     invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 163
+    .line 194
     invoke-virtual {v0, p4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 164
+    .line 195
     if-eqz p5, :cond_0
 
-    .line 165
+    .line 196
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 166
+    .line 197
     const/4 v2, 0x0
 
     invoke-virtual {p5, v0, v2}, Lcyanogenmod/app/CustomTile;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 171
+    .line 202
     :goto_0
     invoke-virtual {v0, p6}, Landroid/os/Parcel;->writeIntArray([I)V
 
-    .line 172
+    .line 203
     invoke-virtual {v0, p7}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 173
+    .line 204
     iget-object v2, p0, Lcyanogenmod/app/ICMStatusBarManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v3, 0x1
@@ -124,24 +124,24 @@
 
     invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 174
+    .line 205
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 175
+    .line 206
     invoke-virtual {v1, p6}, Landroid/os/Parcel;->readIntArray([I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 178
+    .line 209
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 179
+    .line 210
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 154
+    .line 185
     return-void
 
-    .line 169
+    .line 200
     :cond_0
     const/4 v2, 0x0
 
@@ -152,17 +152,17 @@
 
     goto :goto_0
 
-    .line 177
+    .line 208
     :catchall_0
     move-exception v2
 
-    .line 178
+    .line 209
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 179
+    .line 210
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 177
+    .line 208
     throw v2
 .end method
 
@@ -170,7 +170,7 @@
     .locals 1
 
     .prologue
-    .line 148
+    .line 179
     const-string/jumbo v0, "cyanogenmod.app.ICMStatusBarManager"
 
     return-object v0
@@ -190,25 +190,25 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 205
+    .line 236
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 206
+    .line 237
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 208
+    .line 239
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v3, "cyanogenmod.app.ICMStatusBarManager"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 209
+    .line 240
     if-eqz p1, :cond_0
 
     invoke-interface {p1}, Lcyanogenmod/app/ICustomTileListener;->asBinder()Landroid/os/IBinder;
@@ -218,24 +218,24 @@
     :cond_0
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 210
+    .line 241
     if-eqz p2, :cond_1
 
-    .line 211
+    .line 242
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 212
+    .line 243
     const/4 v2, 0x0
 
     invoke-virtual {p2, v0, v2}, Landroid/content/ComponentName;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 217
+    .line 248
     :goto_0
     invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 218
+    .line 249
     iget-object v2, p0, Lcyanogenmod/app/ICMStatusBarManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v3, 0x3
@@ -244,21 +244,21 @@
 
     invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 219
+    .line 250
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 222
+    .line 253
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 223
+    .line 254
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 203
+    .line 234
     return-void
 
-    .line 215
+    .line 246
     :cond_1
     const/4 v2, 0x0
 
@@ -269,17 +269,17 @@
 
     goto :goto_0
 
-    .line 221
+    .line 252
     :catchall_0
     move-exception v2
 
-    .line 222
+    .line 253
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 223
+    .line 254
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 221
+    .line 252
     throw v2
 .end method
 
@@ -298,25 +298,25 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 244
+    .line 275
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 245
+    .line 276
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 247
+    .line 278
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v3, "cyanogenmod.app.ICMStatusBarManager"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 248
+    .line 279
     if-eqz p1, :cond_0
 
     invoke-interface {p1}, Lcyanogenmod/app/ICustomTileListener;->asBinder()Landroid/os/IBinder;
@@ -326,16 +326,16 @@
     :cond_0
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 249
+    .line 280
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 250
+    .line 281
     invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 251
+    .line 282
     invoke-virtual {v0, p4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 252
+    .line 283
     iget-object v2, p0, Lcyanogenmod/app/ICMStatusBarManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v3, 0x5
@@ -344,31 +344,31 @@
 
     invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 253
+    .line 284
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 256
+    .line 287
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 257
+    .line 288
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 242
+    .line 273
     return-void
 
-    .line 255
+    .line 286
     :catchall_0
     move-exception v2
 
-    .line 256
+    .line 287
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 257
+    .line 288
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 255
+    .line 286
     throw v2
 .end method
 
@@ -385,37 +385,37 @@
     .end annotation
 
     .prologue
-    .line 184
+    .line 215
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 185
+    .line 216
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 187
+    .line 218
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v2, "cyanogenmod.app.ICMStatusBarManager"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 188
+    .line 219
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 189
+    .line 220
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 190
+    .line 221
     invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 191
+    .line 222
     invoke-virtual {v0, p4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 192
+    .line 223
     iget-object v2, p0, Lcyanogenmod/app/ICMStatusBarManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v3, 0x2
@@ -424,31 +424,31 @@
 
     invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 193
+    .line 224
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 196
+    .line 227
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 197
+    .line 228
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 182
+    .line 213
     return-void
 
-    .line 195
+    .line 226
     :catchall_0
     move-exception v2
 
-    .line 196
+    .line 227
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 197
+    .line 228
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 195
+    .line 226
     throw v2
 .end method
 
@@ -465,25 +465,25 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 228
+    .line 259
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 229
+    .line 260
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 231
+    .line 262
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v3, "cyanogenmod.app.ICMStatusBarManager"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 232
+    .line 263
     if-eqz p1, :cond_0
 
     invoke-interface {p1}, Lcyanogenmod/app/ICustomTileListener;->asBinder()Landroid/os/IBinder;
@@ -493,10 +493,10 @@
     :cond_0
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 233
+    .line 264
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 234
+    .line 265
     iget-object v2, p0, Lcyanogenmod/app/ICMStatusBarManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v3, 0x4
@@ -505,30 +505,30 @@
 
     invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 235
+    .line 266
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 238
+    .line 269
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 239
+    .line 270
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 226
+    .line 257
     return-void
 
-    .line 237
+    .line 268
     :catchall_0
     move-exception v2
 
-    .line 238
+    .line 269
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 239
+    .line 270
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 237
+    .line 268
     throw v2
 .end method

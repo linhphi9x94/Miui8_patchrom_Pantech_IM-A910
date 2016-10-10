@@ -34,15 +34,15 @@
     .locals 1
 
     .prologue
-    .line 17
+    .line 29
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 19
+    .line 31
     const-string/jumbo v0, "cyanogenmod.app.ILiveLockScreenChangeListener"
 
     invoke-virtual {p0, p0, v0}, Lcyanogenmod/app/ILiveLockScreenChangeListener$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 17
+    .line 29
     return-void
 .end method
 
@@ -53,13 +53,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 27
+    .line 39
     if-nez p0, :cond_0
 
-    .line 28
+    .line 40
     return-object v1
 
-    .line 30
+    .line 42
     :cond_0
     const-string/jumbo v1, "cyanogenmod.app.ILiveLockScreenChangeListener"
 
@@ -67,7 +67,7 @@
 
     move-result-object v0
 
-    .line 31
+    .line 43
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -75,13 +75,13 @@
 
     if-eqz v1, :cond_1
 
-    .line 32
+    .line 44
     check-cast v0, Lcyanogenmod/app/ILiveLockScreenChangeListener;
 
     .end local v0    # "iin":Landroid/os/IInterface;
     return-object v0
 
-    .line 34
+    .line 46
     .restart local v0    # "iin":Landroid/os/IInterface;
     :cond_1
     new-instance v1, Lcyanogenmod/app/ILiveLockScreenChangeListener$Stub$Proxy;
@@ -97,7 +97,7 @@
     .locals 0
 
     .prologue
-    .line 38
+    .line 50
     return-object p0
 .end method
 
@@ -116,39 +116,39 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 42
+    .line 54
     sparse-switch p1, :sswitch_data_0
 
-    .line 64
+    .line 76
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v1
 
     return v1
 
-    .line 46
+    .line 58
     :sswitch_0
     const-string/jumbo v1, "cyanogenmod.app.ILiveLockScreenChangeListener"
 
     invoke-virtual {p3, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 47
+    .line 59
     return v2
 
-    .line 51
+    .line 63
     :sswitch_1
     const-string/jumbo v1, "cyanogenmod.app.ILiveLockScreenChangeListener"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 53
+    .line 65
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 54
+    .line 66
     sget-object v1, Lcyanogenmod/app/LiveLockScreenInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -157,24 +157,24 @@
 
     check-cast v0, Lcyanogenmod/app/LiveLockScreenInfo;
 
-    .line 59
+    .line 71
     :goto_0
     invoke-virtual {p0, v0}, Lcyanogenmod/app/ILiveLockScreenChangeListener$Stub;->onLiveLockScreenChanged(Lcyanogenmod/app/LiveLockScreenInfo;)V
 
-    .line 60
+    .line 72
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 61
+    .line 73
     return v2
 
-    .line 57
+    .line 69
     :cond_0
     const/4 v0, 0x0
 
     .local v0, "_arg0":Lcyanogenmod/app/LiveLockScreenInfo;
     goto :goto_0
 
-    .line 42
+    .line 54
     nop
 
     :sswitch_data_0

@@ -9,6 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcyanogenmod/app/ICMStatusBarManager$NoOp;,
         Lcyanogenmod/app/ICMStatusBarManager$Stub;
     }
 .end annotation

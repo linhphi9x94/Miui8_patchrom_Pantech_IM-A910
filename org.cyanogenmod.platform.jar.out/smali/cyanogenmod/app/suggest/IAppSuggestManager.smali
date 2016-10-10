@@ -9,6 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcyanogenmod/app/suggest/IAppSuggestManager$NoOp;,
         Lcyanogenmod/app/suggest/IAppSuggestManager$Stub;
     }
 .end annotation

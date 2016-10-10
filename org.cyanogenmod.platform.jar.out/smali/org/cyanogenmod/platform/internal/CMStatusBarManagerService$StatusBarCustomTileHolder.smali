@@ -24,13 +24,13 @@
     .param p1, "value"    # Lcyanogenmod/app/StatusBarPanelCustomTile;
 
     .prologue
-    .line 680
+    .line 679
     invoke-direct {p0}, Lorg/cyanogenmod/internal/statusbar/IStatusBarCustomTileHolder$Stub;-><init>()V
 
-    .line 681
+    .line 680
     iput-object p1, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$StatusBarCustomTileHolder;->mValue:Lcyanogenmod/app/StatusBarPanelCustomTile;
 
-    .line 680
+    .line 679
     return-void
 .end method
 
@@ -40,15 +40,15 @@
     .locals 2
 
     .prologue
-    .line 687
+    .line 686
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$StatusBarCustomTileHolder;->mValue:Lcyanogenmod/app/StatusBarPanelCustomTile;
 
-    .line 688
+    .line 687
     .local v0, "value":Lcyanogenmod/app/StatusBarPanelCustomTile;
     const/4 v1, 0x0
 
     iput-object v1, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$StatusBarCustomTileHolder;->mValue:Lcyanogenmod/app/StatusBarPanelCustomTile;
 
-    .line 689
+    .line 688
     return-object v0
 .end method

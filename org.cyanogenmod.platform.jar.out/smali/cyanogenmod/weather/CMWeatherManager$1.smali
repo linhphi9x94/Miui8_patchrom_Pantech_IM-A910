@@ -24,7 +24,7 @@
     .param p1, "this$0"    # Lcyanogenmod/weather/CMWeatherManager;
 
     .prologue
-    .line 291
+    .line 304
     iput-object p1, p0, Lcyanogenmod/weather/CMWeatherManager$1;->this$0:Lcyanogenmod/weather/CMWeatherManager;
 
     invoke-direct {p0}, Lcyanogenmod/weather/IWeatherServiceProviderChangeListener$Stub;-><init>()V
@@ -39,7 +39,7 @@
     .param p1, "providerName"    # Ljava/lang/String;
 
     .prologue
-    .line 294
+    .line 307
     iget-object v0, p0, Lcyanogenmod/weather/CMWeatherManager$1;->this$0:Lcyanogenmod/weather/CMWeatherManager;
 
     invoke-static {v0}, Lcyanogenmod/weather/CMWeatherManager;->-get0(Lcyanogenmod/weather/CMWeatherManager;)Landroid/os/Handler;
@@ -52,6 +52,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 293
+    .line 306
     return-void
 .end method

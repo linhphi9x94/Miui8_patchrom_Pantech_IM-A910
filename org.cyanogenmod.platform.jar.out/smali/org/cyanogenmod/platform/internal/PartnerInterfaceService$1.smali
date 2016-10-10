@@ -24,7 +24,7 @@
     .param p1, "this$0"    # Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;
 
     .prologue
-    .line 102
+    .line 101
     iput-object p1, p0, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService$1;->this$0:Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;
 
     invoke-direct {p0}, Lcyanogenmod/app/IPartnerInterface$Stub;-><init>()V
@@ -38,17 +38,17 @@
     .locals 4
 
     .prologue
-    .line 186
+    .line 185
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService$1;->this$0:Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;
 
     invoke-static {v1}, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;->-wrap1(Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;)V
 
-    .line 187
+    .line 186
     invoke-static {}, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService$1;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 188
+    .line 187
     .local v2, "token":J
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService$1;->this$0:Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;
 
@@ -56,11 +56,11 @@
 
     move-result-object v0
 
-    .line 189
+    .line 188
     .local v0, "packageName":Ljava/lang/String;
     invoke-static {v2, v3}, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService$1;->restoreCallingIdentity(J)V
 
-    .line 190
+    .line 189
     return-object v0
 .end method
 
@@ -68,17 +68,17 @@
     .locals 4
 
     .prologue
-    .line 145
+    .line 144
     iget-object v2, p0, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService$1;->this$0:Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;
 
     invoke-static {v2}, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;->-wrap4(Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;)V
 
-    .line 151
+    .line 150
     invoke-static {}, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService$1;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 152
+    .line 151
     .local v0, "token":J
     iget-object v2, p0, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService$1;->this$0:Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;
 
@@ -86,10 +86,10 @@
 
     invoke-static {v2, v3}, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;->-wrap7(Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;Z)V
 
-    .line 153
+    .line 152
     invoke-static {v0, v1}, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService$1;->restoreCallingIdentity(J)V
 
-    .line 144
+    .line 143
     return-void
 .end method
 
@@ -98,26 +98,26 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 106
+    .line 105
     iget-object v2, p0, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService$1;->this$0:Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;
 
     invoke-static {v2}, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;->-wrap2(Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;)V
 
-    .line 112
+    .line 111
     invoke-static {}, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService$1;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 113
+    .line 112
     .local v0, "token":J
     iget-object v2, p0, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService$1;->this$0:Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;
 
     invoke-static {v2, p1}, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;->-wrap5(Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;Z)V
 
-    .line 114
+    .line 113
     invoke-static {v0, v1}, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService$1;->restoreCallingIdentity(J)V
 
-    .line 105
+    .line 104
     return-void
 .end method
 
@@ -126,26 +126,26 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 119
+    .line 118
     iget-object v2, p0, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService$1;->this$0:Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;
 
     invoke-static {v2}, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;->-wrap2(Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;)V
 
-    .line 125
+    .line 124
     invoke-static {}, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService$1;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 126
+    .line 125
     .local v0, "token":J
     iget-object v2, p0, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService$1;->this$0:Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;
 
     invoke-static {v2, p1}, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;->-wrap6(Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;Z)V
 
-    .line 127
+    .line 126
     invoke-static {v0, v1}, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService$1;->restoreCallingIdentity(J)V
 
-    .line 118
+    .line 117
     return-void
 .end method
 
@@ -154,17 +154,17 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 158
+    .line 157
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService$1;->this$0:Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;
 
     invoke-static {v1}, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;->-wrap3(Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;)V
 
-    .line 164
+    .line 163
     invoke-static {}, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService$1;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 165
+    .line 164
     .local v2, "token":J
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService$1;->this$0:Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;
 
@@ -174,11 +174,11 @@
 
     move-result v0
 
-    .line 166
+    .line 165
     .local v0, "success":Z
     invoke-static {v2, v3}, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService$1;->restoreCallingIdentity(J)V
 
-    .line 167
+    .line 166
     return v0
 .end method
 
@@ -188,17 +188,17 @@
     .param p2, "durationMillis"    # J
 
     .prologue
-    .line 172
+    .line 171
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService$1;->this$0:Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;
 
     invoke-static {v1}, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;->-wrap3(Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;)V
 
-    .line 178
+    .line 177
     invoke-static {}, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService$1;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 179
+    .line 178
     .local v2, "token":J
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService$1;->this$0:Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;
 
@@ -206,11 +206,11 @@
 
     move-result v0
 
-    .line 180
+    .line 179
     .local v0, "success":Z
     invoke-static {v2, v3}, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService$1;->restoreCallingIdentity(J)V
 
-    .line 181
+    .line 180
     return v0
 .end method
 
@@ -218,17 +218,17 @@
     .locals 4
 
     .prologue
-    .line 132
+    .line 131
     iget-object v2, p0, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService$1;->this$0:Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;
 
     invoke-static {v2}, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;->-wrap4(Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;)V
 
-    .line 138
+    .line 137
     invoke-static {}, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService$1;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 139
+    .line 138
     .local v0, "token":J
     iget-object v2, p0, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService$1;->this$0:Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;
 
@@ -236,9 +236,9 @@
 
     invoke-static {v2, v3}, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;->-wrap7(Lorg/cyanogenmod/platform/internal/PartnerInterfaceService;Z)V
 
-    .line 140
+    .line 139
     invoke-static {v0, v1}, Lorg/cyanogenmod/platform/internal/PartnerInterfaceService$1;->restoreCallingIdentity(J)V
 
-    .line 131
+    .line 130
     return-void
 .end method

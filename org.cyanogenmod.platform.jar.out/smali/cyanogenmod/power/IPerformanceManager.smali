@@ -9,6 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcyanogenmod/power/IPerformanceManager$NoOp;,
         Lcyanogenmod/power/IPerformanceManager$Stub;
     }
 .end annotation

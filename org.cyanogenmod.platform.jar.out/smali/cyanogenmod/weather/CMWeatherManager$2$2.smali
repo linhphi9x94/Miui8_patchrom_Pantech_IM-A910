@@ -35,7 +35,7 @@
     .param p3, "val$status"    # I
 
     .prologue
-    .line 343
+    .line 356
     .local p4, "val$weatherLocations":Ljava/util/List;, "Ljava/util/List<Lcyanogenmod/weather/WeatherLocation;>;"
     iput-object p1, p0, Lcyanogenmod/weather/CMWeatherManager$2$2;->this$1:Lcyanogenmod/weather/CMWeatherManager$2;
 
@@ -56,7 +56,7 @@
     .locals 3
 
     .prologue
-    .line 346
+    .line 359
     iget-object v0, p0, Lcyanogenmod/weather/CMWeatherManager$2$2;->val$listener:Lcyanogenmod/weather/CMWeatherManager$LookupCityRequestListener;
 
     iget v1, p0, Lcyanogenmod/weather/CMWeatherManager$2$2;->val$status:I
@@ -65,6 +65,6 @@
 
     invoke-interface {v0, v1, v2}, Lcyanogenmod/weather/CMWeatherManager$LookupCityRequestListener;->onLookupCityRequestCompleted(ILjava/util/List;)V
 
-    .line 345
+    .line 358
     return-void
 .end method

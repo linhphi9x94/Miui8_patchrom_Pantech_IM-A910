@@ -9,6 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcyanogenmod/themes/IThemeChangeListener$NoOp;,
         Lcyanogenmod/themes/IThemeChangeListener$Stub;
     }
 .end annotation

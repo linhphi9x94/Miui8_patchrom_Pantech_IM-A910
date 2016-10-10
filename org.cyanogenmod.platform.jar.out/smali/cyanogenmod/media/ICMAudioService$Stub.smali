@@ -34,15 +34,15 @@
     .locals 1
 
     .prologue
-    .line 14
+    .line 27
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 16
+    .line 29
     const-string/jumbo v0, "cyanogenmod.media.ICMAudioService"
 
     invoke-virtual {p0, p0, v0}, Lcyanogenmod/media/ICMAudioService$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 14
+    .line 27
     return-void
 .end method
 
@@ -53,13 +53,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 24
+    .line 37
     if-nez p0, :cond_0
 
-    .line 25
+    .line 38
     return-object v1
 
-    .line 27
+    .line 40
     :cond_0
     const-string/jumbo v1, "cyanogenmod.media.ICMAudioService"
 
@@ -67,7 +67,7 @@
 
     move-result-object v0
 
-    .line 28
+    .line 41
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -75,13 +75,13 @@
 
     if-eqz v1, :cond_1
 
-    .line 29
+    .line 42
     check-cast v0, Lcyanogenmod/media/ICMAudioService;
 
     .end local v0    # "iin":Landroid/os/IInterface;
     return-object v0
 
-    .line 31
+    .line 44
     .restart local v0    # "iin":Landroid/os/IInterface;
     :cond_1
     new-instance v1, Lcyanogenmod/media/ICMAudioService$Stub$Proxy;
@@ -97,7 +97,7 @@
     .locals 0
 
     .prologue
-    .line 35
+    .line 48
     return-object p0
 .end method
 
@@ -116,53 +116,53 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 39
+    .line 52
     sparse-switch p1, :sswitch_data_0
 
-    .line 57
+    .line 70
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v2
 
     return v2
 
-    .line 43
+    .line 56
     :sswitch_0
     const-string/jumbo v2, "cyanogenmod.media.ICMAudioService"
 
     invoke-virtual {p3, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 44
+    .line 57
     return v3
 
-    .line 48
+    .line 61
     :sswitch_1
     const-string/jumbo v2, "cyanogenmod.media.ICMAudioService"
 
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 50
+    .line 63
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 51
+    .line 64
     .local v0, "_arg0":I
     invoke-virtual {p0, v0}, Lcyanogenmod/media/ICMAudioService$Stub;->listAudioSessions(I)Ljava/util/List;
 
     move-result-object v1
 
-    .line 52
+    .line 65
     .local v1, "_result":Ljava/util/List;, "Ljava/util/List<Lcyanogenmod/media/AudioSessionInfo;>;"
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 53
+    .line 66
     invoke-virtual {p3, v1}, Landroid/os/Parcel;->writeTypedList(Ljava/util/List;)V
 
-    .line 54
+    .line 67
     return v3
 
-    .line 39
+    .line 52
     nop
 
     :sswitch_data_0

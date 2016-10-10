@@ -74,13 +74,11 @@
     if-nez v0, :cond_0
 
     .line 52
-    new-instance v0, Ljava/lang/RuntimeException;
+    sget-object v0, Lcyanogenmod/app/LiveLockScreenManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "Unable to get LiveLockScreenManagerService. The service either crashed, was not started, or the interface has been called to early in SystemServer init"
 
-    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    invoke-static {v0, v1}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 47
     :cond_0

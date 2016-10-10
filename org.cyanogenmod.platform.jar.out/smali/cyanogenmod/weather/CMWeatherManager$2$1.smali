@@ -36,7 +36,7 @@
     .param p4, "val$weatherInfo"    # Lcyanogenmod/weather/WeatherInfo;
 
     .prologue
-    .line 327
+    .line 340
     iput-object p1, p0, Lcyanogenmod/weather/CMWeatherManager$2$1;->this$1:Lcyanogenmod/weather/CMWeatherManager$2;
 
     iput-object p2, p0, Lcyanogenmod/weather/CMWeatherManager$2$1;->val$listener:Lcyanogenmod/weather/CMWeatherManager$WeatherUpdateRequestListener;
@@ -56,7 +56,7 @@
     .locals 3
 
     .prologue
-    .line 330
+    .line 343
     iget-object v0, p0, Lcyanogenmod/weather/CMWeatherManager$2$1;->val$listener:Lcyanogenmod/weather/CMWeatherManager$WeatherUpdateRequestListener;
 
     iget v1, p0, Lcyanogenmod/weather/CMWeatherManager$2$1;->val$status:I
@@ -65,6 +65,6 @@
 
     invoke-interface {v0, v1, v2}, Lcyanogenmod/weather/CMWeatherManager$WeatherUpdateRequestListener;->onWeatherRequestCompleted(ILcyanogenmod/weather/WeatherInfo;)V
 
-    .line 329
+    .line 342
     return-void
 .end method

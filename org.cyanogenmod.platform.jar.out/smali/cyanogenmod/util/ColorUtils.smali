@@ -14,7 +14,7 @@
     .locals 1
 
     .prologue
-    .line 35
+    .line 36
     const/16 v0, 0x9
 
     new-array v0, v0, [I
@@ -23,7 +23,7 @@
 
     sput-object v0, Lcyanogenmod/util/ColorUtils;->SOLID_COLORS:[I
 
-    .line 331
+    .line 336
     const/16 v0, 0x240
 
     new-array v0, v0, [D
@@ -32,10 +32,10 @@
 
     sput-object v0, Lcyanogenmod/util/ColorUtils;->sColorTable:[D
 
-    .line 33
+    .line 34
     return-void
 
-    .line 35
+    .line 36
     nop
 
     :array_0
@@ -51,7 +51,7 @@
         -0x1000000
     .end array-data
 
-    .line 331
+    .line 336
     :array_1
     .array-data 8
         0x3ff0000000000000L    # 1.0
@@ -637,7 +637,7 @@
     .locals 0
 
     .prologue
-    .line 33
+    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -653,14 +653,14 @@
     .param p10, "b2"    # D
 
     .prologue
-    .line 138
+    .line 139
     add-double v54, p0, p6
 
     const-wide/high16 v56, 0x4000000000000000L    # 2.0
 
     div-double v20, v54, v56
 
-    .line 139
+    .line 140
     .local v20, "Lmean":D
     mul-double v54, p2, p2
 
@@ -672,7 +672,7 @@
 
     move-result-wide v4
 
-    .line 140
+    .line 141
     .local v4, "C1":D
     mul-double v54, p8, p8
 
@@ -684,7 +684,7 @@
 
     move-result-wide v8
 
-    .line 141
+    .line 142
     .local v8, "C2":D
     add-double v54, v4, v8
 
@@ -692,7 +692,7 @@
 
     div-double v12, v54, v56
 
-    .line 143
+    .line 144
     .local v12, "Cmean":D
     const-wide/high16 v54, 0x401c000000000000L    # 7.0
 
@@ -734,7 +734,7 @@
 
     div-double v16, v54, v56
 
-    .line 144
+    .line 145
     .local v16, "G":D
     const-wide/high16 v54, 0x3ff0000000000000L    # 1.0
 
@@ -742,7 +742,7 @@
 
     mul-double v34, p2, v54
 
-    .line 145
+    .line 146
     .local v34, "a1prime":D
     const-wide/high16 v54, 0x3ff0000000000000L    # 1.0
 
@@ -750,7 +750,7 @@
 
     mul-double v36, p8, v54
 
-    .line 147
+    .line 148
     .local v36, "a2prime":D
     mul-double v54, v34, v34
 
@@ -762,7 +762,7 @@
 
     move-result-wide v6
 
-    .line 148
+    .line 149
     .local v6, "C1prime":D
     mul-double v54, v36, v36
 
@@ -774,7 +774,7 @@
 
     move-result-wide v10
 
-    .line 149
+    .line 150
     .local v10, "C2prime":D
     add-double v54, v6, v10
 
@@ -782,7 +782,7 @@
 
     div-double v14, v54, v56
 
-    .line 151
+    .line 152
     .local v14, "Cmeanprime":D
     move-wide/from16 v0, p4
 
@@ -792,7 +792,7 @@
 
     move-result-wide v56
 
-    .line 152
+    .line 153
     move-wide/from16 v0, p4
 
     move-wide/from16 v2, v34
@@ -820,10 +820,10 @@
 
     mul-double v54, v54, v58
 
-    .line 151
+    .line 152
     add-double v50, v56, v54
 
-    .line 153
+    .line 154
     .local v50, "h1prime":D
     move-wide/from16 v0, p10
 
@@ -833,7 +833,7 @@
 
     move-result-wide v56
 
-    .line 154
+    .line 155
     move-wide/from16 v0, p10
 
     move-wide/from16 v2, v36
@@ -861,10 +861,10 @@
 
     mul-double v54, v54, v58
 
-    .line 153
+    .line 154
     add-double v52, v56, v54
 
-    .line 155
+    .line 156
     .local v52, "h2prime":D
     sub-double v54, v50, v52
 
@@ -878,7 +878,7 @@
 
     if-lez v54, :cond_2
 
-    .line 156
+    .line 157
     add-double v54, v50, v52
 
     const-wide v56, 0x401921fb54442d18L    # 6.283185307179586
@@ -889,7 +889,7 @@
 
     div-double v18, v54, v56
 
-    .line 158
+    .line 159
     .local v18, "Hmeanprime":D
     :goto_2
     const-wide v54, 0x3fe0c152382d7365L    # 0.5235987755982988
@@ -908,7 +908,7 @@
 
     sub-double v54, v56, v54
 
-    .line 159
+    .line 160
     const-wide/high16 v56, 0x4000000000000000L    # 2.0
 
     mul-double v56, v56, v18
@@ -921,10 +921,10 @@
 
     mul-double v56, v56, v58
 
-    .line 158
+    .line 159
     add-double v54, v54, v56
 
-    .line 159
+    .line 160
     const-wide/high16 v56, 0x4008000000000000L    # 3.0
 
     mul-double v56, v56, v18
@@ -941,10 +941,10 @@
 
     mul-double v56, v56, v58
 
-    .line 158
+    .line 159
     add-double v54, v54, v56
 
-    .line 160
+    .line 161
     const-wide/high16 v56, 0x4010000000000000L    # 4.0
 
     mul-double v56, v56, v18
@@ -961,10 +961,10 @@
 
     mul-double v56, v56, v58
 
-    .line 158
+    .line 159
     sub-double v32, v54, v56
 
-    .line 162
+    .line 163
     .local v32, "T":D
     sub-double v54, v50, v52
 
@@ -980,16 +980,16 @@
 
     sub-double v48, v52, v50
 
-    .line 166
+    .line 167
     .local v48, "deltahprime":D
     :goto_3
     sub-double v44, p6, p0
 
-    .line 167
+    .line 168
     .local v44, "deltaLprime":D
     sub-double v38, v10, v6
 
-    .line 168
+    .line 169
     .local v38, "deltaCprime":D
     mul-double v54, v6, v10
 
@@ -1011,7 +1011,7 @@
 
     mul-double v42, v54, v56
 
-    .line 169
+    .line 170
     .local v42, "deltaHprime":D
     const-wide/high16 v54, 0x4049000000000000L    # 50.0
 
@@ -1027,7 +1027,7 @@
 
     mul-double v54, v54, v56
 
-    .line 170
+    .line 171
     const-wide/high16 v56, 0x4049000000000000L    # 50.0
 
     sub-double v56, v20, v56
@@ -1046,14 +1046,14 @@
 
     move-result-wide v56
 
-    .line 169
+    .line 170
     div-double v54, v54, v56
 
     const-wide/high16 v56, 0x3ff0000000000000L    # 1.0
 
     add-double v30, v56, v54
 
-    .line 171
+    .line 172
     .local v30, "SL":D
     const-wide v54, 0x3fa70a3d70a3d70aL    # 0.045
 
@@ -1063,7 +1063,7 @@
 
     add-double v26, v56, v54
 
-    .line 172
+    .line 173
     .local v26, "SC":D
     const-wide v54, 0x3f8eb851eb851eb8L    # 0.015
 
@@ -1075,7 +1075,7 @@
 
     add-double v28, v56, v54
 
-    .line 175
+    .line 176
     .local v28, "SH":D
     const-wide v54, 0x404ca5dc1a63c1f8L    # 57.29577951308232
 
@@ -1095,7 +1095,7 @@
 
     move-wide/from16 v54, v0
 
-    .line 176
+    .line 177
     const-wide v56, 0x404ca5dc1a63c1f8L    # 57.29577951308232
 
     mul-double v56, v56, v18
@@ -1108,19 +1108,19 @@
 
     div-double v56, v56, v58
 
-    .line 175
+    .line 176
     mul-double v54, v54, v56
 
     invoke-static/range {v54 .. v55}, Ljava/lang/Math;->exp(D)D
 
     move-result-wide v54
 
-    .line 174
+    .line 175
     const-wide v56, 0x3fe0c152382d7365L    # 0.5235987755982988
 
     mul-double v46, v56, v54
 
-    .line 178
+    .line 179
     .local v46, "deltaTheta":D
     const-wide/high16 v54, 0x401c000000000000L    # 7.0
 
@@ -1154,12 +1154,12 @@
 
     move-result-wide v54
 
-    .line 177
+    .line 178
     const-wide/high16 v56, 0x4000000000000000L    # 2.0
 
     mul-double v22, v56, v54
 
-    .line 179
+    .line 180
     .local v22, "RC":D
     move-wide/from16 v0, v22
 
@@ -1177,100 +1177,100 @@
 
     mul-double v24, v54, v56
 
-    .line 181
+    .line 182
     .local v24, "RT":D
     const-wide/high16 v54, 0x3ff0000000000000L    # 1.0
 
-    .line 186
+    .line 187
     mul-double v54, v54, v30
 
     div-double v54, v44, v54
 
-    .line 181
+    .line 182
     const-wide/high16 v56, 0x3ff0000000000000L    # 1.0
 
-    .line 186
+    .line 187
     mul-double v56, v56, v30
 
     div-double v56, v44, v56
 
     mul-double v54, v54, v56
 
-    .line 182
+    .line 183
     const-wide/high16 v56, 0x3ff0000000000000L    # 1.0
 
-    .line 187
+    .line 188
     mul-double v56, v56, v26
 
     div-double v56, v38, v56
 
-    .line 182
+    .line 183
     const-wide/high16 v58, 0x3ff0000000000000L    # 1.0
 
-    .line 187
+    .line 188
     mul-double v58, v58, v26
 
     div-double v58, v38, v58
 
     mul-double v56, v56, v58
 
-    .line 186
+    .line 187
     add-double v54, v54, v56
 
-    .line 183
+    .line 184
     const-wide/high16 v56, 0x3ff0000000000000L    # 1.0
 
-    .line 188
+    .line 189
     mul-double v56, v56, v28
 
     div-double v56, v42, v56
 
-    .line 183
+    .line 184
     const-wide/high16 v58, 0x3ff0000000000000L    # 1.0
 
-    .line 188
+    .line 189
     mul-double v58, v58, v28
 
     div-double v58, v42, v58
 
     mul-double v56, v56, v58
 
-    .line 186
+    .line 187
     add-double v54, v54, v56
 
-    .line 182
+    .line 183
     const-wide/high16 v56, 0x3ff0000000000000L    # 1.0
 
-    .line 189
+    .line 190
     mul-double v56, v56, v26
 
     div-double v56, v38, v56
 
     mul-double v56, v56, v24
 
-    .line 183
+    .line 184
     const-wide/high16 v58, 0x3ff0000000000000L    # 1.0
 
-    .line 189
+    .line 190
     mul-double v58, v58, v28
 
     div-double v58, v42, v58
 
     mul-double v56, v56, v58
 
-    .line 186
+    .line 187
     add-double v54, v54, v56
 
-    .line 185
+    .line 186
     invoke-static/range {v54 .. v55}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v40
 
-    .line 191
+    .line 192
     .local v40, "deltaE":D
     return-wide v40
 
-    .line 152
+    .line 153
     .end local v18    # "Hmeanprime":D
     .end local v22    # "RC":D
     .end local v24    # "RT":D
@@ -1291,14 +1291,14 @@
 
     goto/16 :goto_0
 
-    .line 154
+    .line 155
     .restart local v50    # "h1prime":D
     :cond_1
     const/16 v54, 0x0
 
     goto/16 :goto_1
 
-    .line 156
+    .line 157
     .restart local v52    # "h2prime":D
     :cond_2
     add-double v54, v50, v52
@@ -1310,7 +1310,7 @@
     .restart local v18    # "Hmeanprime":D
     goto/16 :goto_2
 
-    .line 163
+    .line 164
     .restart local v32    # "T":D
     :cond_3
     cmpg-double v54, v52, v50
@@ -1326,7 +1326,7 @@
     .restart local v48    # "deltahprime":D
     goto/16 :goto_3
 
-    .line 164
+    .line 165
     .end local v48    # "deltahprime":D
     :cond_4
     sub-double v54, v52, v50
@@ -1344,14 +1344,14 @@
     .param p0, "rgb"    # I
 
     .prologue
-    .line 59
+    .line 60
     const/16 v18, 0x3
 
     move/from16 v0, v18
 
     new-array v13, v0, [F
 
-    .line 69
+    .line 70
     .local v13, "lab":[F
     invoke-static/range {p0 .. p0}, Landroid/graphics/Color;->red(I)I
 
@@ -1367,7 +1367,7 @@
 
     div-float v14, v18, v19
 
-    .line 70
+    .line 71
     .local v14, "r":F
     invoke-static/range {p0 .. p0}, Landroid/graphics/Color;->green(I)I
 
@@ -1383,7 +1383,7 @@
 
     div-float v12, v18, v19
 
-    .line 71
+    .line 72
     .local v12, "g":F
     invoke-static/range {p0 .. p0}, Landroid/graphics/Color;->blue(I)I
 
@@ -1399,7 +1399,7 @@
 
     div-float v7, v18, v19
 
-    .line 74
+    .line 75
     .local v7, "b":F
     float-to-double v0, v14
 
@@ -1411,12 +1411,12 @@
 
     if-gtz v18, :cond_0
 
-    .line 75
+    .line 76
     const/high16 v18, 0x41400000    # 12.0f
 
     div-float v14, v14, v18
 
-    .line 79
+    .line 80
     :goto_0
     float-to-double v0, v12
 
@@ -1428,12 +1428,12 @@
 
     if-gtz v18, :cond_1
 
-    .line 80
+    .line 81
     const/high16 v18, 0x41400000    # 12.0f
 
     div-float v12, v12, v18
 
-    .line 84
+    .line 85
     :goto_1
     float-to-double v0, v7
 
@@ -1445,12 +1445,12 @@
 
     if-gtz v18, :cond_2
 
-    .line 85
+    .line 86
     const/high16 v18, 0x41400000    # 12.0f
 
     div-float v7, v7, v18
 
-    .line 89
+    .line 90
     :goto_2
     const v18, 0x3edf4236
 
@@ -1468,7 +1468,7 @@
 
     add-float v3, v18, v19
 
-    .line 90
+    .line 91
     .local v3, "X":F
     const v18, 0x3e63d4d6
 
@@ -1486,7 +1486,7 @@
 
     add-float v4, v18, v19
 
-    .line 91
+    .line 92
     .local v4, "Y":F
     const v18, 0x3c6436f9
 
@@ -1504,37 +1504,37 @@
 
     add-float v5, v18, v19
 
-    .line 64
+    .line 65
     .local v5, "Z":F
     const v18, 0x3f76d730    # 0.964221f
 
-    .line 94
+    .line 95
     div-float v15, v3, v18
 
-    .line 65
+    .line 66
     .local v15, "xr":F
     const/high16 v18, 0x3f800000    # 1.0f
 
-    .line 95
+    .line 96
     div-float v16, v4, v18
 
-    .line 66
+    .line 67
     .local v16, "yr":F
     const v18, 0x3f534107
 
-    .line 96
+    .line 97
     div-float v17, v5, v18
 
-    .line 61
+    .line 62
     .local v17, "zr":F
     const v18, 0x3c111aa7
 
-    .line 98
+    .line 99
     cmpl-float v18, v15, v18
 
     if-lez v18, :cond_3
 
-    .line 99
+    .line 100
     float-to-double v0, v15
 
     move-wide/from16 v18, v0
@@ -1549,17 +1549,17 @@
 
     double-to-float v9, v0
 
-    .line 61
+    .line 62
     .local v9, "fx":F
     :goto_3
     const v18, 0x3c111aa7
 
-    .line 103
+    .line 104
     cmpl-float v18, v16, v18
 
     if-lez v18, :cond_4
 
-    .line 104
+    .line 105
     move/from16 v0, v16
 
     float-to-double v0, v0
@@ -1576,17 +1576,17 @@
 
     double-to-float v10, v0
 
-    .line 61
+    .line 62
     .local v10, "fy":F
     :goto_4
     const v18, 0x3c111aa7
 
-    .line 108
+    .line 109
     cmpl-float v18, v17, v18
 
     if-lez v18, :cond_5
 
-    .line 109
+    .line 110
     move/from16 v0, v17
 
     float-to-double v0, v0
@@ -1603,7 +1603,7 @@
 
     double-to-float v11, v0
 
-    .line 113
+    .line 114
     .local v11, "fz":F
     :goto_5
     const/high16 v18, 0x42e80000    # 116.0f
@@ -1614,7 +1614,7 @@
 
     sub-float v2, v18, v19
 
-    .line 114
+    .line 115
     .local v2, "Ls":F
     sub-float v18, v9, v10
 
@@ -1622,7 +1622,7 @@
 
     mul-float v6, v19, v18
 
-    .line 115
+    .line 116
     .local v6, "as":F
     sub-float v18, v10, v11
 
@@ -1630,7 +1630,7 @@
 
     mul-float v8, v19, v18
 
-    .line 117
+    .line 118
     .local v8, "bs":F
     const v18, 0x40233333    # 2.55f
 
@@ -1644,7 +1644,7 @@
 
     aput v18, v13, v19
 
-    .line 118
+    .line 119
     const/high16 v18, 0x3f000000    # 0.5f
 
     add-float v18, v18, v6
@@ -1653,7 +1653,7 @@
 
     aput v18, v13, v19
 
-    .line 119
+    .line 120
     const/high16 v18, 0x3f000000    # 0.5f
 
     add-float v18, v18, v8
@@ -1662,10 +1662,10 @@
 
     aput v18, v13, v19
 
-    .line 121
+    .line 122
     return-object v13
 
-    .line 77
+    .line 78
     .end local v2    # "Ls":F
     .end local v3    # "X":F
     .end local v4    # "Y":F
@@ -1703,7 +1703,7 @@
 
     goto/16 :goto_0
 
-    .line 82
+    .line 83
     :cond_1
     float-to-double v0, v12
 
@@ -1729,7 +1729,7 @@
 
     goto/16 :goto_1
 
-    .line 87
+    .line 88
     :cond_2
     float-to-double v0, v7
 
@@ -1755,7 +1755,7 @@
 
     goto/16 :goto_2
 
-    .line 62
+    .line 63
     .restart local v3    # "X":F
     .restart local v4    # "Y":F
     .restart local v5    # "Z":F
@@ -1765,7 +1765,7 @@
     :cond_3
     const v18, 0x4461d2f7
 
-    .line 101
+    .line 102
     mul-float v18, v18, v15
 
     move/from16 v0, v18
@@ -1789,11 +1789,11 @@
     .restart local v9    # "fx":F
     goto/16 :goto_3
 
-    .line 62
+    .line 63
     :cond_4
     const v18, 0x4461d2f7
 
-    .line 106
+    .line 107
     mul-float v18, v18, v16
 
     move/from16 v0, v18
@@ -1817,11 +1817,11 @@
     .restart local v10    # "fy":F
     goto/16 :goto_4
 
-    .line 62
+    .line 63
     :cond_5
     const v18, 0x4461d2f7
 
-    .line 111
+    .line 112
     mul-float v18, v18, v17
 
     move/from16 v0, v18
@@ -1851,7 +1851,7 @@
     .param p0, "rgba"    # I
 
     .prologue
-    .line 48
+    .line 49
     const v0, 0xffffff
 
     and-int/2addr v0, p0
@@ -1865,20 +1865,20 @@
     .param p1, "colors"    # [I
 
     .prologue
-    .line 204
+    .line 205
     const/16 v20, 0x0
 
-    .line 205
+    .line 206
     .local v20, "nearestColor":I
     const-wide v16, 0x7fefffffffffffffL    # Double.MAX_VALUE
 
-    .line 207
+    .line 208
     .local v16, "closest":D
     invoke-static/range {p0 .. p0}, Lcyanogenmod/util/ColorUtils;->convertRGBtoLAB(I)[F
 
     move-result-object v21
 
-    .line 209
+    .line 210
     .local v21, "original":[F
     const/4 v15, 0x0
 
@@ -1890,14 +1890,14 @@
 
     if-ge v15, v2, :cond_1
 
-    .line 210
+    .line 211
     aget v2, p1, v15
 
     invoke-static {v2}, Lcyanogenmod/util/ColorUtils;->convertRGBtoLAB(I)[F
 
     move-result-object v14
 
-    .line 211
+    .line 212
     .local v14, "cl":[F
     const/4 v2, 0x0
 
@@ -1917,7 +1917,7 @@
 
     float-to-double v6, v6
 
-    .line 212
+    .line 213
     const/4 v8, 0x0
 
     aget v8, v14, v8
@@ -1936,30 +1936,30 @@
 
     float-to-double v12, v12
 
-    .line 211
+    .line 212
     invoke-static/range {v2 .. v13}, Lcyanogenmod/util/ColorUtils;->calculateDeltaE(DDDDDD)D
 
     move-result-wide v18
 
-    .line 213
+    .line 214
     .local v18, "deltaE":D
     cmpg-double v2, v18, v16
 
     if-gez v2, :cond_0
 
-    .line 214
+    .line 215
     aget v20, p1, v15
 
-    .line 215
+    .line 216
     move-wide/from16 v16, v18
 
-    .line 209
+    .line 210
     :cond_0
     add-int/lit8 v15, v15, 0x1
 
     goto :goto_0
 
-    .line 218
+    .line 219
     .end local v14    # "cl":[F
     .end local v18    # "deltaE":D
     :cond_1
@@ -1971,7 +1971,7 @@
     .param p0, "rgb"    # I
 
     .prologue
-    .line 231
+    .line 232
     sget-object v0, Lcyanogenmod/util/ColorUtils;->SOLID_COLORS:[I
 
     invoke-static {p0, v0}, Lcyanogenmod/util/ColorUtils;->findPerceptuallyNearestColor(I[I)I
@@ -1982,143 +1982,169 @@
 .end method
 
 .method public static generateAlertColorFromDrawable(Landroid/graphics/drawable/Drawable;)I
-    .locals 9
+    .locals 12
     .param p0, "drawable"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    const/4 v8, -0x1
+    const/4 v9, 0x1
 
-    .line 263
-    const/high16 v0, -0x1000000
+    const/4 v11, -0x1
 
     .line 264
+    const/high16 v0, -0x1000000
+
+    .line 265
     .local v0, "alertColor":I
     const/4 v1, 0x0
 
-    .line 266
+    .line 267
     .local v1, "bitmap":Landroid/graphics/Bitmap;
     if-nez p0, :cond_0
 
-    .line 267
+    .line 268
     return v0
 
-    .line 270
-    :cond_0
-    instance-of v5, p0, Landroid/graphics/drawable/BitmapDrawable;
-
-    if-eqz v5, :cond_1
-
-    move-object v5, p0
-
     .line 271
-    check-cast v5, Landroid/graphics/drawable/BitmapDrawable;
+    :cond_0
+    instance-of v8, p0, Landroid/graphics/drawable/BitmapDrawable;
 
-    invoke-virtual {v5}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
+    if-eqz v8, :cond_1
+
+    move-object v8, p0
+
+    .line 272
+    check-cast v8, Landroid/graphics/drawable/BitmapDrawable;
+
+    invoke-virtual {v8}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    .line 278
+    .line 283
     .local v1, "bitmap":Landroid/graphics/Bitmap;
     :goto_0
     if-eqz v1, :cond_6
 
-    .line 279
+    .line 284
     invoke-static {v1}, Lcom/android/internal/util/cm/palette/Palette;->from(Landroid/graphics/Bitmap;)Lcom/android/internal/util/cm/palette/Palette$Builder;
 
-    move-result-object v5
+    move-result-object v8
 
-    invoke-virtual {v5}, Lcom/android/internal/util/cm/palette/Palette$Builder;->generate()Lcom/android/internal/util/cm/palette/Palette;
+    invoke-virtual {v8}, Lcom/android/internal/util/cm/palette/Palette$Builder;->generate()Lcom/android/internal/util/cm/palette/Palette;
 
-    move-result-object v4
+    move-result-object v6
 
-    .line 280
-    .local v4, "p":Lcom/android/internal/util/cm/palette/Palette;
-    if-nez v4, :cond_2
+    .line 285
+    .local v6, "p":Lcom/android/internal/util/cm/palette/Palette;
+    if-nez v6, :cond_2
 
-    .line 281
+    .line 286
     return v0
 
-    .line 273
-    .end local v4    # "p":Lcom/android/internal/util/cm/palette/Palette;
+    .line 274
+    .end local v6    # "p":Lcom/android/internal/util/cm/palette/Palette;
     .local v1, "bitmap":Landroid/graphics/Bitmap;
     :cond_1
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
-    move-result v5
-
-    .line 274
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
-
-    move-result v6
+    move-result v7
 
     .line 275
-    sget-object v7, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
+    .local v7, "width":I
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
-    .line 273
-    invoke-static {v5, v6, v7}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+    move-result v4
+
+    .line 276
+    .local v4, "height":I
+    invoke-static {v9, v7}, Ljava/lang/Math;->max(II)I
+
+    move-result v8
+
+    .line 277
+    invoke-static {v9, v4}, Ljava/lang/Math;->max(II)I
+
+    move-result v9
+
+    .line 278
+    sget-object v10, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
+
+    .line 276
+    invoke-static {v8, v9, v10}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
+    .line 279
     .local v1, "bitmap":Landroid/graphics/Bitmap;
+    new-instance v2, Landroid/graphics/Canvas;
+
+    invoke-direct {v2, v1}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
+
+    .line 280
+    .local v2, "canvas":Landroid/graphics/Canvas;
+    invoke-virtual {p0, v2}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+
     goto :goto_0
 
-    .line 285
-    .restart local v4    # "p":Lcom/android/internal/util/cm/palette/Palette;
+    .line 290
+    .end local v2    # "canvas":Landroid/graphics/Canvas;
+    .end local v4    # "height":I
+    .end local v7    # "width":I
+    .restart local v6    # "p":Lcom/android/internal/util/cm/palette/Palette;
     :cond_2
-    invoke-static {v4}, Lcyanogenmod/util/ColorUtils;->getDominantSwatch(Lcom/android/internal/util/cm/palette/Palette;)Lcom/android/internal/util/cm/palette/Palette$Swatch;
+    invoke-static {v6}, Lcyanogenmod/util/ColorUtils;->getDominantSwatch(Lcom/android/internal/util/cm/palette/Palette;)Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
-    move-result-object v2
+    move-result-object v3
 
-    .line 263
-    .local v2, "dominantSwatch":Lcom/android/internal/util/cm/palette/Palette$Swatch;
-    const/high16 v3, -0x1000000
-
-    .line 287
-    .local v3, "iconColor":I
-    if-eqz v2, :cond_3
-
-    .line 288
-    invoke-virtual {v2}, Lcom/android/internal/util/cm/palette/Palette$Swatch;->getRgb()I
-
-    move-result v3
-
-    .line 289
-    invoke-static {v3}, Lcyanogenmod/util/ColorUtils;->findPerceptuallyNearestSolidColor(I)I
-
-    move-result v0
-
-    .line 293
-    :cond_3
+    .line 264
+    .local v3, "dominantSwatch":Lcom/android/internal/util/cm/palette/Palette$Swatch;
     const/high16 v5, -0x1000000
 
-    if-eq v0, v5, :cond_4
+    .line 292
+    .local v5, "iconColor":I
+    if-eqz v3, :cond_3
 
-    if-ne v0, v8, :cond_5
+    .line 293
+    invoke-virtual {v3}, Lcom/android/internal/util/cm/palette/Palette$Swatch;->getRgb()I
+
+    move-result v5
 
     .line 294
-    :cond_4
-    invoke-virtual {v4, v8}, Lcom/android/internal/util/cm/palette/Palette;->getVibrantColor(I)I
-
-    move-result v3
-
-    .line 295
-    invoke-static {v3}, Lcyanogenmod/util/ColorUtils;->findPerceptuallyNearestSolidColor(I)I
+    invoke-static {v5}, Lcyanogenmod/util/ColorUtils;->findPerceptuallyNearestSolidColor(I)I
 
     move-result v0
 
     .line 298
-    :cond_5
-    instance-of v5, p0, Landroid/graphics/drawable/BitmapDrawable;
+    :cond_3
+    const/high16 v8, -0x1000000
 
-    if-nez v5, :cond_6
+    if-eq v0, v8, :cond_4
+
+    if-ne v0, v11, :cond_5
 
     .line 299
-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
+    :cond_4
+    invoke-virtual {v6, v11}, Lcom/android/internal/util/cm/palette/Palette;->getVibrantColor(I)I
+
+    move-result v5
+
+    .line 300
+    invoke-static {v5}, Lcyanogenmod/util/ColorUtils;->findPerceptuallyNearestSolidColor(I)I
+
+    move-result v0
 
     .line 303
-    .end local v2    # "dominantSwatch":Lcom/android/internal/util/cm/palette/Palette$Swatch;
-    .end local v3    # "iconColor":I
-    .end local v4    # "p":Lcom/android/internal/util/cm/palette/Palette;
+    :cond_5
+    instance-of v8, p0, Landroid/graphics/drawable/BitmapDrawable;
+
+    if-nez v8, :cond_6
+
+    .line 304
+    invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
+
+    .line 308
+    .end local v3    # "dominantSwatch":Lcom/android/internal/util/cm/palette/Palette$Swatch;
+    .end local v5    # "iconColor":I
+    .end local v6    # "p":Lcom/android/internal/util/cm/palette/Palette;
     :cond_6
     return v0
 .end method
@@ -2130,7 +2156,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 241
+    .line 242
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Lcom/android/internal/util/cm/palette/Palette;->getSwatches()Ljava/util/List;
@@ -2143,11 +2169,11 @@
 
     if-nez v0, :cond_1
 
-    .line 242
+    .line 243
     :cond_0
     return-object v1
 
-    .line 245
+    .line 246
     :cond_1
     invoke-virtual {p0}, Lcom/android/internal/util/cm/palette/Palette;->getSwatches()Ljava/util/List;
 
@@ -2172,7 +2198,7 @@
     .param p1, "a"    # F
 
     .prologue
-    .line 322
+    .line 327
     sget-object v0, Lcyanogenmod/util/ColorUtils;->sColorTable:[D
 
     aget-wide v0, v0, p0
@@ -2199,7 +2225,7 @@
     .param p0, "degreesK"    # I
 
     .prologue
-    .line 314
+    .line 319
     const/16 v3, 0x3e8
 
     const/16 v4, 0x4e20
@@ -2208,7 +2234,7 @@
 
     move-result v2
 
-    .line 315
+    .line 320
     .local v2, "k":I
     rem-int/lit8 v3, v2, 0x64
 
@@ -2218,7 +2244,7 @@
 
     div-float v0, v3, v4
 
-    .line 316
+    .line 321
     .local v0, "a":F
     add-int/lit16 v3, v2, -0x3e8
 
@@ -2226,7 +2252,7 @@
 
     mul-int/lit8 v1, v3, 0x3
 
-    .line 318
+    .line 323
     .local v1, "i":I
     const/4 v3, 0x3
 

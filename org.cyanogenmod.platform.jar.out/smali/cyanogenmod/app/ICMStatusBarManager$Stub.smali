@@ -42,15 +42,15 @@
     .locals 1
 
     .prologue
-    .line 14
+    .line 45
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 16
+    .line 47
     const-string/jumbo v0, "cyanogenmod.app.ICMStatusBarManager"
 
     invoke-virtual {p0, p0, v0}, Lcyanogenmod/app/ICMStatusBarManager$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 14
+    .line 45
     return-void
 .end method
 
@@ -61,13 +61,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 24
+    .line 55
     if-nez p0, :cond_0
 
-    .line 25
+    .line 56
     return-object v1
 
-    .line 27
+    .line 58
     :cond_0
     const-string/jumbo v1, "cyanogenmod.app.ICMStatusBarManager"
 
@@ -75,7 +75,7 @@
 
     move-result-object v0
 
-    .line 28
+    .line 59
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -83,13 +83,13 @@
 
     if-eqz v1, :cond_1
 
-    .line 29
+    .line 60
     check-cast v0, Lcyanogenmod/app/ICMStatusBarManager;
 
     .end local v0    # "iin":Landroid/os/IInterface;
     return-object v0
 
-    .line 31
+    .line 62
     .restart local v0    # "iin":Landroid/os/IInterface;
     :cond_1
     new-instance v1, Lcyanogenmod/app/ICMStatusBarManager$Stub$Proxy;
@@ -105,7 +105,7 @@
     .locals 0
 
     .prologue
-    .line 35
+    .line 66
     return-object p0
 .end method
 
@@ -122,57 +122,57 @@
     .end annotation
 
     .prologue
-    .line 39
+    .line 70
     sparse-switch p1, :sswitch_data_0
 
-    .line 133
+    .line 164
     invoke-super/range {p0 .. p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v0
 
     return v0
 
-    .line 43
+    .line 74
     :sswitch_0
     const-string/jumbo v0, "cyanogenmod.app.ICMStatusBarManager"
 
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 44
+    .line 75
     const/4 v0, 0x1
 
     return v0
 
-    .line 48
+    .line 79
     :sswitch_1
     const-string/jumbo v0, "cyanogenmod.app.ICMStatusBarManager"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 50
+    .line 81
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 52
+    .line 83
     .local v1, "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 54
+    .line 85
     .local v2, "_arg1":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 56
+    .line 87
     .local v3, "_arg2":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 58
+    .line 89
     .local v4, "_arg3":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -180,7 +180,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 59
+    .line 90
     sget-object v0, Lcyanogenmod/app/CustomTile;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -189,13 +189,13 @@
 
     check-cast v5, Lcyanogenmod/app/CustomTile;
 
-    .line 65
+    .line 96
     :goto_0
     invoke-virtual {p2}, Landroid/os/Parcel;->createIntArray()[I
 
     move-result-object v6
 
-    .line 67
+    .line 98
     .local v6, "_arg5":[I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -204,21 +204,21 @@
     .local v7, "_arg6":I
     move-object v0, p0
 
-    .line 68
+    .line 99
     invoke-virtual/range {v0 .. v7}, Lcyanogenmod/app/ICMStatusBarManager$Stub;->createCustomTileWithTag(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILcyanogenmod/app/CustomTile;[II)V
 
-    .line 69
+    .line 100
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 70
+    .line 101
     invoke-virtual {p3, v6}, Landroid/os/Parcel;->writeIntArray([I)V
 
-    .line 71
+    .line 102
     const/4 v0, 0x1
 
     return v0
 
-    .line 62
+    .line 93
     .end local v6    # "_arg5":[I
     .end local v7    # "_arg6":I
     :cond_0
@@ -227,7 +227,7 @@
     .local v5, "_arg4":Lcyanogenmod/app/CustomTile;
     goto :goto_0
 
-    .line 75
+    .line 106
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":Ljava/lang/String;
     .end local v3    # "_arg2":Ljava/lang/String;
@@ -238,42 +238,42 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 77
+    .line 108
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 79
+    .line 110
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 81
+    .line 112
     .restart local v2    # "_arg1":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v11
 
-    .line 83
+    .line 114
     .local v11, "_arg2":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 84
+    .line 115
     .restart local v4    # "_arg3":I
     invoke-virtual {p0, v1, v2, v11, v4}, Lcyanogenmod/app/ICMStatusBarManager$Stub;->removeCustomTileWithTag(Ljava/lang/String;Ljava/lang/String;II)V
 
-    .line 85
+    .line 116
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 86
+    .line 117
     const/4 v0, 0x1
 
     return v0
 
-    .line 90
+    .line 121
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":Ljava/lang/String;
     .end local v4    # "_arg3":I
@@ -283,7 +283,7 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 92
+    .line 123
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
@@ -292,7 +292,7 @@
 
     move-result-object v8
 
-    .line 94
+    .line 125
     .local v8, "_arg0":Lcyanogenmod/app/ICustomTileListener;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -300,7 +300,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 95
+    .line 126
     sget-object v0, Landroid/content/ComponentName;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -309,25 +309,25 @@
 
     check-cast v10, Landroid/content/ComponentName;
 
-    .line 101
+    .line 132
     :goto_1
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v11
 
-    .line 102
+    .line 133
     .restart local v11    # "_arg2":I
     invoke-virtual {p0, v8, v10, v11}, Lcyanogenmod/app/ICMStatusBarManager$Stub;->registerListener(Lcyanogenmod/app/ICustomTileListener;Landroid/content/ComponentName;I)V
 
-    .line 103
+    .line 134
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 104
+    .line 135
     const/4 v0, 0x1
 
     return v0
 
-    .line 98
+    .line 129
     .end local v11    # "_arg2":I
     :cond_1
     const/4 v10, 0x0
@@ -335,7 +335,7 @@
     .local v10, "_arg1":Landroid/content/ComponentName;
     goto :goto_1
 
-    .line 108
+    .line 139
     .end local v8    # "_arg0":Lcyanogenmod/app/ICustomTileListener;
     .end local v10    # "_arg1":Landroid/content/ComponentName;
     :sswitch_4
@@ -343,7 +343,7 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 110
+    .line 141
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
@@ -352,25 +352,25 @@
 
     move-result-object v8
 
-    .line 112
+    .line 143
     .restart local v8    # "_arg0":Lcyanogenmod/app/ICustomTileListener;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
 
-    .line 113
+    .line 144
     .local v9, "_arg1":I
     invoke-virtual {p0, v8, v9}, Lcyanogenmod/app/ICMStatusBarManager$Stub;->unregisterListener(Lcyanogenmod/app/ICustomTileListener;I)V
 
-    .line 114
+    .line 145
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 115
+    .line 146
     const/4 v0, 0x1
 
     return v0
 
-    .line 119
+    .line 150
     .end local v8    # "_arg0":Lcyanogenmod/app/ICustomTileListener;
     .end local v9    # "_arg1":I
     :sswitch_5
@@ -378,7 +378,7 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 121
+    .line 152
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
@@ -387,37 +387,37 @@
 
     move-result-object v8
 
-    .line 123
+    .line 154
     .restart local v8    # "_arg0":Lcyanogenmod/app/ICustomTileListener;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 125
+    .line 156
     .restart local v2    # "_arg1":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 127
+    .line 158
     .restart local v3    # "_arg2":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 128
+    .line 159
     .restart local v4    # "_arg3":I
     invoke-virtual {p0, v8, v2, v3, v4}, Lcyanogenmod/app/ICMStatusBarManager$Stub;->removeCustomTileFromListener(Lcyanogenmod/app/ICustomTileListener;Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 129
+    .line 160
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 130
+    .line 161
     const/4 v0, 0x1
 
     return v0
 
-    .line 39
+    .line 70
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

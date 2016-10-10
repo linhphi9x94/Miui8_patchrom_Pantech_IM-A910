@@ -9,6 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcyanogenmod/app/ILiveLockScreenManagerProvider$NoOp;,
         Lcyanogenmod/app/ILiveLockScreenManagerProvider$Stub;
     }
 .end annotation

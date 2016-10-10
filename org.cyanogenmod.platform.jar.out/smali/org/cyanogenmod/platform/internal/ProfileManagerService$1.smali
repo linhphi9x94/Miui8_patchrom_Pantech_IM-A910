@@ -27,7 +27,7 @@
     .param p1, "this$0"    # Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     .prologue
-    .line 100
+    .line 108
     iput-object p1, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +41,11 @@
     .locals 1
 
     .prologue
-    .line 103
+    .line 111
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ProfileManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/ProfileManagerService;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/ProfileManagerService;->-wrap4(Lorg/cyanogenmod/platform/internal/ProfileManagerService;)V
 
-    .line 102
+    .line 110
     return-void
 .end method

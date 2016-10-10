@@ -42,7 +42,7 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    const v8, 0x3f06004d
+    const v8, 0x3f080058
 
     .line 104
     const-string/jumbo v4, "notification"
@@ -61,7 +61,7 @@
 
     .line 106
     .local v3, "title":Ljava/lang/String;
-    const v4, 0x3f06004e
+    const v4, 0x3f080059
 
     invoke-virtual {p1, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

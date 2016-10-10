@@ -24,7 +24,7 @@
     .param p1, "this$0"    # Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;
 
     .prologue
-    .line 170
+    .line 121
     iput-object p1, p0, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;
 
     invoke-direct {p0}, Lcyanogenmod/app/ILiveLockScreenManager$Stub;-><init>()V
@@ -56,16 +56,18 @@
     .end annotation
 
     .prologue
-    .line 180
+    .line 131
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;
 
-    invoke-static {v0}, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;->-wrap0(Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;)Lcyanogenmod/app/ILiveLockScreenManagerProvider;
+    invoke-virtual {v0}, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;->getBrokeredService()Landroid/os/IInterface;
 
     move-result-object v0
 
+    check-cast v0, Lcyanogenmod/app/ILiveLockScreenManagerProvider;
+
     invoke-interface {v0, p1, p2, p3}, Lcyanogenmod/app/ILiveLockScreenManagerProvider;->cancelLiveLockScreen(Ljava/lang/String;II)V
 
-    .line 179
+    .line 130
     return-void
 .end method
 
@@ -83,12 +85,14 @@
     .end annotation
 
     .prologue
-    .line 175
+    .line 126
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;
 
-    invoke-static {v0}, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;->-wrap0(Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;)Lcyanogenmod/app/ILiveLockScreenManagerProvider;
+    invoke-virtual {v0}, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;->getBrokeredService()Landroid/os/IInterface;
 
     move-result-object v0
+
+    check-cast v0, Lcyanogenmod/app/ILiveLockScreenManagerProvider;
 
     move-object v1, p1
 
@@ -102,7 +106,7 @@
 
     invoke-interface/range {v0 .. v5}, Lcyanogenmod/app/ILiveLockScreenManagerProvider;->enqueueLiveLockScreen(Ljava/lang/String;ILcyanogenmod/app/LiveLockScreenInfo;[II)V
 
-    .line 174
+    .line 125
     return-void
 .end method
 
@@ -115,12 +119,14 @@
     .end annotation
 
     .prologue
-    .line 185
+    .line 136
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;
 
-    invoke-static {v0}, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;->-wrap0(Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;)Lcyanogenmod/app/ILiveLockScreenManagerProvider;
+    invoke-virtual {v0}, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;->getBrokeredService()Landroid/os/IInterface;
 
     move-result-object v0
+
+    check-cast v0, Lcyanogenmod/app/ILiveLockScreenManagerProvider;
 
     invoke-interface {v0}, Lcyanogenmod/app/ILiveLockScreenManagerProvider;->getCurrentLiveLockScreen()Lcyanogenmod/app/LiveLockScreenInfo;
 
@@ -138,15 +144,15 @@
     .end annotation
 
     .prologue
-    .line 190
+    .line 141
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;
 
-    invoke-static {v0}, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;->-wrap2(Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;)V
+    invoke-static {v0}, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;->-wrap1(Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;)V
 
-    .line 191
+    .line 142
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;
 
-    invoke-static {v0}, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;->-wrap1(Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;)Lcyanogenmod/app/LiveLockScreenInfo;
+    invoke-static {v0}, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;->-wrap0(Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;)Lcyanogenmod/app/LiveLockScreenInfo;
 
     move-result-object v0
 
@@ -162,12 +168,14 @@
     .end annotation
 
     .prologue
-    .line 208
+    .line 159
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;
 
-    invoke-static {v0}, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;->-wrap0(Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;)Lcyanogenmod/app/ILiveLockScreenManagerProvider;
+    invoke-virtual {v0}, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;->getBrokeredService()Landroid/os/IInterface;
 
     move-result-object v0
+
+    check-cast v0, Lcyanogenmod/app/ILiveLockScreenManagerProvider;
 
     invoke-interface {v0}, Lcyanogenmod/app/ILiveLockScreenManagerProvider;->getLiveLockScreenEnabled()Z
 
@@ -186,43 +194,35 @@
     .end annotation
 
     .prologue
-    .line 214
+    .line 165
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;
 
-    invoke-static {v1}, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;->-wrap0(Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;)Lcyanogenmod/app/ILiveLockScreenManagerProvider;
+    invoke-virtual {v1}, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;->getBrokeredService()Landroid/os/IInterface;
 
     move-result-object v1
+
+    check-cast v1, Lcyanogenmod/app/ILiveLockScreenManagerProvider;
 
     invoke-interface {v1, p1}, Lcyanogenmod/app/ILiveLockScreenManagerProvider;->registerChangeListener(Lcyanogenmod/app/ILiveLockScreenChangeListener;)Z
 
     move-result v0
 
-    .line 215
+    .line 166
     .local v0, "registered":Z
     if-eqz v0, :cond_0
 
-    .line 216
+    .line 167
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;
 
-    invoke-static {v1}, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;->-get1(Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;)Landroid/os/RemoteCallbackList;
+    invoke-static {v1}, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;->-get0(Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;)Landroid/os/RemoteCallbackList;
 
     move-result-object v1
 
     invoke-virtual {v1, p1}, Landroid/os/RemoteCallbackList;->register(Landroid/os/IInterface;)Z
 
-    .line 218
+    .line 169
     :cond_0
-    iget-object v1, p0, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;
-
-    invoke-static {v1}, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;->-wrap0(Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;)Lcyanogenmod/app/ILiveLockScreenManagerProvider;
-
-    move-result-object v1
-
-    invoke-interface {v1, p1}, Lcyanogenmod/app/ILiveLockScreenManagerProvider;->registerChangeListener(Lcyanogenmod/app/ILiveLockScreenChangeListener;)Z
-
-    move-result v1
-
-    return v1
+    return v0
 .end method
 
 .method public setDefaultLiveLockScreen(Lcyanogenmod/app/LiveLockScreenInfo;)V
@@ -235,17 +235,17 @@
     .end annotation
 
     .prologue
-    .line 196
+    .line 147
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;
 
-    invoke-static {v0}, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;->-wrap2(Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;)V
+    invoke-static {v0}, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;->-wrap1(Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;)V
 
-    .line 197
+    .line 148
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;
 
-    invoke-static {v0, p1}, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;->-wrap3(Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;Lcyanogenmod/app/LiveLockScreenInfo;)V
+    invoke-static {v0, p1}, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;->-wrap2(Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;Lcyanogenmod/app/LiveLockScreenInfo;)V
 
-    .line 195
+    .line 146
     return-void
 .end method
 
@@ -259,17 +259,17 @@
     .end annotation
 
     .prologue
-    .line 202
+    .line 153
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;
 
-    invoke-static {v0}, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;->-wrap2(Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;)V
+    invoke-static {v0}, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;->-wrap1(Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;)V
 
-    .line 203
+    .line 154
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;
 
-    invoke-static {v0, p1}, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;->-wrap4(Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;Z)V
+    invoke-static {v0, p1}, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;->-wrap3(Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;Z)V
 
-    .line 201
+    .line 152
     return-void
 .end method
 
@@ -283,31 +283,33 @@
     .end annotation
 
     .prologue
-    .line 224
+    .line 175
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;
 
-    invoke-static {v1}, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;->-wrap0(Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;)Lcyanogenmod/app/ILiveLockScreenManagerProvider;
+    invoke-virtual {v1}, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;->getBrokeredService()Landroid/os/IInterface;
 
     move-result-object v1
+
+    check-cast v1, Lcyanogenmod/app/ILiveLockScreenManagerProvider;
 
     invoke-interface {v1, p1}, Lcyanogenmod/app/ILiveLockScreenManagerProvider;->unregisterChangeListener(Lcyanogenmod/app/ILiveLockScreenChangeListener;)Z
 
     move-result v0
 
-    .line 225
+    .line 176
     .local v0, "unregistered":Z
     if-eqz v0, :cond_0
 
-    .line 226
+    .line 177
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;
 
-    invoke-static {v1}, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;->-get1(Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;)Landroid/os/RemoteCallbackList;
+    invoke-static {v1}, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;->-get0(Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;)Landroid/os/RemoteCallbackList;
 
     move-result-object v1
 
     invoke-virtual {v1, p1}, Landroid/os/RemoteCallbackList;->unregister(Landroid/os/IInterface;)Z
 
-    .line 228
+    .line 179
     :cond_0
     return v0
 .end method

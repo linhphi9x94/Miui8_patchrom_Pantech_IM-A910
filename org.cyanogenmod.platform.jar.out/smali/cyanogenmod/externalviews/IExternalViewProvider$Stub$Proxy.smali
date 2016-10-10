@@ -27,13 +27,13 @@
     .param p1, "remote"    # Landroid/os/IBinder;
 
     .prologue
-    .line 114
+    .line 144
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 116
+    .line 146
     iput-object p1, p0, Lcyanogenmod/externalviews/IExternalViewProvider$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    .line 114
+    .line 144
     return-void
 .end method
 
@@ -58,56 +58,56 @@
 
     const/4 v3, 0x0
 
-    .line 195
+    .line 225
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 196
+    .line 226
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 198
+    .line 228
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v4, "cyanogenmod.externalviews.IExternalViewProvider"
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 199
+    .line 229
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 200
+    .line 230
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 201
+    .line 231
     invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 202
+    .line 232
     invoke-virtual {v0, p4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 203
+    .line 233
     if-eqz p5, :cond_0
 
     :goto_0
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 204
+    .line 234
     if-eqz p6, :cond_1
 
-    .line 205
+    .line 235
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 206
+    .line 236
     const/4 v2, 0x0
 
     invoke-virtual {p6, v0, v2}, Landroid/graphics/Rect;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 211
+    .line 241
     :goto_1
     iget-object v2, p0, Lcyanogenmod/externalviews/IExternalViewProvider$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
@@ -117,27 +117,27 @@
 
     invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 212
+    .line 242
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 215
+    .line 245
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 216
+    .line 246
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 193
+    .line 223
     return-void
 
     :cond_0
     move v2, v3
 
-    .line 203
+    .line 233
     goto :goto_0
 
-    .line 209
+    .line 239
     :cond_1
     const/4 v2, 0x0
 
@@ -148,17 +148,17 @@
 
     goto :goto_1
 
-    .line 214
+    .line 244
     :catchall_0
     move-exception v2
 
-    .line 215
+    .line 245
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 216
+    .line 246
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 214
+    .line 244
     throw v2
 .end method
 
@@ -166,7 +166,7 @@
     .locals 1
 
     .prologue
-    .line 120
+    .line 150
     iget-object v0, p0, Lcyanogenmod/externalviews/IExternalViewProvider$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object v0
@@ -176,7 +176,7 @@
     .locals 1
 
     .prologue
-    .line 124
+    .line 154
     const-string/jumbo v0, "cyanogenmod.externalviews.IExternalViewProvider"
 
     return-object v0
@@ -192,22 +192,22 @@
     .end annotation
 
     .prologue
-    .line 128
+    .line 158
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 130
+    .line 160
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v1, "cyanogenmod.externalviews.IExternalViewProvider"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 131
+    .line 161
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 132
+    .line 162
     iget-object v1, p0, Lcyanogenmod/externalviews/IExternalViewProvider$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x1
@@ -220,20 +220,20 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 135
+    .line 165
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 126
+    .line 156
     return-void
 
-    .line 134
+    .line 164
     :catchall_0
     move-exception v1
 
-    .line 135
+    .line 165
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 134
+    .line 164
     throw v1
 .end method
 
@@ -246,19 +246,19 @@
     .end annotation
 
     .prologue
-    .line 184
+    .line 214
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 186
+    .line 216
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v1, "cyanogenmod.externalviews.IExternalViewProvider"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 187
+    .line 217
     iget-object v1, p0, Lcyanogenmod/externalviews/IExternalViewProvider$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x6
@@ -271,20 +271,20 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 190
+    .line 220
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 182
+    .line 212
     return-void
 
-    .line 189
+    .line 219
     :catchall_0
     move-exception v1
 
-    .line 190
+    .line 220
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 189
+    .line 219
     throw v1
 .end method
 
@@ -297,19 +297,19 @@
     .end annotation
 
     .prologue
-    .line 162
+    .line 192
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 164
+    .line 194
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v1, "cyanogenmod.externalviews.IExternalViewProvider"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 165
+    .line 195
     iget-object v1, p0, Lcyanogenmod/externalviews/IExternalViewProvider$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x4
@@ -322,20 +322,20 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 168
+    .line 198
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 160
+    .line 190
     return-void
 
-    .line 167
+    .line 197
     :catchall_0
     move-exception v1
 
-    .line 168
+    .line 198
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 167
+    .line 197
     throw v1
 .end method
 
@@ -348,19 +348,19 @@
     .end annotation
 
     .prologue
-    .line 151
+    .line 181
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 153
+    .line 183
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v1, "cyanogenmod.externalviews.IExternalViewProvider"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 154
+    .line 184
     iget-object v1, p0, Lcyanogenmod/externalviews/IExternalViewProvider$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x3
@@ -373,20 +373,20 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 157
+    .line 187
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 149
+    .line 179
     return-void
 
-    .line 156
+    .line 186
     :catchall_0
     move-exception v1
 
-    .line 157
+    .line 187
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 156
+    .line 186
     throw v1
 .end method
 
@@ -399,19 +399,19 @@
     .end annotation
 
     .prologue
-    .line 140
+    .line 170
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 142
+    .line 172
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v1, "cyanogenmod.externalviews.IExternalViewProvider"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 143
+    .line 173
     iget-object v1, p0, Lcyanogenmod/externalviews/IExternalViewProvider$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x2
@@ -424,20 +424,20 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 146
+    .line 176
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 138
+    .line 168
     return-void
 
-    .line 145
+    .line 175
     :catchall_0
     move-exception v1
 
-    .line 146
+    .line 176
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 145
+    .line 175
     throw v1
 .end method
 
@@ -450,19 +450,19 @@
     .end annotation
 
     .prologue
-    .line 173
+    .line 203
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 175
+    .line 205
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v1, "cyanogenmod.externalviews.IExternalViewProvider"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 176
+    .line 206
     iget-object v1, p0, Lcyanogenmod/externalviews/IExternalViewProvider$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x5
@@ -475,19 +475,19 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 179
+    .line 209
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 171
+    .line 201
     return-void
 
-    .line 178
+    .line 208
     :catchall_0
     move-exception v1
 
-    .line 179
+    .line 209
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 178
+    .line 208
     throw v1
 .end method

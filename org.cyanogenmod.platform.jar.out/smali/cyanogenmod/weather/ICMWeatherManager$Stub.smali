@@ -44,15 +44,15 @@
     .locals 1
 
     .prologue
-    .line 14
+    .line 42
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 16
+    .line 44
     const-string/jumbo v0, "cyanogenmod.weather.ICMWeatherManager"
 
     invoke-virtual {p0, p0, v0}, Lcyanogenmod/weather/ICMWeatherManager$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 14
+    .line 42
     return-void
 .end method
 
@@ -63,13 +63,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 24
+    .line 52
     if-nez p0, :cond_0
 
-    .line 25
+    .line 53
     return-object v1
 
-    .line 27
+    .line 55
     :cond_0
     const-string/jumbo v1, "cyanogenmod.weather.ICMWeatherManager"
 
@@ -77,7 +77,7 @@
 
     move-result-object v0
 
-    .line 28
+    .line 56
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -85,13 +85,13 @@
 
     if-eqz v1, :cond_1
 
-    .line 29
+    .line 57
     check-cast v0, Lcyanogenmod/weather/ICMWeatherManager;
 
     .end local v0    # "iin":Landroid/os/IInterface;
     return-object v0
 
-    .line 31
+    .line 59
     .restart local v0    # "iin":Landroid/os/IInterface;
     :cond_1
     new-instance v1, Lcyanogenmod/weather/ICMWeatherManager$Stub$Proxy;
@@ -107,7 +107,7 @@
     .locals 0
 
     .prologue
-    .line 35
+    .line 63
     return-object p0
 .end method
 
@@ -126,39 +126,39 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 39
+    .line 67
     sparse-switch p1, :sswitch_data_0
 
-    .line 105
+    .line 133
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v4
 
     return v4
 
-    .line 43
+    .line 71
     :sswitch_0
     const-string/jumbo v4, "cyanogenmod.weather.ICMWeatherManager"
 
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 44
+    .line 72
     return v5
 
-    .line 48
+    .line 76
     :sswitch_1
     const-string/jumbo v4, "cyanogenmod.weather.ICMWeatherManager"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 50
+    .line 78
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 51
+    .line 79
     sget-object v4, Lcyanogenmod/weather/RequestInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v4, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -167,35 +167,35 @@
 
     check-cast v2, Lcyanogenmod/weather/RequestInfo;
 
-    .line 56
+    .line 84
     :goto_0
     invoke-virtual {p0, v2}, Lcyanogenmod/weather/ICMWeatherManager$Stub;->updateWeather(Lcyanogenmod/weather/RequestInfo;)V
 
-    .line 57
+    .line 85
     return v5
 
-    .line 54
+    .line 82
     :cond_0
     const/4 v2, 0x0
 
     .local v2, "_arg0":Lcyanogenmod/weather/RequestInfo;
     goto :goto_0
 
-    .line 61
+    .line 89
     .end local v2    # "_arg0":Lcyanogenmod/weather/RequestInfo;
     :sswitch_2
     const-string/jumbo v4, "cyanogenmod.weather.ICMWeatherManager"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 63
+    .line 91
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    .line 64
+    .line 92
     sget-object v4, Lcyanogenmod/weather/RequestInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v4, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -204,28 +204,28 @@
 
     check-cast v2, Lcyanogenmod/weather/RequestInfo;
 
-    .line 69
+    .line 97
     :goto_1
     invoke-virtual {p0, v2}, Lcyanogenmod/weather/ICMWeatherManager$Stub;->lookupCity(Lcyanogenmod/weather/RequestInfo;)V
 
-    .line 70
+    .line 98
     return v5
 
-    .line 67
+    .line 95
     :cond_1
     const/4 v2, 0x0
 
     .restart local v2    # "_arg0":Lcyanogenmod/weather/RequestInfo;
     goto :goto_1
 
-    .line 74
+    .line 102
     .end local v2    # "_arg0":Lcyanogenmod/weather/RequestInfo;
     :sswitch_3
     const-string/jumbo v4, "cyanogenmod.weather.ICMWeatherManager"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 76
+    .line 104
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v4
@@ -234,21 +234,21 @@
 
     move-result-object v1
 
-    .line 77
+    .line 105
     .local v1, "_arg0":Lcyanogenmod/weather/IWeatherServiceProviderChangeListener;
     invoke-virtual {p0, v1}, Lcyanogenmod/weather/ICMWeatherManager$Stub;->registerWeatherServiceProviderChangeListener(Lcyanogenmod/weather/IWeatherServiceProviderChangeListener;)V
 
-    .line 78
+    .line 106
     return v5
 
-    .line 82
+    .line 110
     .end local v1    # "_arg0":Lcyanogenmod/weather/IWeatherServiceProviderChangeListener;
     :sswitch_4
     const-string/jumbo v4, "cyanogenmod.weather.ICMWeatherManager"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 84
+    .line 112
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v4
@@ -257,55 +257,55 @@
 
     move-result-object v1
 
-    .line 85
+    .line 113
     .restart local v1    # "_arg0":Lcyanogenmod/weather/IWeatherServiceProviderChangeListener;
     invoke-virtual {p0, v1}, Lcyanogenmod/weather/ICMWeatherManager$Stub;->unregisterWeatherServiceProviderChangeListener(Lcyanogenmod/weather/IWeatherServiceProviderChangeListener;)V
 
-    .line 86
+    .line 114
     return v5
 
-    .line 90
+    .line 118
     .end local v1    # "_arg0":Lcyanogenmod/weather/IWeatherServiceProviderChangeListener;
     :sswitch_5
     const-string/jumbo v4, "cyanogenmod.weather.ICMWeatherManager"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 91
+    .line 119
     invoke-virtual {p0}, Lcyanogenmod/weather/ICMWeatherManager$Stub;->getActiveWeatherServiceProviderLabel()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 92
+    .line 120
     .local v3, "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 93
+    .line 121
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 94
+    .line 122
     return v5
 
-    .line 98
+    .line 126
     .end local v3    # "_result":Ljava/lang/String;
     :sswitch_6
     const-string/jumbo v4, "cyanogenmod.weather.ICMWeatherManager"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 100
+    .line 128
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 101
+    .line 129
     .local v0, "_arg0":I
     invoke-virtual {p0, v0}, Lcyanogenmod/weather/ICMWeatherManager$Stub;->cancelRequest(I)V
 
-    .line 102
+    .line 130
     return v5
 
-    .line 39
+    .line 67
     nop
 
     :sswitch_data_0

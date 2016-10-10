@@ -9,6 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcyanogenmod/app/ICMTelephonyManager$NoOp;,
         Lcyanogenmod/app/ICMTelephonyManager$Stub;
     }
 .end annotation

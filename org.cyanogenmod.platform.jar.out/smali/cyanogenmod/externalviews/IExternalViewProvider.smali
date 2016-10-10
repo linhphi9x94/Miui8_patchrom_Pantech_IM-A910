@@ -9,6 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcyanogenmod/externalviews/IExternalViewProvider$NoOp;,
         Lcyanogenmod/externalviews/IExternalViewProvider$Stub;
     }
 .end annotation

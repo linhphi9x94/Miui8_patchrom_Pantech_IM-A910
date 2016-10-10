@@ -9,6 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcyanogenmod/media/ICMAudioService$NoOp;,
         Lcyanogenmod/media/ICMAudioService$Stub;
     }
 .end annotation

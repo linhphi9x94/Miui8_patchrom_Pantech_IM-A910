@@ -42,15 +42,15 @@
     .locals 1
 
     .prologue
-    .line 14
+    .line 42
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 16
+    .line 44
     const-string/jumbo v0, "cyanogenmod.power.IPerformanceManager"
 
     invoke-virtual {p0, p0, v0}, Lcyanogenmod/power/IPerformanceManager$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 14
+    .line 42
     return-void
 .end method
 
@@ -61,13 +61,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 24
+    .line 52
     if-nez p0, :cond_0
 
-    .line 25
+    .line 53
     return-object v1
 
-    .line 27
+    .line 55
     :cond_0
     const-string/jumbo v1, "cyanogenmod.power.IPerformanceManager"
 
@@ -75,7 +75,7 @@
 
     move-result-object v0
 
-    .line 28
+    .line 56
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -83,13 +83,13 @@
 
     if-eqz v1, :cond_1
 
-    .line 29
+    .line 57
     check-cast v0, Lcyanogenmod/power/IPerformanceManager;
 
     .end local v0    # "iin":Landroid/os/IInterface;
     return-object v0
 
-    .line 31
+    .line 59
     .restart local v0    # "iin":Landroid/os/IInterface;
     :cond_1
     new-instance v1, Lcyanogenmod/power/IPerformanceManager$Stub$Proxy;
@@ -105,7 +105,7 @@
     .locals 0
 
     .prologue
-    .line 35
+    .line 63
     return-object p0
 .end method
 
@@ -126,66 +126,66 @@
 
     const/4 v4, 0x1
 
-    .line 39
+    .line 67
     sparse-switch p1, :sswitch_data_0
 
-    .line 91
+    .line 119
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v3
 
     return v3
 
-    .line 43
+    .line 71
     :sswitch_0
     const-string/jumbo v3, "cyanogenmod.power.IPerformanceManager"
 
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 44
+    .line 72
     return v4
 
-    .line 48
+    .line 76
     :sswitch_1
     const-string/jumbo v3, "cyanogenmod.power.IPerformanceManager"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 50
+    .line 78
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 51
+    .line 79
     .local v0, "_arg0":I
     invoke-virtual {p0, v0}, Lcyanogenmod/power/IPerformanceManager$Stub;->cpuBoost(I)V
 
-    .line 52
+    .line 80
     return v4
 
-    .line 56
+    .line 84
     .end local v0    # "_arg0":I
     :sswitch_2
     const-string/jumbo v5, "cyanogenmod.power.IPerformanceManager"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 58
+    .line 86
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 59
+    .line 87
     .restart local v0    # "_arg0":I
     invoke-virtual {p0, v0}, Lcyanogenmod/power/IPerformanceManager$Stub;->setPowerProfile(I)Z
 
     move-result v2
 
-    .line 60
+    .line 88
     .local v2, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 61
+    .line 89
     if-eqz v2, :cond_0
 
     move v3, v4
@@ -193,10 +193,10 @@
     :cond_0
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 62
+    .line 90
     return v4
 
-    .line 66
+    .line 94
     .end local v0    # "_arg0":I
     .end local v2    # "_result":Z
     :sswitch_3
@@ -204,66 +204,66 @@
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 67
+    .line 95
     invoke-virtual {p0}, Lcyanogenmod/power/IPerformanceManager$Stub;->getPowerProfile()I
 
     move-result v1
 
-    .line 68
+    .line 96
     .local v1, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 69
+    .line 97
     invoke-virtual {p3, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 70
+    .line 98
     return v4
 
-    .line 74
+    .line 102
     .end local v1    # "_result":I
     :sswitch_4
     const-string/jumbo v3, "cyanogenmod.power.IPerformanceManager"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 75
+    .line 103
     invoke-virtual {p0}, Lcyanogenmod/power/IPerformanceManager$Stub;->getNumberOfProfiles()I
 
     move-result v1
 
-    .line 76
+    .line 104
     .restart local v1    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 77
+    .line 105
     invoke-virtual {p3, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 78
+    .line 106
     return v4
 
-    .line 82
+    .line 110
     .end local v1    # "_result":I
     :sswitch_5
     const-string/jumbo v5, "cyanogenmod.power.IPerformanceManager"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 84
+    .line 112
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 85
+    .line 113
     .restart local v0    # "_arg0":I
     invoke-virtual {p0, v0}, Lcyanogenmod/power/IPerformanceManager$Stub;->getProfileHasAppProfiles(I)Z
 
     move-result v2
 
-    .line 86
+    .line 114
     .restart local v2    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 87
+    .line 115
     if-eqz v2, :cond_1
 
     move v3, v4
@@ -271,10 +271,10 @@
     :cond_1
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 88
+    .line 116
     return v4
 
-    .line 39
+    .line 67
     nop
 
     :sswitch_data_0

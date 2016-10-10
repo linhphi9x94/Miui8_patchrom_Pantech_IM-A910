@@ -34,15 +34,15 @@
     .locals 1
 
     .prologue
-    .line 14
+    .line 28
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 16
+    .line 30
     const-string/jumbo v0, "org.cyanogenmod.internal.statusbar.IStatusBarCustomTileHolder"
 
     invoke-virtual {p0, p0, v0}, Lorg/cyanogenmod/internal/statusbar/IStatusBarCustomTileHolder$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 14
+    .line 28
     return-void
 .end method
 
@@ -53,13 +53,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 24
+    .line 38
     if-nez p0, :cond_0
 
-    .line 25
+    .line 39
     return-object v1
 
-    .line 27
+    .line 41
     :cond_0
     const-string/jumbo v1, "org.cyanogenmod.internal.statusbar.IStatusBarCustomTileHolder"
 
@@ -67,7 +67,7 @@
 
     move-result-object v0
 
-    .line 28
+    .line 42
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -75,13 +75,13 @@
 
     if-eqz v1, :cond_1
 
-    .line 29
+    .line 43
     check-cast v0, Lorg/cyanogenmod/internal/statusbar/IStatusBarCustomTileHolder;
 
     .end local v0    # "iin":Landroid/os/IInterface;
     return-object v0
 
-    .line 31
+    .line 45
     .restart local v0    # "iin":Landroid/os/IInterface;
     :cond_1
     new-instance v1, Lorg/cyanogenmod/internal/statusbar/IStatusBarCustomTileHolder$Stub$Proxy;
@@ -97,7 +97,7 @@
     .locals 0
 
     .prologue
-    .line 35
+    .line 49
     return-object p0
 .end method
 
@@ -116,54 +116,54 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 39
+    .line 53
     sparse-switch p1, :sswitch_data_0
 
-    .line 61
+    .line 75
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v1
 
     return v1
 
-    .line 43
+    .line 57
     :sswitch_0
     const-string/jumbo v1, "org.cyanogenmod.internal.statusbar.IStatusBarCustomTileHolder"
 
     invoke-virtual {p3, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 44
+    .line 58
     return v2
 
-    .line 48
+    .line 62
     :sswitch_1
     const-string/jumbo v1, "org.cyanogenmod.internal.statusbar.IStatusBarCustomTileHolder"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 49
+    .line 63
     invoke-virtual {p0}, Lorg/cyanogenmod/internal/statusbar/IStatusBarCustomTileHolder$Stub;->get()Lcyanogenmod/app/StatusBarPanelCustomTile;
 
     move-result-object v0
 
-    .line 50
+    .line 64
     .local v0, "_result":Lcyanogenmod/app/StatusBarPanelCustomTile;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 51
+    .line 65
     if-eqz v0, :cond_0
 
-    .line 52
+    .line 66
     invoke-virtual {p3, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 53
+    .line 67
     invoke-virtual {v0, p3, v2}, Lcyanogenmod/app/StatusBarPanelCustomTile;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 58
+    .line 72
     :goto_0
     return v2
 
-    .line 56
+    .line 70
     :cond_0
     const/4 v1, 0x0
 
@@ -171,7 +171,7 @@
 
     goto :goto_0
 
-    .line 39
+    .line 53
     nop
 
     :sswitch_data_0

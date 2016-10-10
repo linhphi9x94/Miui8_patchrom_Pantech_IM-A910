@@ -39,7 +39,7 @@
     .param p5, "val$userId"    # I
 
     .prologue
-    .line 434
+    .line 433
     iput-object p1, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$4;->this$0:Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;
 
     iput-object p2, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$4;->val$pkg:Ljava/lang/String;
@@ -61,14 +61,14 @@
     .locals 9
 
     .prologue
-    .line 437
+    .line 436
     iget-object v3, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$4;->this$0:Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;
 
     iget-object v4, v3, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;->mQSTileList:Ljava/util/ArrayList;
 
     monitor-enter v4
 
-    .line 438
+    .line 437
     :try_start_0
     iget-object v3, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$4;->this$0:Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;
 
@@ -84,11 +84,11 @@
 
     move-result v1
 
-    .line 439
+    .line 438
     .local v1, "index":I
     if-ltz v1, :cond_0
 
-    .line 440
+    .line 439
     iget-object v3, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$4;->this$0:Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;
 
     iget-object v3, v3, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;->mQSTileList:Ljava/util/ArrayList;
@@ -99,7 +99,7 @@
 
     check-cast v2, Lorg/cyanogenmod/internal/statusbar/ExternalQuickSettingsRecord;
 
-    .line 441
+    .line 440
     .local v2, "r":Lorg/cyanogenmod/internal/statusbar/ExternalQuickSettingsRecord;
     iget-object v3, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$4;->this$0:Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;
 
@@ -107,12 +107,12 @@
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 443
+    .line 442
     const/4 v3, 0x1
 
     iput-boolean v3, v2, Lorg/cyanogenmod/internal/statusbar/ExternalQuickSettingsRecord;->isCanceled:Z
 
-    .line 444
+    .line 443
     iget-object v3, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$4;->this$0:Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;
 
     invoke-static {v3}, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;->-get1(Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;)Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$CustomTileListeners;
@@ -123,7 +123,7 @@
 
     invoke-virtual {v3, v5}, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$CustomTileListeners;->notifyRemovedLocked(Lcyanogenmod/app/StatusBarPanelCustomTile;)V
 
-    .line 445
+    .line 444
     iget-object v3, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$4;->this$0:Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;
 
     iget-object v3, v3, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;->mCustomTileByKey:Landroid/util/ArrayMap;
@@ -136,7 +136,7 @@
 
     invoke-virtual {v3, v5}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 446
+    .line 445
     invoke-virtual {v2}, Lorg/cyanogenmod/internal/statusbar/ExternalQuickSettingsRecord;->getCustomTile()Lcyanogenmod/app/CustomTile;
 
     move-result-object v3
@@ -147,7 +147,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 448
+    .line 447
     :try_start_1
     invoke-virtual {v2}, Lorg/cyanogenmod/internal/statusbar/ExternalQuickSettingsRecord;->getCustomTile()Lcyanogenmod/app/CustomTile;
 
@@ -165,15 +165,15 @@
     :goto_0
     monitor-exit v4
 
-    .line 436
+    .line 435
     return-void
 
-    .line 449
+    .line 448
     .restart local v2    # "r":Lorg/cyanogenmod/internal/statusbar/ExternalQuickSettingsRecord;
     :catch_0
     move-exception v0
 
-    .line 452
+    .line 451
     .local v0, "ex":Landroid/app/PendingIntent$CanceledException;
     :try_start_2
     const-string/jumbo v3, "CMStatusBarManagerService"
@@ -188,14 +188,14 @@
 
     move-result-object v5
 
-    .line 453
+    .line 452
     iget-object v6, v2, Lorg/cyanogenmod/internal/statusbar/ExternalQuickSettingsRecord;->sbTile:Lcyanogenmod/app/StatusBarPanelCustomTile;
 
     invoke-virtual {v6}, Lcyanogenmod/app/StatusBarPanelCustomTile;->getPackage()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 452
+    .line 451
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v5
@@ -210,7 +210,7 @@
 
     goto :goto_0
 
-    .line 437
+    .line 436
     .end local v0    # "ex":Landroid/app/PendingIntent$CanceledException;
     .end local v1    # "index":I
     .end local v2    # "r":Lorg/cyanogenmod/internal/statusbar/ExternalQuickSettingsRecord;

@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 1361
+    .line 1386
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,13 +39,13 @@
 
     const/4 v3, 0x0
 
-    .line 1364
+    .line 1389
     if-nez p1, :cond_0
 
-    .line 1365
+    .line 1390
     const/4 v0, 0x0
 
-    .line 1366
+    .line 1391
     :goto_0
     if-eqz v0, :cond_1
 
@@ -55,10 +55,10 @@
 
     if-eq v4, v5, :cond_1
 
-    .line 1367
+    .line 1392
     return v3
 
-    .line 1365
+    .line 1390
     :cond_0
     const-string/jumbo v4, " "
 
@@ -69,7 +69,7 @@
     .local v0, "colorAdjustment":[Ljava/lang/String;
     goto :goto_0
 
-    .line 1369
+    .line 1394
     .end local v0    # "colorAdjustment":[Ljava/lang/String;
     :cond_1
     new-instance v1, Lcyanogenmod/providers/CMSettings$InclusiveFloatRangeValidator;
@@ -80,11 +80,11 @@
 
     invoke-direct {v1, v4, v5}, Lcyanogenmod/providers/CMSettings$InclusiveFloatRangeValidator;-><init>(FF)V
 
-    .line 1370
+    .line 1395
     .local v1, "floatValidator":Lcyanogenmod/providers/CMSettings$Validator;
     if-eqz v0, :cond_2
 
-    .line 1371
+    .line 1396
     aget-object v4, v0, v3
 
     invoke-interface {v1, v4}, Lcyanogenmod/providers/CMSettings$Validator;->validate(Ljava/lang/String;)Z
@@ -93,17 +93,17 @@
 
     if-eqz v4, :cond_3
 
-    .line 1372
+    .line 1397
     aget-object v2, v0, v2
 
     invoke-interface {v1, v2}, Lcyanogenmod/providers/CMSettings$Validator;->validate(Ljava/lang/String;)Z
 
     move-result v2
 
-    .line 1371
+    .line 1396
     if-eqz v2, :cond_3
 
-    .line 1373
+    .line 1398
     const/4 v2, 0x2
 
     aget-object v2, v0, v2
@@ -112,7 +112,7 @@
 
     move-result v2
 
-    .line 1370
+    .line 1395
     :cond_2
     :goto_1
     return v2
@@ -120,6 +120,6 @@
     :cond_3
     move v2, v3
 
-    .line 1371
+    .line 1396
     goto :goto_1
 .end method

@@ -27,13 +27,13 @@
     .param p1, "remote"    # Landroid/os/IBinder;
 
     .prologue
-    .line 69
+    .line 82
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 71
+    .line 84
     iput-object p1, p0, Lorg/cyanogenmod/internal/themes/IIconCacheManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    .line 69
+    .line 82
     return-void
 .end method
 
@@ -43,7 +43,7 @@
     .locals 1
 
     .prologue
-    .line 75
+    .line 88
     iget-object v0, p0, Lorg/cyanogenmod/internal/themes/IIconCacheManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object v0
@@ -60,42 +60,42 @@
     .end annotation
 
     .prologue
-    .line 83
+    .line 96
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 84
+    .line 97
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 87
+    .line 100
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v3, "org.cyanogenmod.internal.themes.IIconCacheManager"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 88
+    .line 101
     if-eqz p1, :cond_0
 
-    .line 89
+    .line 102
     const/4 v3, 0x1
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 90
+    .line 103
     const/4 v3, 0x0
 
     invoke-virtual {p1, v0, v3}, Landroid/graphics/Bitmap;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 95
+    .line 108
     :goto_0
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 96
+    .line 109
     iget-object v3, p0, Lorg/cyanogenmod/internal/themes/IIconCacheManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v4, 0x1
@@ -104,10 +104,10 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 97
+    .line 110
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 98
+    .line 111
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -118,18 +118,18 @@
 
     const/4 v2, 0x1
 
-    .line 101
+    .line 114
     .local v2, "_result":Z
     :goto_1
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 102
+    .line 115
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 104
+    .line 117
     return v2
 
-    .line 93
+    .line 106
     .end local v2    # "_result":Z
     :cond_0
     const/4 v3, 0x0
@@ -141,20 +141,20 @@
 
     goto :goto_0
 
-    .line 100
+    .line 113
     :catchall_0
     move-exception v3
 
-    .line 101
+    .line 114
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 102
+    .line 115
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 100
+    .line 113
     throw v3
 
-    .line 98
+    .line 111
     :cond_1
     const/4 v2, 0x0
 
@@ -166,7 +166,7 @@
     .locals 1
 
     .prologue
-    .line 79
+    .line 92
     const-string/jumbo v0, "org.cyanogenmod.internal.themes.IIconCacheManager"
 
     return-object v0

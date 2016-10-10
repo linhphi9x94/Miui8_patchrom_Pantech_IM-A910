@@ -24,7 +24,7 @@
     .param p1, "this$0"    # Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;
 
     .prologue
-    .line 111
+    .line 110
     iput-object p1, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,35 +40,35 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 114
+    .line 113
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 115
+    .line 114
     .local v8, "action":Ljava/lang/String;
     if-nez v8, :cond_0
 
-    .line 116
+    .line 115
     return-void
 
-    .line 119
+    .line 118
     :cond_0
     const/16 v17, 0x0
 
-    .line 120
+    .line 119
     .local v17, "queryRestart":Z
     const/4 v15, 0x0
 
-    .line 121
+    .line 120
     .local v15, "queryRemove":Z
     const/4 v12, 0x0
 
-    .line 122
+    .line 121
     .local v12, "packageChanged":Z
     const/16 v18, 0x1
 
-    .line 124
+    .line 123
     .local v18, "removeTiles":Z
     const-string/jumbo v2, "android.intent.action.PACKAGE_ADDED"
 
@@ -78,85 +78,85 @@
 
     if-nez v2, :cond_1
 
-    .line 125
+    .line 124
     const-string/jumbo v2, "android.intent.action.PACKAGE_REMOVED"
 
     invoke-virtual {v8, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v15
 
-    .line 124
+    .line 123
     .local v15, "queryRemove":Z
     if-nez v15, :cond_1
 
-    .line 126
+    .line 125
     const-string/jumbo v2, "android.intent.action.PACKAGE_RESTARTED"
 
     invoke-virtual {v8, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
-    .line 124
+    .line 123
     if-nez v2, :cond_1
 
-    .line 127
+    .line 126
     const-string/jumbo v2, "android.intent.action.PACKAGE_CHANGED"
 
     invoke-virtual {v8, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v12
 
-    .line 124
+    .line 123
     .local v12, "packageChanged":Z
     if-nez v12, :cond_1
 
-    .line 128
+    .line 127
     const-string/jumbo v2, "android.intent.action.QUERY_PACKAGE_RESTART"
 
     invoke-virtual {v8, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v17
 
-    .line 124
+    .line 123
     .local v17, "queryRestart":Z
     if-nez v17, :cond_1
 
-    .line 129
+    .line 128
     const-string/jumbo v2, "android.intent.action.EXTERNAL_APPLICATIONS_UNAVAILABLE"
 
     invoke-virtual {v8, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
-    .line 124
+    .line 123
     if-eqz v2, :cond_d
 
-    .line 130
+    .line 129
     .end local v12    # "packageChanged":Z
     .end local v15    # "queryRemove":Z
     .end local v17    # "queryRestart":Z
     :cond_1
     const-string/jumbo v2, "android.intent.extra.user_handle"
 
-    .line 131
+    .line 130
     const/4 v4, -0x1
 
-    .line 130
+    .line 129
     move-object/from16 v0, p2
 
     invoke-virtual {v0, v2, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v5
 
-    .line 132
+    .line 131
     .local v5, "changeUserId":I
     const/4 v13, 0x0
 
-    .line 133
+    .line 132
     .local v13, "pkgList":[Ljava/lang/String;
     if-eqz v15, :cond_3
 
-    .line 134
+    .line 133
     const-string/jumbo v2, "android.intent.extra.REPLACING"
 
     const/4 v4, 0x0
@@ -167,7 +167,7 @@
 
     move-result v16
 
-    .line 135
+    .line 134
     :goto_0
     const-string/jumbo v2, "android.intent.action.EXTERNAL_APPLICATIONS_UNAVAILABLE"
 
@@ -177,7 +177,7 @@
 
     if-eqz v2, :cond_4
 
-    .line 136
+    .line 135
     const-string/jumbo v2, "android.intent.extra.changed_package_list"
 
     move-object/from16 v0, p2
@@ -186,7 +186,7 @@
 
     move-result-object v13
 
-    .line 170
+    .line 169
     .local v13, "pkgList":[Ljava/lang/String;
     :goto_1
     if-eqz v13, :cond_c
@@ -195,7 +195,7 @@
 
     if-lez v2, :cond_c
 
-    .line 171
+    .line 170
     const/4 v2, 0x0
 
     array-length v0, v13
@@ -213,11 +213,11 @@
 
     aget-object v3, v13, v20
 
-    .line 172
+    .line 171
     .local v3, "pkgName":Ljava/lang/String;
     if-eqz v18, :cond_2
 
-    .line 173
+    .line 172
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;
@@ -226,16 +226,16 @@
 
     const/4 v4, 0x0
 
-    .line 174
+    .line 173
     :goto_3
     const/4 v6, 0x1
 
     const/4 v7, 0x0
 
-    .line 173
+    .line 172
     invoke-virtual/range {v2 .. v7}, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;->removeAllCustomTilesInt(Ljava/lang/String;ZIILorg/cyanogenmod/platform/internal/ManagedServices$ManagedServiceInfo;)Z
 
-    .line 171
+    .line 170
     :cond_2
     add-int/lit8 v2, v20, 0x1
 
@@ -243,7 +243,7 @@
 
     goto :goto_2
 
-    .line 133
+    .line 132
     .end local v3    # "pkgName":Ljava/lang/String;
     .local v13, "pkgList":[Ljava/lang/String;
     :cond_3
@@ -252,12 +252,12 @@
     .local v16, "queryReplace":Z
     goto :goto_0
 
-    .line 137
+    .line 136
     .end local v16    # "queryReplace":Z
     :cond_4
     if-eqz v17, :cond_5
 
-    .line 138
+    .line 137
     const-string/jumbo v2, "android.intent.extra.PACKAGES"
 
     move-object/from16 v0, p2
@@ -269,44 +269,44 @@
     .local v13, "pkgList":[Ljava/lang/String;
     goto :goto_1
 
-    .line 140
+    .line 139
     .local v13, "pkgList":[Ljava/lang/String;
     :cond_5
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v19
 
-    .line 141
+    .line 140
     .local v19, "uri":Landroid/net/Uri;
     if-nez v19, :cond_6
 
-    .line 142
+    .line 141
     return-void
 
-    .line 144
+    .line 143
     :cond_6
     invoke-virtual/range {v19 .. v19}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 145
+    .line 144
     .restart local v3    # "pkgName":Ljava/lang/String;
     if-nez v3, :cond_7
 
-    .line 146
+    .line 145
     return-void
 
-    .line 148
+    .line 147
     :cond_7
     if-eqz v12, :cond_9
 
-    .line 151
+    .line 150
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v14
 
-    .line 153
+    .line 152
     .local v14, "pm":Landroid/content/pm/IPackageManager;
     const/4 v2, -0x1
 
@@ -314,7 +314,7 @@
 
     move v2, v5
 
-    .line 152
+    .line 151
     :goto_4
     invoke-interface {v14, v3, v2}, Landroid/content/pm/IPackageManager;->getApplicationEnabledSetting(Ljava/lang/String;I)I
     :try_end_0
@@ -323,20 +323,20 @@
 
     move-result v11
 
-    .line 155
+    .line 154
     .local v11, "enabled":I
     const/4 v2, 0x1
 
     if-eq v11, v2, :cond_8
 
-    .line 156
+    .line 155
     if-nez v11, :cond_9
 
-    .line 157
+    .line 156
     :cond_8
     const/16 v18, 0x0
 
-    .line 167
+    .line 166
     .end local v11    # "enabled":I
     .end local v14    # "pm":Landroid/content/pm/IPackageManager;
     :cond_9
@@ -353,7 +353,7 @@
     .local v13, "pkgList":[Ljava/lang/String;
     goto :goto_1
 
-    .line 154
+    .line 153
     .local v13, "pkgList":[Ljava/lang/String;
     .restart local v14    # "pm":Landroid/content/pm/IPackageManager;
     :cond_a
@@ -361,12 +361,12 @@
 
     goto :goto_4
 
-    .line 159
+    .line 158
     .end local v14    # "pm":Landroid/content/pm/IPackageManager;
     :catch_0
     move-exception v10
 
-    .line 162
+    .line 161
     .local v10, "e":Ljava/lang/IllegalArgumentException;
     const-string/jumbo v2, "CMStatusBarManagerService"
 
@@ -376,7 +376,7 @@
 
     goto :goto_5
 
-    .line 173
+    .line 172
     .end local v10    # "e":Ljava/lang/IllegalArgumentException;
     .end local v19    # "uri":Landroid/net/Uri;
     .local v13, "pkgList":[Ljava/lang/String;
@@ -385,7 +385,7 @@
 
     goto :goto_3
 
-    .line 178
+    .line 177
     .end local v3    # "pkgName":Ljava/lang/String;
     :cond_c
     move-object/from16 v0, p0
@@ -400,13 +400,13 @@
 
     invoke-virtual {v2, v0, v13}, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$CustomTileListeners;->onPackagesChanged(Z[Ljava/lang/String;)V
 
-    .line 113
+    .line 112
     .end local v5    # "changeUserId":I
     .end local v13    # "pkgList":[Ljava/lang/String;
     :cond_d
     return-void
 
-    .line 163
+    .line 162
     .restart local v3    # "pkgName":Ljava/lang/String;
     .restart local v5    # "changeUserId":I
     .local v13, "pkgList":[Ljava/lang/String;

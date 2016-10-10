@@ -46,10 +46,10 @@
     .param p1, "this$0"    # Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;
 
     .prologue
-    .line 546
+    .line 545
     iput-object p1, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$CustomTileListeners;->this$0:Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;
 
-    .line 547
+    .line 546
     invoke-static {p1}, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;->-get0(Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;)Landroid/content/Context;
 
     move-result-object v0
@@ -66,7 +66,7 @@
 
     invoke-direct {p0, v0, v1, v2, v3}, Lorg/cyanogenmod/platform/internal/ManagedServices;-><init>(Landroid/content/Context;Landroid/os/Handler;Ljava/lang/Object;Lorg/cyanogenmod/platform/internal/ManagedServices$UserProfiles;)V
 
-    .line 546
+    .line 545
     return-void
 .end method
 
@@ -76,33 +76,33 @@
     .param p2, "sbc"    # Lcyanogenmod/app/StatusBarPanelCustomTile;
 
     .prologue
-    .line 649
+    .line 648
     iget-object v1, p1, Lorg/cyanogenmod/platform/internal/ManagedServices$ManagedServiceInfo;->service:Landroid/os/IInterface;
 
     check-cast v1, Lcyanogenmod/app/ICustomTileListener;
 
-    .line 650
+    .line 649
     .local v1, "listener":Lcyanogenmod/app/ICustomTileListener;
     new-instance v2, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$StatusBarCustomTileHolder;
 
     invoke-direct {v2, p2}, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$StatusBarCustomTileHolder;-><init>(Lcyanogenmod/app/StatusBarPanelCustomTile;)V
 
-    .line 652
+    .line 651
     .local v2, "sbcHolder":Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$StatusBarCustomTileHolder;
     :try_start_0
     invoke-interface {v1, v2}, Lcyanogenmod/app/ICustomTileListener;->onCustomTilePosted(Lorg/cyanogenmod/internal/statusbar/IStatusBarCustomTileHolder;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 648
+    .line 647
     :goto_0
     return-void
 
-    .line 653
+    .line 652
     :catch_0
     move-exception v0
 
-    .line 654
+    .line 653
     .local v0, "ex":Landroid/os/RemoteException;
     iget-object v3, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$CustomTileListeners;->TAG:Ljava/lang/String;
 
@@ -135,7 +135,7 @@
     .param p2, "sbc"    # Lcyanogenmod/app/StatusBarPanelCustomTile;
 
     .prologue
-    .line 659
+    .line 658
     invoke-virtual {p2}, Lcyanogenmod/app/StatusBarPanelCustomTile;->getUserId()I
 
     move-result v3
@@ -146,37 +146,37 @@
 
     if-nez v3, :cond_0
 
-    .line 660
+    .line 659
     return-void
 
-    .line 662
+    .line 661
     :cond_0
     iget-object v1, p1, Lorg/cyanogenmod/platform/internal/ManagedServices$ManagedServiceInfo;->service:Landroid/os/IInterface;
 
     check-cast v1, Lcyanogenmod/app/ICustomTileListener;
 
-    .line 663
+    .line 662
     .local v1, "listener":Lcyanogenmod/app/ICustomTileListener;
     new-instance v2, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$StatusBarCustomTileHolder;
 
     invoke-direct {v2, p2}, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$StatusBarCustomTileHolder;-><init>(Lcyanogenmod/app/StatusBarPanelCustomTile;)V
 
-    .line 665
+    .line 664
     .local v2, "sbcHolder":Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$StatusBarCustomTileHolder;
     :try_start_0
     invoke-interface {v1, v2}, Lcyanogenmod/app/ICustomTileListener;->onCustomTileRemoved(Lorg/cyanogenmod/internal/statusbar/IStatusBarCustomTileHolder;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 658
+    .line 657
     :goto_0
     return-void
 
-    .line 666
+    .line 665
     :catch_0
     move-exception v0
 
-    .line 667
+    .line 666
     .local v0, "ex":Landroid/os/RemoteException;
     iget-object v3, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$CustomTileListeners;->TAG:Ljava/lang/String;
 
@@ -210,7 +210,7 @@
     .param p1, "binder"    # Landroid/os/IBinder;
 
     .prologue
-    .line 567
+    .line 566
     invoke-static {p1}, Lcyanogenmod/app/ICustomTileListener$Stub;->asInterface(Landroid/os/IBinder;)Lcyanogenmod/app/ICustomTileListener;
 
     move-result-object v0
@@ -222,34 +222,34 @@
     .locals 2
 
     .prologue
-    .line 552
+    .line 551
     new-instance v0, Lorg/cyanogenmod/platform/internal/ManagedServices$Config;
 
     invoke-direct {v0}, Lorg/cyanogenmod/platform/internal/ManagedServices$Config;-><init>()V
 
-    .line 553
+    .line 552
     .local v0, "c":Lorg/cyanogenmod/platform/internal/ManagedServices$Config;
     const-string/jumbo v1, "custom tile listener"
 
     iput-object v1, v0, Lorg/cyanogenmod/platform/internal/ManagedServices$Config;->caption:Ljava/lang/String;
 
-    .line 554
+    .line 553
     const-string/jumbo v1, "cyanogenmod.app.CustomTileListenerService"
 
     iput-object v1, v0, Lorg/cyanogenmod/platform/internal/ManagedServices$Config;->serviceInterface:Ljava/lang/String;
 
-    .line 558
+    .line 557
     const-string/jumbo v1, "cyanogenmod.permission.BIND_CUSTOM_TILE_LISTENER_SERVICE"
 
-    .line 557
+    .line 556
     iput-object v1, v0, Lorg/cyanogenmod/platform/internal/ManagedServices$Config;->bindPermission:Ljava/lang/String;
 
-    .line 561
-    const v1, 0x3f060024
+    .line 560
+    const v1, 0x3f080025
 
     iput v1, v0, Lorg/cyanogenmod/platform/internal/ManagedServices$Config;->clientLabel:I
 
-    .line 562
+    .line 561
     return-object v0
 .end method
 
@@ -259,10 +259,10 @@
     .param p2, "oldSbc"    # Lcyanogenmod/app/StatusBarPanelCustomTile;
 
     .prologue
-    .line 595
+    .line 594
     const/4 v4, 0x0
 
-    .line 597
+    .line 596
     .local v4, "sbcClone":Lcyanogenmod/app/StatusBarPanelCustomTile;
     iget-object v7, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$CustomTileListeners;->mServices:Ljava/util/ArrayList;
 
@@ -286,7 +286,7 @@
 
     check-cast v0, Lorg/cyanogenmod/platform/internal/ManagedServices$ManagedServiceInfo;
 
-    .line 598
+    .line 597
     .local v0, "info":Lorg/cyanogenmod/platform/internal/ManagedServices$ManagedServiceInfo;
     iget-object v7, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$CustomTileListeners;->this$0:Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;
 
@@ -294,7 +294,7 @@
 
     move-result v6
 
-    .line 599
+    .line 598
     .local v6, "sbnVisible":Z
     if-eqz p2, :cond_3
 
@@ -304,29 +304,29 @@
 
     move-result v3
 
-    .line 601
+    .line 600
     :goto_1
     if-nez v3, :cond_1
 
     if-eqz v6, :cond_0
 
-    .line 606
+    .line 605
     :cond_1
     if-eqz v3, :cond_2
 
     if-eqz v6, :cond_4
 
-    .line 616
+    .line 615
     :cond_2
     invoke-virtual {p1}, Lcyanogenmod/app/StatusBarPanelCustomTile;->clone()Lcyanogenmod/app/StatusBarPanelCustomTile;
 
     move-result-object v4
 
-    .line 618
+    .line 617
     .local v4, "sbcClone":Lcyanogenmod/app/StatusBarPanelCustomTile;
     move-object v5, v4
 
-    .line 619
+    .line 618
     .local v5, "sbcToPost":Lcyanogenmod/app/StatusBarPanelCustomTile;
     iget-object v7, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$CustomTileListeners;->this$0:Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;
 
@@ -342,7 +342,7 @@
 
     goto :goto_0
 
-    .line 599
+    .line 598
     .end local v4    # "sbcClone":Lcyanogenmod/app/StatusBarPanelCustomTile;
     .end local v5    # "sbcToPost":Lcyanogenmod/app/StatusBarPanelCustomTile;
     :cond_3
@@ -351,14 +351,14 @@
     .local v3, "oldSbnVisible":Z
     goto :goto_1
 
-    .line 607
+    .line 606
     .end local v3    # "oldSbnVisible":Z
     :cond_4
     invoke-virtual {p2}, Lcyanogenmod/app/StatusBarPanelCustomTile;->clone()Lcyanogenmod/app/StatusBarPanelCustomTile;
 
     move-result-object v2
 
-    .line 608
+    .line 607
     .local v2, "oldSbcClone":Lcyanogenmod/app/StatusBarPanelCustomTile;
     iget-object v7, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$CustomTileListeners;->this$0:Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;
 
@@ -374,7 +374,7 @@
 
     goto :goto_0
 
-    .line 593
+    .line 592
     .end local v0    # "info":Lorg/cyanogenmod/platform/internal/ManagedServices$ManagedServiceInfo;
     .end local v2    # "oldSbcClone":Lcyanogenmod/app/StatusBarPanelCustomTile;
     .end local v6    # "sbnVisible":Z
@@ -387,12 +387,12 @@
     .param p1, "sbc"    # Lcyanogenmod/app/StatusBarPanelCustomTile;
 
     .prologue
-    .line 633
+    .line 632
     invoke-virtual {p1}, Lcyanogenmod/app/StatusBarPanelCustomTile;->clone()Lcyanogenmod/app/StatusBarPanelCustomTile;
 
     move-result-object v2
 
-    .line 634
+    .line 633
     .local v2, "sbcClone":Lcyanogenmod/app/StatusBarPanelCustomTile;
     iget-object v3, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$CustomTileListeners;->mServices:Ljava/util/ArrayList;
 
@@ -415,7 +415,7 @@
 
     check-cast v0, Lorg/cyanogenmod/platform/internal/ManagedServices$ManagedServiceInfo;
 
-    .line 635
+    .line 634
     .local v0, "info":Lorg/cyanogenmod/platform/internal/ManagedServices$ManagedServiceInfo;
     iget-object v3, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$CustomTileListeners;->this$0:Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;
 
@@ -425,7 +425,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 638
+    .line 637
     iget-object v3, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$CustomTileListeners;->this$0:Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;
 
     invoke-static {v3}, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;->-get2(Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;)Landroid/os/Handler;
@@ -440,7 +440,7 @@
 
     goto :goto_0
 
-    .line 631
+    .line 630
     .end local v0    # "info":Lorg/cyanogenmod/platform/internal/ManagedServices$ManagedServiceInfo;
     :cond_1
     return-void
@@ -451,23 +451,23 @@
     .param p1, "info"    # Lorg/cyanogenmod/platform/internal/ManagedServices$ManagedServiceInfo;
 
     .prologue
-    .line 572
+    .line 571
     iget-object v1, p1, Lorg/cyanogenmod/platform/internal/ManagedServices$ManagedServiceInfo;->service:Landroid/os/IInterface;
 
     check-cast v1, Lcyanogenmod/app/ICustomTileListener;
 
-    .line 574
+    .line 573
     .local v1, "listener":Lcyanogenmod/app/ICustomTileListener;
     :try_start_0
     invoke-interface {v1}, Lcyanogenmod/app/ICustomTileListener;->onListenerConnected()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 571
+    .line 570
     :goto_0
     return-void
 
-    .line 575
+    .line 574
     :catch_0
     move-exception v0
 
@@ -480,6 +480,6 @@
     .param p1, "removed"    # Lorg/cyanogenmod/platform/internal/ManagedServices$ManagedServiceInfo;
 
     .prologue
-    .line 581
+    .line 580
     return-void
 .end method

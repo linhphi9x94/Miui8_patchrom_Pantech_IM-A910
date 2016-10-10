@@ -24,7 +24,7 @@
     .param p1, "this$0"    # Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;
 
     .prologue
-    .line 183
+    .line 182
     iput-object p1, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$2;->this$0:Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;
 
     invoke-direct {p0}, Lcyanogenmod/app/ICMStatusBarManager$Stub;-><init>()V
@@ -50,19 +50,19 @@
     .end annotation
 
     .prologue
-    .line 190
+    .line 189
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$2;->this$0:Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;->-wrap4(Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;)V
 
-    .line 191
+    .line 190
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$2;->this$0:Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;
 
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v3
 
-    .line 192
+    .line 191
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v4
@@ -81,10 +81,10 @@
 
     move/from16 v9, p7
 
-    .line 191
+    .line 190
     invoke-virtual/range {v0 .. v9}, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;->createCustomTileWithTagInternal(Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;ILcyanogenmod/app/CustomTile;[II)V
 
-    .line 189
+    .line 188
     return-void
 .end method
 
@@ -95,12 +95,12 @@
     .param p3, "userid"    # I
 
     .prologue
-    .line 217
+    .line 216
     iget-object v3, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$2;->this$0:Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;
 
     invoke-static {v3}, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;->-wrap3(Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;)V
 
-    .line 218
+    .line 217
     iget-object v3, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$2;->this$0:Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;
 
     invoke-static {v3}, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;->-get1(Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;)Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$CustomTileListeners;
@@ -109,7 +109,7 @@
 
     invoke-virtual {v3, p1, p2, p3}, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$CustomTileListeners;->registerService(Landroid/os/IInterface;Landroid/content/ComponentName;I)V
 
-    .line 222
+    .line 221
     :try_start_0
     iget-object v3, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$2;->this$0:Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;
 
@@ -134,7 +134,7 @@
 
     check-cast v0, Lorg/cyanogenmod/internal/statusbar/ExternalQuickSettingsRecord;
 
-    .line 223
+    .line 222
     .local v0, "qsTile":Lorg/cyanogenmod/internal/statusbar/ExternalQuickSettingsRecord;
     const/4 v3, -0x1
 
@@ -146,7 +146,7 @@
 
     if-ne v3, p3, :cond_0
 
-    .line 224
+    .line 223
     :cond_1
     new-instance v3, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$StatusBarCustomTileHolder;
 
@@ -160,13 +160,13 @@
 
     goto :goto_0
 
-    .line 227
+    .line 226
     .end local v0    # "qsTile":Lorg/cyanogenmod/internal/statusbar/ExternalQuickSettingsRecord;
     .end local v1    # "qsTile$iterator":Ljava/util/Iterator;
     :catch_0
     move-exception v2
 
-    .line 216
+    .line 215
     :cond_2
     return-void
 .end method
@@ -179,24 +179,24 @@
     .param p4, "id"    # I
 
     .prologue
-    .line 250
+    .line 249
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v2
 
-    .line 251
+    .line 250
     .local v2, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v3
 
-    .line 252
+    .line 251
     .local v3, "callingPid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v8
 
-    .line 254
+    .line 253
     .local v8, "identity":J
     :try_start_0
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$2;->this$0:Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;
@@ -207,7 +207,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 256
+    .line 255
     :try_start_1
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$2;->this$0:Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;
 
@@ -219,11 +219,11 @@
 
     move-result-object v1
 
-    .line 257
+    .line 256
     .local v1, "info":Lorg/cyanogenmod/platform/internal/ManagedServices$ManagedServiceInfo;
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$2;->this$0:Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;
 
-    .line 258
+    .line 257
     iget v7, v1, Lorg/cyanogenmod/platform/internal/ManagedServices$ManagedServiceInfo;->userid:I
 
     move-object v4, p2
@@ -232,7 +232,7 @@
 
     move v6, p4
 
-    .line 257
+    .line 256
     invoke-static/range {v0 .. v7}, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;->-wrap5(Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;Lorg/cyanogenmod/platform/internal/ManagedServices$ManagedServiceInfo;IILjava/lang/String;Ljava/lang/String;II)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -242,13 +242,13 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 261
+    .line 260
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 249
+    .line 248
     return-void
 
-    .line 254
+    .line 253
     .end local v1    # "info":Lorg/cyanogenmod/platform/internal/ManagedServices$ManagedServiceInfo;
     :catchall_0
     move-exception v0
@@ -260,14 +260,14 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 260
+    .line 259
     :catchall_1
     move-exception v0
 
-    .line 261
+    .line 260
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 260
+    .line 259
     throw v0
 .end method
 
@@ -279,15 +279,15 @@
     .param p4, "userId"    # I
 
     .prologue
-    .line 200
+    .line 199
     invoke-static {p1}, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;->-wrap2(Ljava/lang/String;)V
 
-    .line 201
+    .line 200
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v0
 
-    .line 202
+    .line 201
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
@@ -302,19 +302,19 @@
 
     move-object v6, p1
 
-    .line 201
+    .line 200
     invoke-static/range {v0 .. v6}, Landroid/app/ActivityManager;->handleIncomingUser(IIIZZLjava/lang/String;Ljava/lang/String;)I
 
     move-result p4
 
-    .line 203
+    .line 202
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$2;->this$0:Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;
 
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 204
+    .line 203
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v2
@@ -329,10 +329,10 @@
 
     move v6, p4
 
-    .line 203
+    .line 202
     invoke-virtual/range {v0 .. v7}, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;->removeCustomTileWithTagInternal(IILjava/lang/String;Ljava/lang/String;IILorg/cyanogenmod/platform/internal/ManagedServices$ManagedServiceInfo;)V
 
-    .line 199
+    .line 198
     return-void
 .end method
 
@@ -342,12 +342,12 @@
     .param p2, "userid"    # I
 
     .prologue
-    .line 238
+    .line 237
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$2;->this$0:Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;->-wrap3(Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;)V
 
-    .line 239
+    .line 238
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$2;->this$0:Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;->-get1(Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService;)Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$CustomTileListeners;
@@ -356,6 +356,6 @@
 
     invoke-virtual {v0, p1, p2}, Lorg/cyanogenmod/platform/internal/CMStatusBarManagerService$CustomTileListeners;->unregisterService(Landroid/os/IInterface;I)V
 
-    .line 237
+    .line 236
     return-void
 .end method

@@ -18,10 +18,22 @@
 .method public abstract get(I)Z
 .end method
 
+.method public abstract getColorBalance()I
+.end method
+
+.method public abstract getColorBalanceMax()I
+.end method
+
+.method public abstract getColorBalanceMin()I
+.end method
+
 .method public abstract getCurrentDisplayMode()Lcyanogenmod/hardware/DisplayMode;
 .end method
 
 .method public abstract getDefaultDisplayMode()Lcyanogenmod/hardware/DisplayMode;
+.end method
+
+.method public abstract getDefaultPictureAdjustment()Lcyanogenmod/hardware/HSIC;
 .end method
 
 .method public abstract getDisplayColorCalibration()[I
@@ -43,6 +55,23 @@
 .end method
 
 .method public abstract getNumGammaControls()I
+.end method
+
+.method public abstract getPictureAdjustment()Lcyanogenmod/hardware/HSIC;
+.end method
+
+.method public abstract getPictureAdjustmentRanges()Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Landroid/util/Range",
+            "<",
+            "Ljava/lang/Float;",
+            ">;>;"
+        }
+    .end annotation
 .end method
 
 .method public abstract getSerialNumber()Ljava/lang/String;
@@ -69,6 +98,9 @@
 .method public abstract set(IZ)Z
 .end method
 
+.method public abstract setColorBalance(I)Z
+.end method
+
 .method public abstract setDisplayColorCalibration([I)Z
 .end method
 
@@ -76,6 +108,9 @@
 .end method
 
 .method public abstract setDisplayMode(Lcyanogenmod/hardware/DisplayMode;Z)Z
+.end method
+
+.method public abstract setPictureAdjustment(Lcyanogenmod/hardware/HSIC;)Z
 .end method
 
 .method public abstract setVibratorIntensity(I)Z

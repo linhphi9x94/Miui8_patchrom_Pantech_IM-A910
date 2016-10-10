@@ -42,15 +42,15 @@
     .locals 1
 
     .prologue
-    .line 14
+    .line 38
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 16
+    .line 40
     const-string/jumbo v0, "cyanogenmod.weatherservice.IWeatherProviderService"
 
     invoke-virtual {p0, p0, v0}, Lcyanogenmod/weatherservice/IWeatherProviderService$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 14
+    .line 38
     return-void
 .end method
 
@@ -61,13 +61,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 24
+    .line 48
     if-nez p0, :cond_0
 
-    .line 25
+    .line 49
     return-object v1
 
-    .line 27
+    .line 51
     :cond_0
     const-string/jumbo v1, "cyanogenmod.weatherservice.IWeatherProviderService"
 
@@ -75,7 +75,7 @@
 
     move-result-object v0
 
-    .line 28
+    .line 52
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -83,13 +83,13 @@
 
     if-eqz v1, :cond_1
 
-    .line 29
+    .line 53
     check-cast v0, Lcyanogenmod/weatherservice/IWeatherProviderService;
 
     .end local v0    # "iin":Landroid/os/IInterface;
     return-object v0
 
-    .line 31
+    .line 55
     .restart local v0    # "iin":Landroid/os/IInterface;
     :cond_1
     new-instance v1, Lcyanogenmod/weatherservice/IWeatherProviderService$Stub$Proxy;
@@ -105,7 +105,7 @@
     .locals 0
 
     .prologue
-    .line 35
+    .line 59
     return-object p0
 .end method
 
@@ -124,39 +124,39 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 39
+    .line 63
     sparse-switch p1, :sswitch_data_0
 
-    .line 95
+    .line 119
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v3
 
     return v3
 
-    .line 43
+    .line 67
     :sswitch_0
     const-string/jumbo v3, "cyanogenmod.weatherservice.IWeatherProviderService"
 
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 44
+    .line 68
     return v4
 
-    .line 48
+    .line 72
     :sswitch_1
     const-string/jumbo v3, "cyanogenmod.weatherservice.IWeatherProviderService"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 50
+    .line 74
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 51
+    .line 75
     sget-object v3, Lcyanogenmod/weather/RequestInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v3, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -165,35 +165,35 @@
 
     check-cast v1, Lcyanogenmod/weather/RequestInfo;
 
-    .line 56
+    .line 80
     :goto_0
     invoke-virtual {p0, v1}, Lcyanogenmod/weatherservice/IWeatherProviderService$Stub;->processWeatherUpdateRequest(Lcyanogenmod/weather/RequestInfo;)V
 
-    .line 57
+    .line 81
     return v4
 
-    .line 54
+    .line 78
     :cond_0
     const/4 v1, 0x0
 
     .local v1, "_arg0":Lcyanogenmod/weather/RequestInfo;
     goto :goto_0
 
-    .line 61
+    .line 85
     .end local v1    # "_arg0":Lcyanogenmod/weather/RequestInfo;
     :sswitch_2
     const-string/jumbo v3, "cyanogenmod.weatherservice.IWeatherProviderService"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 63
+    .line 87
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 64
+    .line 88
     sget-object v3, Lcyanogenmod/weather/RequestInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v3, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -202,28 +202,28 @@
 
     check-cast v1, Lcyanogenmod/weather/RequestInfo;
 
-    .line 69
+    .line 93
     :goto_1
     invoke-virtual {p0, v1}, Lcyanogenmod/weatherservice/IWeatherProviderService$Stub;->processCityNameLookupRequest(Lcyanogenmod/weather/RequestInfo;)V
 
-    .line 70
+    .line 94
     return v4
 
-    .line 67
+    .line 91
     :cond_1
     const/4 v1, 0x0
 
     .restart local v1    # "_arg0":Lcyanogenmod/weather/RequestInfo;
     goto :goto_1
 
-    .line 74
+    .line 98
     .end local v1    # "_arg0":Lcyanogenmod/weather/RequestInfo;
     :sswitch_3
     const-string/jumbo v3, "cyanogenmod.weatherservice.IWeatherProviderService"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 76
+    .line 100
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v3
@@ -232,45 +232,45 @@
 
     move-result-object v2
 
-    .line 77
+    .line 101
     .local v2, "_arg0":Lcyanogenmod/weatherservice/IWeatherProviderServiceClient;
     invoke-virtual {p0, v2}, Lcyanogenmod/weatherservice/IWeatherProviderService$Stub;->setServiceClient(Lcyanogenmod/weatherservice/IWeatherProviderServiceClient;)V
 
-    .line 78
+    .line 102
     return v4
 
-    .line 82
+    .line 106
     .end local v2    # "_arg0":Lcyanogenmod/weatherservice/IWeatherProviderServiceClient;
     :sswitch_4
     const-string/jumbo v3, "cyanogenmod.weatherservice.IWeatherProviderService"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 83
+    .line 107
     invoke-virtual {p0}, Lcyanogenmod/weatherservice/IWeatherProviderService$Stub;->cancelOngoingRequests()V
 
-    .line 84
+    .line 108
     return v4
 
-    .line 88
+    .line 112
     :sswitch_5
     const-string/jumbo v3, "cyanogenmod.weatherservice.IWeatherProviderService"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 90
+    .line 114
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 91
+    .line 115
     .local v0, "_arg0":I
     invoke-virtual {p0, v0}, Lcyanogenmod/weatherservice/IWeatherProviderService$Stub;->cancelRequest(I)V
 
-    .line 92
+    .line 116
     return v4
 
-    .line 39
+    .line 63
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

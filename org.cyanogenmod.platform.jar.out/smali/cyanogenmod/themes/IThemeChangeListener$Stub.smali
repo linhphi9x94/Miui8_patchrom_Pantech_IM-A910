@@ -36,15 +36,15 @@
     .locals 1
 
     .prologue
-    .line 14
+    .line 29
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 16
+    .line 31
     const-string/jumbo v0, "cyanogenmod.themes.IThemeChangeListener"
 
     invoke-virtual {p0, p0, v0}, Lcyanogenmod/themes/IThemeChangeListener$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 14
+    .line 29
     return-void
 .end method
 
@@ -55,13 +55,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 24
+    .line 39
     if-nez p0, :cond_0
 
-    .line 25
+    .line 40
     return-object v1
 
-    .line 27
+    .line 42
     :cond_0
     const-string/jumbo v1, "cyanogenmod.themes.IThemeChangeListener"
 
@@ -69,7 +69,7 @@
 
     move-result-object v0
 
-    .line 28
+    .line 43
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -77,13 +77,13 @@
 
     if-eqz v1, :cond_1
 
-    .line 29
+    .line 44
     check-cast v0, Lcyanogenmod/themes/IThemeChangeListener;
 
     .end local v0    # "iin":Landroid/os/IInterface;
     return-object v0
 
-    .line 31
+    .line 46
     .restart local v0    # "iin":Landroid/os/IInterface;
     :cond_1
     new-instance v1, Lcyanogenmod/themes/IThemeChangeListener$Stub$Proxy;
@@ -99,7 +99,7 @@
     .locals 0
 
     .prologue
-    .line 35
+    .line 50
     return-object p0
 .end method
 
@@ -118,51 +118,51 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 39
+    .line 54
     sparse-switch p1, :sswitch_data_0
 
-    .line 63
+    .line 78
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v2
 
     return v2
 
-    .line 43
+    .line 58
     :sswitch_0
     const-string/jumbo v2, "cyanogenmod.themes.IThemeChangeListener"
 
     invoke-virtual {p3, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 44
+    .line 59
     return v3
 
-    .line 48
+    .line 63
     :sswitch_1
     const-string/jumbo v2, "cyanogenmod.themes.IThemeChangeListener"
 
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 50
+    .line 65
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 51
+    .line 66
     .local v0, "_arg0":I
     invoke-virtual {p0, v0}, Lcyanogenmod/themes/IThemeChangeListener$Stub;->onProgress(I)V
 
-    .line 52
+    .line 67
     return v3
 
-    .line 56
+    .line 71
     .end local v0    # "_arg0":I
     :sswitch_2
     const-string/jumbo v2, "cyanogenmod.themes.IThemeChangeListener"
 
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 58
+    .line 73
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
@@ -171,15 +171,15 @@
 
     const/4 v1, 0x1
 
-    .line 59
+    .line 74
     .local v1, "_arg0":Z
     :goto_0
     invoke-virtual {p0, v1}, Lcyanogenmod/themes/IThemeChangeListener$Stub;->onFinish(Z)V
 
-    .line 60
+    .line 75
     return v3
 
-    .line 58
+    .line 73
     .end local v1    # "_arg0":Z
     :cond_0
     const/4 v1, 0x0
@@ -187,7 +187,7 @@
     .restart local v1    # "_arg0":Z
     goto :goto_0
 
-    .line 39
+    .line 54
     nop
 
     :sswitch_data_0

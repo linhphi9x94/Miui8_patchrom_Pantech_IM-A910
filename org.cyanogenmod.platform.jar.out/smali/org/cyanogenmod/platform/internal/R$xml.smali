@@ -15,7 +15,7 @@
 
 
 # static fields
-.field public static final profile_default:I = 0x3f030000
+.field public static final profile_default:I = 0x3f040000
 
 
 # direct methods
@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 776
+    .line 952
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

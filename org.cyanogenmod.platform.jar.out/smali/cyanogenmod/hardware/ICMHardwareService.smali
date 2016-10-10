@@ -9,6 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcyanogenmod/hardware/ICMHardwareService$NoOp;,
         Lcyanogenmod/hardware/ICMHardwareService$Stub;
     }
 .end annotation
@@ -16,6 +17,30 @@
 
 # virtual methods
 .method public abstract get(I)Z
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract getColorBalance()I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract getColorBalanceMax()I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract getColorBalanceMin()I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -32,6 +57,14 @@
 .end method
 
 .method public abstract getDefaultDisplayMode()Lcyanogenmod/hardware/DisplayMode;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract getDefaultPictureAdjustment()Lcyanogenmod/hardware/HSIC;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -88,6 +121,22 @@
 .end method
 
 .method public abstract getNumGammaControls()I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract getPictureAdjustment()Lcyanogenmod/hardware/HSIC;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract getPictureAdjustmentRanges()[F
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -175,6 +224,14 @@
     .end annotation
 .end method
 
+.method public abstract setColorBalance(I)Z
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract setDisplayColorCalibration([I)Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -192,6 +249,14 @@
 .end method
 
 .method public abstract setDisplayMode(Lcyanogenmod/hardware/DisplayMode;Z)Z
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract setPictureAdjustment(Lcyanogenmod/hardware/HSIC;)Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

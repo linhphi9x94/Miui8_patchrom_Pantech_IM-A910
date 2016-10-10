@@ -21,6 +21,8 @@
 
 .field public static final HARDWARE_ABSTRACTION:Ljava/lang/String; = "org.cyanogenmod.hardware"
 
+.field public static final LIVEDISPLAY:Ljava/lang/String; = "org.cyanogenmod.livedisplay"
+
 .field public static final LIVE_LOCK_SCREEN:Ljava/lang/String; = "org.cyanogenmod.livelockscreen"
 
 .field public static final PARTNER:Ljava/lang/String; = "org.cyanogenmod.partner"
@@ -43,7 +45,7 @@
     .locals 0
 
     .prologue
-    .line 144
+    .line 152
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -72,15 +72,15 @@
     .locals 1
 
     .prologue
-    .line 14
+    .line 98
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 16
+    .line 100
     const-string/jumbo v0, "cyanogenmod.app.IProfileManager"
 
     invoke-virtual {p0, p0, v0}, Lcyanogenmod/app/IProfileManager$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 14
+    .line 98
     return-void
 .end method
 
@@ -91,13 +91,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 24
+    .line 108
     if-nez p0, :cond_0
 
-    .line 25
+    .line 109
     return-object v1
 
-    .line 27
+    .line 111
     :cond_0
     const-string/jumbo v1, "cyanogenmod.app.IProfileManager"
 
@@ -105,7 +105,7 @@
 
     move-result-object v0
 
-    .line 28
+    .line 112
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -113,13 +113,13 @@
 
     if-eqz v1, :cond_1
 
-    .line 29
+    .line 113
     check-cast v0, Lcyanogenmod/app/IProfileManager;
 
     .end local v0    # "iin":Landroid/os/IInterface;
     return-object v0
 
-    .line 31
+    .line 115
     .restart local v0    # "iin":Landroid/os/IInterface;
     :cond_1
     new-instance v1, Lcyanogenmod/app/IProfileManager$Stub$Proxy;
@@ -135,7 +135,7 @@
     .locals 0
 
     .prologue
-    .line 35
+    .line 119
     return-object p0
 .end method
 
@@ -152,41 +152,41 @@
     .end annotation
 
     .prologue
-    .line 39
+    .line 123
     sparse-switch p1, :sswitch_data_0
 
-    .line 312
+    .line 396
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v9
 
     return v9
 
-    .line 43
+    .line 127
     :sswitch_0
     const-string/jumbo v9, "cyanogenmod.app.IProfileManager"
 
     invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 44
+    .line 128
     const/4 v9, 0x1
 
     return v9
 
-    .line 48
+    .line 132
     :sswitch_1
     const-string/jumbo v9, "cyanogenmod.app.IProfileManager"
 
     invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 50
+    .line 134
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
 
     if-eqz v9, :cond_0
 
-    .line 51
+    .line 135
     sget-object v9, Landroid/os/ParcelUuid;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v9, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -195,17 +195,17 @@
 
     check-cast v1, Landroid/os/ParcelUuid;
 
-    .line 56
+    .line 140
     :goto_0
     invoke-virtual {p0, v1}, Lcyanogenmod/app/IProfileManager$Stub;->setActiveProfile(Landroid/os/ParcelUuid;)Z
 
     move-result v6
 
-    .line 57
+    .line 141
     .local v6, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 58
+    .line 142
     if-eqz v6, :cond_1
 
     const/4 v9, 0x1
@@ -213,12 +213,12 @@
     :goto_1
     invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 59
+    .line 143
     const/4 v9, 0x1
 
     return v9
 
-    .line 54
+    .line 138
     .end local v6    # "_result":Z
     :cond_0
     const/4 v1, 0x0
@@ -226,7 +226,7 @@
     .local v1, "_arg0":Landroid/os/ParcelUuid;
     goto :goto_0
 
-    .line 58
+    .line 142
     .end local v1    # "_arg0":Landroid/os/ParcelUuid;
     .restart local v6    # "_result":Z
     :cond_1
@@ -234,29 +234,29 @@
 
     goto :goto_1
 
-    .line 63
+    .line 147
     .end local v6    # "_result":Z
     :sswitch_2
     const-string/jumbo v9, "cyanogenmod.app.IProfileManager"
 
     invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 65
+    .line 149
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 66
+    .line 150
     .local v3, "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v3}, Lcyanogenmod/app/IProfileManager$Stub;->setActiveProfileByName(Ljava/lang/String;)Z
 
     move-result v6
 
-    .line 67
+    .line 151
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 68
+    .line 152
     if-eqz v6, :cond_2
 
     const/4 v9, 0x1
@@ -264,18 +264,18 @@
     :goto_2
     invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 69
+    .line 153
     const/4 v9, 0x1
 
     return v9
 
-    .line 68
+    .line 152
     :cond_2
     const/4 v9, 0x0
 
     goto :goto_2
 
-    .line 73
+    .line 157
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v6    # "_result":Z
     :sswitch_3
@@ -283,35 +283,35 @@
 
     invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 74
+    .line 158
     invoke-virtual {p0}, Lcyanogenmod/app/IProfileManager$Stub;->getActiveProfile()Lcyanogenmod/app/Profile;
 
     move-result-object v5
 
-    .line 75
+    .line 159
     .local v5, "_result":Lcyanogenmod/app/Profile;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 76
+    .line 160
     if-eqz v5, :cond_3
 
-    .line 77
+    .line 161
     const/4 v9, 0x1
 
     invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 78
+    .line 162
     const/4 v9, 0x1
 
     invoke-virtual {v5, p3, v9}, Lcyanogenmod/app/Profile;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 83
+    .line 167
     :goto_3
     const/4 v9, 0x1
 
     return v9
 
-    .line 81
+    .line 165
     :cond_3
     const/4 v9, 0x0
 
@@ -319,21 +319,21 @@
 
     goto :goto_3
 
-    .line 87
+    .line 171
     .end local v5    # "_result":Lcyanogenmod/app/Profile;
     :sswitch_4
     const-string/jumbo v9, "cyanogenmod.app.IProfileManager"
 
     invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 89
+    .line 173
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
 
     if-eqz v9, :cond_4
 
-    .line 90
+    .line 174
     sget-object v9, Lcyanogenmod/app/Profile;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v9, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -342,17 +342,17 @@
 
     check-cast v2, Lcyanogenmod/app/Profile;
 
-    .line 95
+    .line 179
     :goto_4
     invoke-virtual {p0, v2}, Lcyanogenmod/app/IProfileManager$Stub;->addProfile(Lcyanogenmod/app/Profile;)Z
 
     move-result v6
 
-    .line 96
+    .line 180
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 97
+    .line 181
     if-eqz v6, :cond_5
 
     const/4 v9, 0x1
@@ -360,12 +360,12 @@
     :goto_5
     invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 98
+    .line 182
     const/4 v9, 0x1
 
     return v9
 
-    .line 93
+    .line 177
     .end local v6    # "_result":Z
     :cond_4
     const/4 v2, 0x0
@@ -373,7 +373,7 @@
     .local v2, "_arg0":Lcyanogenmod/app/Profile;
     goto :goto_4
 
-    .line 97
+    .line 181
     .end local v2    # "_arg0":Lcyanogenmod/app/Profile;
     .restart local v6    # "_result":Z
     :cond_5
@@ -381,21 +381,21 @@
 
     goto :goto_5
 
-    .line 102
+    .line 186
     .end local v6    # "_result":Z
     :sswitch_5
     const-string/jumbo v9, "cyanogenmod.app.IProfileManager"
 
     invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 104
+    .line 188
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
 
     if-eqz v9, :cond_6
 
-    .line 105
+    .line 189
     sget-object v9, Lcyanogenmod/app/Profile;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v9, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -404,17 +404,17 @@
 
     check-cast v2, Lcyanogenmod/app/Profile;
 
-    .line 110
+    .line 194
     :goto_6
     invoke-virtual {p0, v2}, Lcyanogenmod/app/IProfileManager$Stub;->removeProfile(Lcyanogenmod/app/Profile;)Z
 
     move-result v6
 
-    .line 111
+    .line 195
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 112
+    .line 196
     if-eqz v6, :cond_7
 
     const/4 v9, 0x1
@@ -422,12 +422,12 @@
     :goto_7
     invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 113
+    .line 197
     const/4 v9, 0x1
 
     return v9
 
-    .line 108
+    .line 192
     .end local v6    # "_result":Z
     :cond_6
     const/4 v2, 0x0
@@ -435,7 +435,7 @@
     .restart local v2    # "_arg0":Lcyanogenmod/app/Profile;
     goto :goto_6
 
-    .line 112
+    .line 196
     .end local v2    # "_arg0":Lcyanogenmod/app/Profile;
     .restart local v6    # "_result":Z
     :cond_7
@@ -443,21 +443,21 @@
 
     goto :goto_7
 
-    .line 117
+    .line 201
     .end local v6    # "_result":Z
     :sswitch_6
     const-string/jumbo v9, "cyanogenmod.app.IProfileManager"
 
     invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 119
+    .line 203
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
 
     if-eqz v9, :cond_8
 
-    .line 120
+    .line 204
     sget-object v9, Lcyanogenmod/app/Profile;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v9, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -466,40 +466,40 @@
 
     check-cast v2, Lcyanogenmod/app/Profile;
 
-    .line 125
+    .line 209
     :goto_8
     invoke-virtual {p0, v2}, Lcyanogenmod/app/IProfileManager$Stub;->updateProfile(Lcyanogenmod/app/Profile;)V
 
-    .line 126
+    .line 210
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 127
+    .line 211
     const/4 v9, 0x1
 
     return v9
 
-    .line 123
+    .line 207
     :cond_8
     const/4 v2, 0x0
 
     .restart local v2    # "_arg0":Lcyanogenmod/app/Profile;
     goto :goto_8
 
-    .line 131
+    .line 215
     .end local v2    # "_arg0":Lcyanogenmod/app/Profile;
     :sswitch_7
     const-string/jumbo v9, "cyanogenmod.app.IProfileManager"
 
     invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 133
+    .line 217
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
 
     if-eqz v9, :cond_9
 
-    .line 134
+    .line 218
     sget-object v9, Landroid/os/ParcelUuid;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v9, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -508,36 +508,36 @@
 
     check-cast v1, Landroid/os/ParcelUuid;
 
-    .line 139
+    .line 223
     :goto_9
     invoke-virtual {p0, v1}, Lcyanogenmod/app/IProfileManager$Stub;->getProfile(Landroid/os/ParcelUuid;)Lcyanogenmod/app/Profile;
 
     move-result-object v5
 
-    .line 140
+    .line 224
     .restart local v5    # "_result":Lcyanogenmod/app/Profile;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 141
+    .line 225
     if-eqz v5, :cond_a
 
-    .line 142
+    .line 226
     const/4 v9, 0x1
 
     invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 143
+    .line 227
     const/4 v9, 0x1
 
     invoke-virtual {v5, p3, v9}, Lcyanogenmod/app/Profile;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 148
+    .line 232
     :goto_a
     const/4 v9, 0x1
 
     return v9
 
-    .line 137
+    .line 221
     .end local v5    # "_result":Lcyanogenmod/app/Profile;
     :cond_9
     const/4 v1, 0x0
@@ -545,7 +545,7 @@
     .restart local v1    # "_arg0":Landroid/os/ParcelUuid;
     goto :goto_9
 
-    .line 146
+    .line 230
     .end local v1    # "_arg0":Landroid/os/ParcelUuid;
     .restart local v5    # "_result":Lcyanogenmod/app/Profile;
     :cond_a
@@ -555,48 +555,48 @@
 
     goto :goto_a
 
-    .line 152
+    .line 236
     .end local v5    # "_result":Lcyanogenmod/app/Profile;
     :sswitch_8
     const-string/jumbo v9, "cyanogenmod.app.IProfileManager"
 
     invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 154
+    .line 238
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 155
+    .line 239
     .restart local v3    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v3}, Lcyanogenmod/app/IProfileManager$Stub;->getProfileByName(Ljava/lang/String;)Lcyanogenmod/app/Profile;
 
     move-result-object v5
 
-    .line 156
+    .line 240
     .restart local v5    # "_result":Lcyanogenmod/app/Profile;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 157
+    .line 241
     if-eqz v5, :cond_b
 
-    .line 158
+    .line 242
     const/4 v9, 0x1
 
     invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 159
+    .line 243
     const/4 v9, 0x1
 
     invoke-virtual {v5, p3, v9}, Lcyanogenmod/app/Profile;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 164
+    .line 248
     :goto_b
     const/4 v9, 0x1
 
     return v9
 
-    .line 162
+    .line 246
     :cond_b
     const/4 v9, 0x0
 
@@ -604,7 +604,7 @@
 
     goto :goto_b
 
-    .line 168
+    .line 252
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v5    # "_result":Lcyanogenmod/app/Profile;
     :sswitch_9
@@ -612,40 +612,40 @@
 
     invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 169
+    .line 253
     invoke-virtual {p0}, Lcyanogenmod/app/IProfileManager$Stub;->getProfiles()[Lcyanogenmod/app/Profile;
 
     move-result-object v8
 
-    .line 170
+    .line 254
     .local v8, "_result":[Lcyanogenmod/app/Profile;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 171
+    .line 255
     const/4 v9, 0x1
 
     invoke-virtual {p3, v8, v9}, Landroid/os/Parcel;->writeTypedArray([Landroid/os/Parcelable;I)V
 
-    .line 172
+    .line 256
     const/4 v9, 0x1
 
     return v9
 
-    .line 176
+    .line 260
     .end local v8    # "_result":[Lcyanogenmod/app/Profile;
     :sswitch_a
     const-string/jumbo v9, "cyanogenmod.app.IProfileManager"
 
     invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 178
+    .line 262
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
 
     if-eqz v9, :cond_c
 
-    .line 179
+    .line 263
     sget-object v9, Landroid/os/ParcelUuid;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v9, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -654,17 +654,17 @@
 
     check-cast v1, Landroid/os/ParcelUuid;
 
-    .line 184
+    .line 268
     :goto_c
     invoke-virtual {p0, v1}, Lcyanogenmod/app/IProfileManager$Stub;->profileExists(Landroid/os/ParcelUuid;)Z
 
     move-result v6
 
-    .line 185
+    .line 269
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 186
+    .line 270
     if-eqz v6, :cond_d
 
     const/4 v9, 0x1
@@ -672,12 +672,12 @@
     :goto_d
     invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 187
+    .line 271
     const/4 v9, 0x1
 
     return v9
 
-    .line 182
+    .line 266
     .end local v6    # "_result":Z
     :cond_c
     const/4 v1, 0x0
@@ -685,7 +685,7 @@
     .restart local v1    # "_arg0":Landroid/os/ParcelUuid;
     goto :goto_c
 
-    .line 186
+    .line 270
     .end local v1    # "_arg0":Landroid/os/ParcelUuid;
     .restart local v6    # "_result":Z
     :cond_d
@@ -693,29 +693,29 @@
 
     goto :goto_d
 
-    .line 191
+    .line 275
     .end local v6    # "_result":Z
     :sswitch_b
     const-string/jumbo v9, "cyanogenmod.app.IProfileManager"
 
     invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 193
+    .line 277
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 194
+    .line 278
     .restart local v3    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v3}, Lcyanogenmod/app/IProfileManager$Stub;->profileExistsByName(Ljava/lang/String;)Z
 
     move-result v6
 
-    .line 195
+    .line 279
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 196
+    .line 280
     if-eqz v6, :cond_e
 
     const/4 v9, 0x1
@@ -723,18 +723,18 @@
     :goto_e
     invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 197
+    .line 281
     const/4 v9, 0x1
 
     return v9
 
-    .line 196
+    .line 280
     :cond_e
     const/4 v9, 0x0
 
     goto :goto_e
 
-    .line 201
+    .line 285
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v6    # "_result":Z
     :sswitch_c
@@ -742,22 +742,22 @@
 
     invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 203
+    .line 287
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 204
+    .line 288
     .restart local v3    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v3}, Lcyanogenmod/app/IProfileManager$Stub;->notificationGroupExistsByName(Ljava/lang/String;)Z
 
     move-result v6
 
-    .line 205
+    .line 289
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 206
+    .line 290
     if-eqz v6, :cond_f
 
     const/4 v9, 0x1
@@ -765,18 +765,18 @@
     :goto_f
     invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 207
+    .line 291
     const/4 v9, 0x1
 
     return v9
 
-    .line 206
+    .line 290
     :cond_f
     const/4 v9, 0x0
 
     goto :goto_f
 
-    .line 211
+    .line 295
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v6    # "_result":Z
     :sswitch_d
@@ -784,40 +784,40 @@
 
     invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 212
+    .line 296
     invoke-virtual {p0}, Lcyanogenmod/app/IProfileManager$Stub;->getNotificationGroups()[Landroid/app/NotificationGroup;
 
     move-result-object v7
 
-    .line 213
+    .line 297
     .local v7, "_result":[Landroid/app/NotificationGroup;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 214
+    .line 298
     const/4 v9, 0x1
 
     invoke-virtual {p3, v7, v9}, Landroid/os/Parcel;->writeTypedArray([Landroid/os/Parcelable;I)V
 
-    .line 215
+    .line 299
     const/4 v9, 0x1
 
     return v9
 
-    .line 219
+    .line 303
     .end local v7    # "_result":[Landroid/app/NotificationGroup;
     :sswitch_e
     const-string/jumbo v9, "cyanogenmod.app.IProfileManager"
 
     invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 221
+    .line 305
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
 
     if-eqz v9, :cond_10
 
-    .line 222
+    .line 306
     sget-object v9, Landroid/app/NotificationGroup;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v9, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -826,40 +826,40 @@
 
     check-cast v0, Landroid/app/NotificationGroup;
 
-    .line 227
+    .line 311
     :goto_10
     invoke-virtual {p0, v0}, Lcyanogenmod/app/IProfileManager$Stub;->addNotificationGroup(Landroid/app/NotificationGroup;)V
 
-    .line 228
+    .line 312
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 229
+    .line 313
     const/4 v9, 0x1
 
     return v9
 
-    .line 225
+    .line 309
     :cond_10
     const/4 v0, 0x0
 
     .local v0, "_arg0":Landroid/app/NotificationGroup;
     goto :goto_10
 
-    .line 233
+    .line 317
     .end local v0    # "_arg0":Landroid/app/NotificationGroup;
     :sswitch_f
     const-string/jumbo v9, "cyanogenmod.app.IProfileManager"
 
     invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 235
+    .line 319
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
 
     if-eqz v9, :cond_11
 
-    .line 236
+    .line 320
     sget-object v9, Landroid/app/NotificationGroup;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v9, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -868,40 +868,40 @@
 
     check-cast v0, Landroid/app/NotificationGroup;
 
-    .line 241
+    .line 325
     :goto_11
     invoke-virtual {p0, v0}, Lcyanogenmod/app/IProfileManager$Stub;->removeNotificationGroup(Landroid/app/NotificationGroup;)V
 
-    .line 242
+    .line 326
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 243
+    .line 327
     const/4 v9, 0x1
 
     return v9
 
-    .line 239
+    .line 323
     :cond_11
     const/4 v0, 0x0
 
     .restart local v0    # "_arg0":Landroid/app/NotificationGroup;
     goto :goto_11
 
-    .line 247
+    .line 331
     .end local v0    # "_arg0":Landroid/app/NotificationGroup;
     :sswitch_10
     const-string/jumbo v9, "cyanogenmod.app.IProfileManager"
 
     invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 249
+    .line 333
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
 
     if-eqz v9, :cond_12
 
-    .line 250
+    .line 334
     sget-object v9, Landroid/app/NotificationGroup;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v9, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -910,67 +910,67 @@
 
     check-cast v0, Landroid/app/NotificationGroup;
 
-    .line 255
+    .line 339
     :goto_12
     invoke-virtual {p0, v0}, Lcyanogenmod/app/IProfileManager$Stub;->updateNotificationGroup(Landroid/app/NotificationGroup;)V
 
-    .line 256
+    .line 340
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 257
+    .line 341
     const/4 v9, 0x1
 
     return v9
 
-    .line 253
+    .line 337
     :cond_12
     const/4 v0, 0x0
 
     .restart local v0    # "_arg0":Landroid/app/NotificationGroup;
     goto :goto_12
 
-    .line 261
+    .line 345
     .end local v0    # "_arg0":Landroid/app/NotificationGroup;
     :sswitch_11
     const-string/jumbo v9, "cyanogenmod.app.IProfileManager"
 
     invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 263
+    .line 347
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 264
+    .line 348
     .restart local v3    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v3}, Lcyanogenmod/app/IProfileManager$Stub;->getNotificationGroupForPackage(Ljava/lang/String;)Landroid/app/NotificationGroup;
 
     move-result-object v4
 
-    .line 265
+    .line 349
     .local v4, "_result":Landroid/app/NotificationGroup;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 266
+    .line 350
     if-eqz v4, :cond_13
 
-    .line 267
+    .line 351
     const/4 v9, 0x1
 
     invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 268
+    .line 352
     const/4 v9, 0x1
 
     invoke-virtual {v4, p3, v9}, Landroid/app/NotificationGroup;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 273
+    .line 357
     :goto_13
     const/4 v9, 0x1
 
     return v9
 
-    .line 271
+    .line 355
     :cond_13
     const/4 v9, 0x0
 
@@ -978,7 +978,7 @@
 
     goto :goto_13
 
-    .line 277
+    .line 361
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_result":Landroid/app/NotificationGroup;
     :sswitch_12
@@ -986,14 +986,14 @@
 
     invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 279
+    .line 363
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
 
     if-eqz v9, :cond_14
 
-    .line 280
+    .line 364
     sget-object v9, Landroid/os/ParcelUuid;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v9, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -1002,36 +1002,36 @@
 
     check-cast v1, Landroid/os/ParcelUuid;
 
-    .line 285
+    .line 369
     :goto_14
     invoke-virtual {p0, v1}, Lcyanogenmod/app/IProfileManager$Stub;->getNotificationGroup(Landroid/os/ParcelUuid;)Landroid/app/NotificationGroup;
 
     move-result-object v4
 
-    .line 286
+    .line 370
     .restart local v4    # "_result":Landroid/app/NotificationGroup;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 287
+    .line 371
     if-eqz v4, :cond_15
 
-    .line 288
+    .line 372
     const/4 v9, 0x1
 
     invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 289
+    .line 373
     const/4 v9, 0x1
 
     invoke-virtual {v4, p3, v9}, Landroid/app/NotificationGroup;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 294
+    .line 378
     :goto_15
     const/4 v9, 0x1
 
     return v9
 
-    .line 283
+    .line 367
     .end local v4    # "_result":Landroid/app/NotificationGroup;
     :cond_14
     const/4 v1, 0x0
@@ -1039,7 +1039,7 @@
     .restart local v1    # "_arg0":Landroid/os/ParcelUuid;
     goto :goto_14
 
-    .line 292
+    .line 376
     .end local v1    # "_arg0":Landroid/os/ParcelUuid;
     .restart local v4    # "_result":Landroid/app/NotificationGroup;
     :cond_15
@@ -1049,40 +1049,40 @@
 
     goto :goto_15
 
-    .line 298
+    .line 382
     .end local v4    # "_result":Landroid/app/NotificationGroup;
     :sswitch_13
     const-string/jumbo v9, "cyanogenmod.app.IProfileManager"
 
     invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 299
+    .line 383
     invoke-virtual {p0}, Lcyanogenmod/app/IProfileManager$Stub;->resetAll()V
 
-    .line 300
+    .line 384
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 301
+    .line 385
     const/4 v9, 0x1
 
     return v9
 
-    .line 305
+    .line 389
     :sswitch_14
     const-string/jumbo v9, "cyanogenmod.app.IProfileManager"
 
     invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 306
+    .line 390
     invoke-virtual {p0}, Lcyanogenmod/app/IProfileManager$Stub;->isEnabled()Z
 
     move-result v6
 
-    .line 307
+    .line 391
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 308
+    .line 392
     if-eqz v6, :cond_16
 
     const/4 v9, 0x1
@@ -1090,18 +1090,18 @@
     :goto_16
     invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 309
+    .line 393
     const/4 v9, 0x1
 
     return v9
 
-    .line 308
+    .line 392
     :cond_16
     const/4 v9, 0x0
 
     goto :goto_16
 
-    .line 39
+    .line 123
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

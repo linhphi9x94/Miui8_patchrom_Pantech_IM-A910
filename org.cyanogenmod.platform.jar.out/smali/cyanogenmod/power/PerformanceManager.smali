@@ -101,13 +101,11 @@
     if-nez v1, :cond_0
 
     .line 94
-    new-instance v1, Ljava/lang/RuntimeException;
+    const-string/jumbo v1, "PerformanceManager"
 
     const-string/jumbo v2, "Unable to get PerformanceManagerService. The service either crashed, was not started, or the interface has been called to early in SystemServer init"
 
-    invoke-direct {v1, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v1
+    invoke-static {v1, v2}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 99
     :cond_0

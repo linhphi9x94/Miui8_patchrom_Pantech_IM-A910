@@ -1,5 +1,5 @@
 .class public Lorg/cyanogenmod/platform/internal/PerformanceManagerService;
-.super Lcom/android/server/SystemService;
+.super Lorg/cyanogenmod/platform/internal/CMSystemService;
 .source "PerformanceManagerService.java"
 
 
@@ -174,6 +174,17 @@
     return-void
 .end method
 
+.method static synthetic -wrap5(Lorg/cyanogenmod/platform/internal/PerformanceManagerService;ILjava/lang/String;)V
+    .locals 0
+    .param p1, "pid"    # I
+    .param p2, "packageName"    # Ljava/lang/String;
+
+    .prologue
+    invoke-direct {p0, p1, p2}, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->native_launchBoost(ILjava/lang/String;)V
+
+    return-void
+.end method
+
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 7
     .param p1, "context"    # Landroid/content/Context;
@@ -183,80 +194,80 @@
 
     const/4 v6, 0x0
 
-    .line 81
-    invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
+    .line 76
+    invoke-direct {p0, p1}, Lorg/cyanogenmod/platform/internal/CMSystemService;-><init>(Landroid/content/Context;)V
 
-    .line 55
+    .line 50
     iput-object v4, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mPatterns:[Ljava/util/regex/Pattern;
 
-    .line 56
+    .line 51
     iput-object v4, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mProfiles:[I
 
-    .line 59
+    .line 54
     const/4 v3, -0x1
 
     iput v3, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mCurrentProfile:I
 
-    .line 60
+    .line 55
     iput v6, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mNumProfiles:I
 
-    .line 66
+    .line 61
     const/16 v3, 0x10
 
     iput v3, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->POWER_HINT_CPU_BOOST:I
 
-    .line 67
+    .line 62
     const/16 v3, 0x11
 
     iput v3, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->POWER_HINT_LAUNCH_BOOST:I
 
-    .line 68
+    .line 63
     const/16 v3, 0x30
 
     iput v3, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->POWER_HINT_SET_PROFILE:I
 
-    .line 70
+    .line 65
     const/16 v3, 0x1000
 
     iput v3, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->POWER_FEATURE_SUPPORTED_PROFILES:I
 
-    .line 73
+    .line 68
     iput-boolean v6, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mLowPowerModeEnabled:Z
 
-    .line 74
+    .line 69
     iput-object v4, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mCurrentActivityName:Ljava/lang/String;
 
-    .line 304
+    .line 294
     new-instance v3, Lorg/cyanogenmod/platform/internal/PerformanceManagerService$1;
 
     invoke-direct {v3, p0}, Lorg/cyanogenmod/platform/internal/PerformanceManagerService$1;-><init>(Lorg/cyanogenmod/platform/internal/PerformanceManagerService;)V
 
     iput-object v3, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mBinder:Landroid/os/IBinder;
 
-    .line 406
+    .line 398
     new-instance v3, Lorg/cyanogenmod/platform/internal/PerformanceManagerService$2;
 
     invoke-direct {v3, p0}, Lorg/cyanogenmod/platform/internal/PerformanceManagerService$2;-><init>(Lorg/cyanogenmod/platform/internal/PerformanceManagerService;)V
 
     iput-object v3, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mLowPowerModeListener:Landroid/os/PowerManagerInternal$LowPowerModeListener;
 
-    .line 83
+    .line 78
     iput-object p1, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mContext:Landroid/content/Context;
 
-    .line 85
+    .line 80
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    .line 86
-    const v4, 0x3f040006
+    .line 81
+    const v4, 0x3f050009
 
-    .line 85
+    .line 80
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 87
+    .line 82
     .local v0, "activities":[Ljava/lang/String;
     if-eqz v0, :cond_1
 
@@ -264,21 +275,21 @@
 
     if-lez v3, :cond_1
 
-    .line 88
+    .line 83
     array-length v3, v0
 
     new-array v3, v3, [Ljava/util/regex/Pattern;
 
     iput-object v3, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mPatterns:[Ljava/util/regex/Pattern;
 
-    .line 89
+    .line 84
     array-length v3, v0
 
     new-array v3, v3, [I
 
     iput-object v3, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mProfiles:[I
 
-    .line 90
+    .line 85
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -287,7 +298,7 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 91
+    .line 86
     aget-object v3, v0, v1
 
     const-string/jumbo v4, ","
@@ -296,7 +307,7 @@
 
     move-result-object v2
 
-    .line 92
+    .line 87
     .local v2, "info":[Ljava/lang/String;
     array-length v3, v2
 
@@ -304,7 +315,7 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 93
+    .line 88
     iget-object v3, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mPatterns:[Ljava/util/regex/Pattern;
 
     aget-object v4, v2, v6
@@ -315,7 +326,7 @@
 
     aput-object v4, v3, v1
 
-    .line 94
+    .line 89
     iget-object v3, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mProfiles:[I
 
     const/4 v4, 0x1
@@ -332,13 +343,13 @@
 
     aput v4, v3, v1
 
-    .line 90
+    .line 85
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 105
+    .line 100
     .end local v1    # "i":I
     .end local v2    # "info":[Ljava/lang/String;
     :cond_1
@@ -346,20 +357,20 @@
 
     const-string/jumbo v4, "PerformanceManager"
 
-    .line 106
+    .line 101
     const/4 v5, -0x7
 
-    .line 105
+    .line 100
     invoke-direct {v3, v4, v5, v6}, Lcom/android/server/ServiceThread;-><init>(Ljava/lang/String;IZ)V
 
     iput-object v3, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mHandlerThread:Lcom/android/server/ServiceThread;
 
-    .line 107
+    .line 102
     iget-object v3, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mHandlerThread:Lcom/android/server/ServiceThread;
 
     invoke-virtual {v3}, Lcom/android/server/ServiceThread;->start()V
 
-    .line 109
+    .line 104
     new-instance v3, Lorg/cyanogenmod/platform/internal/PerformanceManagerService$PerformanceManagerHandler;
 
     iget-object v4, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mHandlerThread:Lcom/android/server/ServiceThread;
@@ -372,7 +383,7 @@
 
     iput-object v3, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mHandler:Lorg/cyanogenmod/platform/internal/PerformanceManagerService$PerformanceManagerHandler;
 
-    .line 80
+    .line 75
     return-void
 .end method
 
@@ -381,35 +392,35 @@
     .param p1, "fromUser"    # Z
 
     .prologue
-    .line 283
+    .line 273
     iget v1, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mNumProfiles:I
 
     const/4 v2, 0x1
 
     if-ge v1, v2, :cond_0
 
-    .line 285
+    .line 275
     return-void
 
-    .line 289
+    .line 279
     :cond_0
     iget-boolean v1, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mLowPowerModeEnabled:Z
 
     if-eqz v1, :cond_2
 
-    .line 291
+    .line 281
     const/4 v0, 0x0
 
-    .line 301
+    .line 291
     .local v0, "profile":I
     :cond_1
     :goto_0
     invoke-direct {p0, v0, p1}, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->setPowerProfileInternal(IZ)Z
 
-    .line 282
+    .line 272
     return-void
 
-    .line 292
+    .line 282
     .end local v0    # "profile":I
     :cond_2
     if-eqz p1, :cond_3
@@ -418,21 +429,21 @@
 
     if-nez v1, :cond_3
 
-    .line 293
+    .line 283
     const/4 v0, 0x1
 
-    .line 292
+    .line 282
     .restart local v0    # "profile":I
     goto :goto_0
 
-    .line 295
+    .line 285
     .end local v0    # "profile":I
     :cond_3
     invoke-direct {p0}, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->getUserProfile()I
 
     move-result v0
 
-    .line 297
+    .line 287
     .restart local v0    # "profile":I
     invoke-direct {p0}, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->hasAppProfiles()Z
 
@@ -446,7 +457,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 298
+    .line 288
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mCurrentActivityName:Ljava/lang/String;
 
     invoke-direct {p0, v1}, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->getProfileForActivity(Ljava/lang/String;)I
@@ -457,24 +468,22 @@
 .end method
 
 .method private cpuBoostInternal(I)V
-    .locals 4
+    .locals 3
     .param p1, "duration"    # I
 
     .prologue
-    const/4 v3, 0x1
-
     const/4 v2, 0x0
 
-    .line 263
+    .line 254
     monitor-enter p0
 
-    .line 264
+    .line 255
     :try_start_0
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mPm:Landroid/os/PowerManagerInternal;
 
     if-nez v0, :cond_0
 
-    .line 265
+    .line 256
     const-string/jumbo v0, "PerformanceManager"
 
     const-string/jumbo v1, "System is not ready, dropping cpu boost request"
@@ -485,36 +494,36 @@
 
     monitor-exit p0
 
-    .line 266
+    .line 257
     return-void
 
     :cond_0
     monitor-exit p0
 
-    .line 269
+    .line 260
     if-lez p1, :cond_3
 
     const v0, 0x4c4b40
 
     if-gt p1, v0, :cond_3
 
-    .line 271
+    .line 262
     iget v0, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mCurrentProfile:I
 
     if-eqz v0, :cond_1
 
-    .line 272
+    .line 263
     iget v0, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mCurrentProfile:I
 
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_2
 
-    .line 273
+    .line 264
     :cond_1
     return-void
 
-    .line 263
+    .line 254
     :catchall_0
     move-exception v0
 
@@ -522,28 +531,23 @@
 
     throw v0
 
-    .line 275
+    .line 266
     :cond_2
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mHandler:Lorg/cyanogenmod/platform/internal/PerformanceManagerService$PerformanceManagerHandler;
 
-    invoke-virtual {v0, v3}, Lorg/cyanogenmod/platform/internal/PerformanceManagerService$PerformanceManagerHandler;->removeMessages(I)V
+    const/4 v1, 0x1
 
-    .line 276
-    iget-object v0, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mHandler:Lorg/cyanogenmod/platform/internal/PerformanceManagerService$PerformanceManagerHandler;
+    invoke-virtual {v0, v1, p1, v2}, Lorg/cyanogenmod/platform/internal/PerformanceManagerService$PerformanceManagerHandler;->obtainMessage(III)Landroid/os/Message;
 
-    iget-object v1, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mHandler:Lorg/cyanogenmod/platform/internal/PerformanceManagerService$PerformanceManagerHandler;
+    move-result-object v0
 
-    invoke-static {v1, v3, p1, v2}, Landroid/os/Message;->obtain(Landroid/os/Handler;III)Landroid/os/Message;
+    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lorg/cyanogenmod/platform/internal/PerformanceManagerService$PerformanceManagerHandler;->sendMessage(Landroid/os/Message;)Z
-
-    .line 262
+    .line 253
     :goto_0
     return-void
 
-    .line 278
+    .line 268
     :cond_3
     const-string/jumbo v0, "PerformanceManager"
 
@@ -575,10 +579,10 @@
     .param p1, "componentName"    # Ljava/lang/String;
 
     .prologue
-    .line 252
+    .line 243
     if-eqz p1, :cond_1
 
-    .line 253
+    .line 244
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -589,7 +593,7 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 254
+    .line 245
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mPatterns:[Ljava/util/regex/Pattern;
 
     aget-object v1, v1, v0
@@ -604,20 +608,20 @@
 
     if-eqz v1, :cond_0
 
-    .line 255
+    .line 246
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mProfiles:[I
 
     aget v1, v1, v0
 
     return v1
 
-    .line 253
+    .line 244
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 259
+    .line 250
     .end local v0    # "i":I
     :cond_1
     const/4 v1, 0x1
@@ -634,14 +638,14 @@
 
     const/4 v1, 0x0
 
-    .line 154
+    .line 148
     if-ltz p1, :cond_0
 
     iget v2, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mNumProfiles:I
 
     if-le p1, v2, :cond_1
 
-    .line 155
+    .line 149
     :cond_0
     const-string/jumbo v0, "PerformanceManager"
 
@@ -665,14 +669,14 @@
 
     invoke-static {v0, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 156
+    .line 150
     return v1
 
-    .line 159
+    .line 153
     :cond_1
     if-ne p1, v0, :cond_3
 
-    .line 160
+    .line 154
     iget-object v2, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mPatterns:[Ljava/util/regex/Pattern;
 
     if-eqz v2, :cond_2
@@ -685,7 +689,7 @@
 
     goto :goto_0
 
-    .line 163
+    .line 157
     :cond_3
     return v1
 .end method
@@ -694,20 +698,20 @@
     .locals 3
 
     .prologue
-    .line 170
+    .line 164
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 171
+    .line 165
     const-string/jumbo v1, "performance_profile"
 
-    .line 172
+    .line 166
     const/4 v2, 0x1
 
-    .line 170
+    .line 164
     invoke-static {v0, v1, v2}, Lcyanogenmod/providers/CMSettings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v0
@@ -723,7 +727,7 @@
 
     const/4 v1, 0x0
 
-    .line 148
+    .line 142
     iget v2, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mNumProfiles:I
 
     if-lez v2, :cond_1
@@ -732,38 +736,41 @@
 
     if-eqz v2, :cond_1
 
-    .line 149
+    .line 143
     iget-object v2, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    .line 150
+    .line 144
     const-string/jumbo v3, "app_perf_profiles_enabled"
 
-    .line 149
+    .line 143
     invoke-static {v2, v3, v0}, Lcyanogenmod/providers/CMSettings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v2
 
     if-ne v2, v0, :cond_0
 
-    .line 148
+    .line 142
     :goto_0
     return v0
 
     :cond_0
     move v0, v1
 
-    .line 149
+    .line 143
     goto :goto_0
 
     :cond_1
     move v0, v1
 
-    .line 148
+    .line 142
     goto :goto_0
+.end method
+
+.method private final native native_launchBoost(ILjava/lang/String;)V
 .end method
 
 .method private declared-synchronized setPowerProfileInternal(IZ)Z
@@ -778,13 +785,13 @@
 
     monitor-enter p0
 
-    .line 188
+    .line 182
     :try_start_0
     iget-object v5, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mPm:Landroid/os/PowerManagerInternal;
 
     if-nez v5, :cond_0
 
-    .line 189
+    .line 183
     const-string/jumbo v4, "PerformanceManager"
 
     const-string/jumbo v5, "System is not ready, dropping profile request"
@@ -795,10 +802,10 @@
 
     monitor-exit p0
 
-    .line 190
+    .line 184
     return v1
 
-    .line 192
+    .line 186
     :cond_0
     if-ltz p1, :cond_1
 
@@ -807,7 +814,7 @@
 
     if-le p1, v5, :cond_2
 
-    .line 193
+    .line 187
     :cond_1
     const-string/jumbo v4, "PerformanceManager"
 
@@ -835,10 +842,10 @@
 
     monitor-exit p0
 
-    .line 194
+    .line 188
     return v1
 
-    .line 197
+    .line 191
     :cond_2
     :try_start_2
     iget v5, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mCurrentProfile:I
@@ -847,22 +854,22 @@
 
     const/4 v0, 0x1
 
-    .line 199
+    .line 193
     .local v0, "isProfileSame":Z
     :goto_0
     if-nez v0, :cond_5
 
-    .line 200
+    .line 194
     if-nez p1, :cond_7
 
-    .line 203
+    .line 197
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     move-result-wide v2
 
-    .line 205
+    .line 199
     .local v2, "token":J
     :try_start_3
     iget-object v5, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mPm:Landroid/os/PowerManagerInternal;
@@ -877,7 +884,7 @@
 
     if-nez v5, :cond_4
 
-    .line 209
+    .line 203
     :try_start_4
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_4
@@ -885,10 +892,10 @@
 
     monitor-exit p0
 
-    .line 206
+    .line 200
     return v1
 
-    .line 197
+    .line 191
     .end local v0    # "isProfileSame":Z
     .end local v2    # "token":J
     :cond_3
@@ -897,52 +904,52 @@
     .restart local v0    # "isProfileSame":Z
     goto :goto_0
 
-    .line 209
+    .line 203
     .restart local v2    # "token":J
     :cond_4
     :try_start_5
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 223
+    .line 217
     .end local v2    # "token":J
     :cond_5
     :goto_1
     if-eqz p2, :cond_6
 
-    .line 224
+    .line 218
     iget-object v5, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
-    .line 225
+    .line 219
     const-string/jumbo v6, "performance_profile"
 
-    .line 224
+    .line 218
     invoke-static {v5, v6, p1}, Lcyanogenmod/providers/CMSettings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 228
+    .line 222
     :cond_6
     if-eqz v0, :cond_8
 
     monitor-exit p0
 
-    .line 229
+    .line 223
     return v1
 
-    .line 208
+    .line 202
     .restart local v2    # "token":J
     :catchall_0
     move-exception v1
 
-    .line 209
+    .line 203
     :try_start_6
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 208
+    .line 202
     throw v1
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
@@ -956,7 +963,7 @@
 
     throw v1
 
-    .line 211
+    .line 205
     .restart local v0    # "isProfileSame":Z
     :cond_7
     :try_start_7
@@ -964,12 +971,12 @@
 
     if-nez v5, :cond_5
 
-    .line 212
+    .line 206
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 213
+    .line 207
     .restart local v2    # "token":J
     iget-object v5, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mPm:Landroid/os/PowerManagerInternal;
 
@@ -977,82 +984,74 @@
 
     invoke-virtual {v5, v6}, Landroid/os/PowerManagerInternal;->setPowerSaveMode(Z)Z
 
-    .line 214
+    .line 208
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_1
 
-    .line 233
+    .line 227
     .end local v2    # "token":J
     :cond_8
     iget-object v5, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mContext:Landroid/content/Context;
 
-    .line 234
+    .line 228
     const-string/jumbo v6, "cyanogenmod.permission.PERFORMANCE_ACCESS"
 
     const/4 v7, 0x0
 
-    .line 233
+    .line 227
     invoke-virtual {v5, v6, v7}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 236
+    .line 230
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 238
+    .line 232
     .restart local v2    # "token":J
     iput p1, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mCurrentProfile:I
 
-    .line 240
+    .line 234
     iget-object v5, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mHandler:Lorg/cyanogenmod/platform/internal/PerformanceManagerService$PerformanceManagerHandler;
 
-    const/4 v6, 0x1
-
-    invoke-virtual {v5, v6}, Lorg/cyanogenmod/platform/internal/PerformanceManagerService$PerformanceManagerHandler;->removeMessages(I)V
-
-    .line 241
-    iget-object v5, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mHandler:Lorg/cyanogenmod/platform/internal/PerformanceManagerService$PerformanceManagerHandler;
-
-    const/4 v6, 0x2
-
-    invoke-virtual {v5, v6}, Lorg/cyanogenmod/platform/internal/PerformanceManagerService$PerformanceManagerHandler;->removeMessages(I)V
-
-    .line 242
-    iget-object v5, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mHandler:Lorg/cyanogenmod/platform/internal/PerformanceManagerService$PerformanceManagerHandler;
-
-    .line 243
-    iget-object v6, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mHandler:Lorg/cyanogenmod/platform/internal/PerformanceManagerService$PerformanceManagerHandler;
-
-    .line 244
+    .line 235
     if-eqz p2, :cond_9
 
     move v1, v4
 
-    .line 243
+    .line 234
     :cond_9
-    const/4 v7, 0x3
+    const/4 v6, 0x3
 
-    invoke-static {v6, v7, p1, v1}, Landroid/os/Message;->obtain(Landroid/os/Handler;III)Landroid/os/Message;
+    invoke-virtual {v5, v6, p1, v1}, Lorg/cyanogenmod/platform/internal/PerformanceManagerService$PerformanceManagerHandler;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object v1
 
-    .line 242
-    invoke-virtual {v5, v1}, Lorg/cyanogenmod/platform/internal/PerformanceManagerService$PerformanceManagerHandler;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 246
+    .line 237
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
     monitor-exit p0
 
-    .line 248
+    .line 239
     return v4
 .end method
 
 
 # virtual methods
+.method public getFeatureDeclaration()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 109
+    const-string/jumbo v0, "org.cyanogenmod.performance"
+
+    return-object v0
+.end method
+
 .method public onBootPhase(I)V
     .locals 6
     .param p1, "phase"    # I
@@ -1060,15 +1059,15 @@
     .prologue
     const/4 v3, 0x2
 
-    .line 126
+    .line 120
     const/16 v1, 0x1f4
 
     if-ne p1, v1, :cond_1
 
-    .line 127
+    .line 121
     monitor-enter p0
 
-    .line 128
+    .line 122
     :try_start_0
     const-class v1, Landroid/os/PowerManagerInternal;
 
@@ -1080,7 +1079,7 @@
 
     iput-object v1, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mPm:Landroid/os/PowerManagerInternal;
 
-    .line 129
+    .line 123
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mPm:Landroid/os/PowerManagerInternal;
 
     const/16 v2, 0x1000
@@ -1091,21 +1090,21 @@
 
     iput v1, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mNumProfiles:I
 
-    .line 130
+    .line 124
     iget v1, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mNumProfiles:I
 
     if-lez v1, :cond_0
 
-    .line 131
+    .line 125
     invoke-direct {p0}, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->getUserProfile()I
 
     move-result v0
 
-    .line 132
+    .line 126
     .local v0, "profile":I
     if-ne v0, v3, :cond_2
 
-    .line 133
+    .line 127
     const-string/jumbo v1, "PerformanceManager"
 
     const-string/jumbo v2, "Reverting profile %d to %d"
@@ -1114,7 +1113,7 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    .line 134
+    .line 128
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -1133,22 +1132,22 @@
 
     aput-object v4, v3, v5
 
-    .line 133
+    .line 127
     invoke-static {v2, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 136
+    .line 130
     const/4 v1, 0x1
 
     const/4 v2, 0x1
 
-    .line 135
+    .line 129
     invoke-direct {p0, v1, v2}, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->setPowerProfileInternal(IZ)Z
 
-    .line 141
+    .line 135
     :goto_0
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mPm:Landroid/os/PowerManagerInternal;
 
@@ -1162,11 +1161,11 @@
     :cond_0
     monitor-exit p0
 
-    .line 125
+    .line 119
     :cond_1
     return-void
 
-    .line 138
+    .line 132
     .restart local v0    # "profile":I
     :cond_2
     const/4 v1, 0x0
@@ -1178,7 +1177,7 @@
 
     goto :goto_0
 
-    .line 127
+    .line 121
     .end local v0    # "profile":I
     :catchall_0
     move-exception v1
@@ -1193,31 +1192,13 @@
 
     .prologue
     .line 114
-    iget-object v0, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v0
-
-    .line 115
-    const-string/jumbo v1, "org.cyanogenmod.performance"
-
-    .line 114
-    invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 116
     const-string/jumbo v0, "cmperformance"
 
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->mBinder:Landroid/os/IBinder;
 
     invoke-virtual {p0, v0, v1}, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 121
-    :goto_0
+    .line 115
     const-class v0, Lcyanogenmod/power/PerformanceManagerInternal;
 
     new-instance v1, Lorg/cyanogenmod/platform/internal/PerformanceManagerService$LocalService;
@@ -1230,14 +1211,4 @@
 
     .line 113
     return-void
-
-    .line 118
-    :cond_0
-    const-string/jumbo v0, "PerformanceManager"
-
-    const-string/jumbo v1, "CM performance service started by system server but feature xml not declared. Not publishing binder service!"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
 .end method

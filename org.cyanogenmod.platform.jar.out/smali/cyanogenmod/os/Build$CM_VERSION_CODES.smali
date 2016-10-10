@@ -25,13 +25,15 @@
 
 .field public static final ELDERBERRY:I = 0x5
 
+.field public static final FIG:I = 0x6
+
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
     .prologue
-    .line 82
+    .line 83
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

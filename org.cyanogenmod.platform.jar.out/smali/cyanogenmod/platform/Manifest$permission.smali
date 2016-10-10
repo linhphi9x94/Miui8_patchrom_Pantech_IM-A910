@@ -21,6 +21,8 @@
 
 .field public static final ACCESS_WEATHER_MANAGER:Ljava/lang/String; = "cyanogenmod.permission.ACCESS_WEATHER_MANAGER"
 
+.field public static final BIND_CORE_SERVICE:Ljava/lang/String; = "cyanogenmod.permission.BIND_CORE_SERVICE"
+
 .field public static final BIND_CUSTOM_TILE_LISTENER_SERVICE:Ljava/lang/String; = "cyanogenmod.permission.BIND_CUSTOM_TILE_LISTENER_SERVICE"
 
 .field public static final BIND_WEATHER_PROVIDER_SERVICE:Ljava/lang/String; = "cyanogenmod.permission.BIND_WEATHER_PROVIDER_SERVICE"
@@ -34,6 +36,10 @@
 .field public static final LIVE_LOCK_SCREEN_MANAGER_PROVIDER:Ljava/lang/String; = "cyanogenmod.permission.LIVE_LOCK_SCREEN_MANAGER_PROVIDER"
 
 .field public static final MANAGE_ALARMS:Ljava/lang/String; = "cyanogenmod.permission.MANAGE_ALARMS"
+
+.field public static final MANAGE_AUDIO_SESSIONS:Ljava/lang/String; = "cyanogenmod.permission.MANAGE_AUDIO_SESSIONS"
+
+.field public static final MANAGE_LIVEDISPLAY:Ljava/lang/String; = "cyanogenmod.permission.MANAGE_LIVEDISPLAY"
 
 .field public static final MANAGE_PERSISTENT_STORAGE:Ljava/lang/String; = "cyanogenmod.permission.MANAGE_PERSISTENT_STORAGE"
 
@@ -62,6 +68,8 @@
 .field public static final READ_THEMES:Ljava/lang/String; = "cyanogenmod.permission.READ_THEMES"
 
 .field public static final READ_WEATHER:Ljava/lang/String; = "cyanogenmod.permission.READ_WEATHER"
+
+.field public static final SEND_PROTECTED_THEME_BROADCAST:Ljava/lang/String; = "cyanogenmod.permission.SEND_PROTECTED_THEME_BROADCAST"
 
 .field public static final THIRD_PARTY_KEYGUARD:Ljava/lang/String; = "cyanogenmod.permission.THIRD_PARTY_KEYGUARD"
 

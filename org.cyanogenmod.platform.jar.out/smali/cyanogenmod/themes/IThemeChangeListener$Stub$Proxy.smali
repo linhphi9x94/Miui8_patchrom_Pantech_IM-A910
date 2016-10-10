@@ -27,13 +27,13 @@
     .param p1, "remote"    # Landroid/os/IBinder;
 
     .prologue
-    .line 68
+    .line 83
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 70
+    .line 85
     iput-object p1, p0, Lcyanogenmod/themes/IThemeChangeListener$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    .line 68
+    .line 83
     return-void
 .end method
 
@@ -43,7 +43,7 @@
     .locals 1
 
     .prologue
-    .line 74
+    .line 89
     iget-object v0, p0, Lcyanogenmod/themes/IThemeChangeListener$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object v0
@@ -53,7 +53,7 @@
     .locals 1
 
     .prologue
-    .line 78
+    .line 93
     const-string/jumbo v0, "cyanogenmod.themes.IThemeChangeListener"
 
     return-object v0
@@ -71,25 +71,25 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 94
+    .line 109
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 96
+    .line 111
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v2, "cyanogenmod.themes.IThemeChangeListener"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 97
+    .line 112
     if-eqz p1, :cond_0
 
     :goto_0
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 98
+    .line 113
     iget-object v1, p0, Lcyanogenmod/themes/IThemeChangeListener$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x2
@@ -102,26 +102,26 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 101
+    .line 116
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 92
+    .line 107
     return-void
 
-    .line 97
+    .line 112
     :cond_0
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 100
+    .line 115
     :catchall_0
     move-exception v1
 
-    .line 101
+    .line 116
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 100
+    .line 115
     throw v1
 .end method
 
@@ -135,22 +135,22 @@
     .end annotation
 
     .prologue
-    .line 82
+    .line 97
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 84
+    .line 99
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v1, "cyanogenmod.themes.IThemeChangeListener"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 85
+    .line 100
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 86
+    .line 101
     iget-object v1, p0, Lcyanogenmod/themes/IThemeChangeListener$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x1
@@ -163,19 +163,19 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 89
+    .line 104
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 80
+    .line 95
     return-void
 
-    .line 88
+    .line 103
     :catchall_0
     move-exception v1
 
-    .line 89
+    .line 104
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 88
+    .line 103
     throw v1
 .end method

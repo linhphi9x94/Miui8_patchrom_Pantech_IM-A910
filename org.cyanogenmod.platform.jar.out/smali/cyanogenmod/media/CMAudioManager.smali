@@ -73,6 +73,7 @@
     if-eqz v1, :cond_1
 
     .line 86
+    :goto_1
     return-void
 
     .line 91
@@ -83,13 +84,13 @@
 
     .line 98
     :cond_1
-    new-instance v1, Ljava/lang/RuntimeException;
+    const-string/jumbo v1, "CMAudioManager"
 
     const-string/jumbo v2, "Unable to get CMAudioService. The service either crashed, was not started, or the interface has been called to early in SystemServer init"
 
-    invoke-direct {v1, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-static {v1, v2}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    throw v1
+    goto :goto_1
 .end method
 
 .method private checkService()Z

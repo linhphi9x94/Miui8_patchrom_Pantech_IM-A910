@@ -27,7 +27,7 @@
     .param p1, "this$0"    # Lorg/cyanogenmod/platform/internal/PerformanceManagerService;
 
     .prologue
-    .line 338
+    .line 328
     iput-object p1, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService$LocalService;->this$0:Lorg/cyanogenmod/platform/internal/PerformanceManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,28 +52,28 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 365
+    .line 353
     const/4 v0, 0x0
 
-    .line 366
+    .line 354
     .local v0, "activityName":Ljava/lang/String;
     if-eqz p1, :cond_0
 
-    .line 367
+    .line 355
     invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v1
 
-    .line 368
+    .line 356
     .local v1, "cn":Landroid/content/ComponentName;
     if-eqz v1, :cond_0
 
-    .line 369
+    .line 357
     invoke-virtual {v1}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 373
+    .line 361
     .end local v0    # "activityName":Ljava/lang/String;
     .end local v1    # "cn":Landroid/content/ComponentName;
     :cond_0
@@ -81,14 +81,14 @@
 
     invoke-static {v2, v0}, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->-set0(Lorg/cyanogenmod/platform/internal/PerformanceManagerService;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 374
+    .line 362
     iget-object v2, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService$LocalService;->this$0:Lorg/cyanogenmod/platform/internal/PerformanceManagerService;
 
     const/4 v3, 0x0
 
     invoke-static {v2, v3}, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->-wrap3(Lorg/cyanogenmod/platform/internal/PerformanceManagerService;Z)V
 
-    .line 364
+    .line 352
     return-void
 .end method
 
@@ -97,27 +97,31 @@
     .param p1, "duration"    # I
 
     .prologue
-    .line 342
+    .line 332
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService$LocalService;->this$0:Lorg/cyanogenmod/platform/internal/PerformanceManagerService;
 
     invoke-static {v0, p1}, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->-wrap4(Lorg/cyanogenmod/platform/internal/PerformanceManagerService;I)V
 
-    .line 341
+    .line 331
     return-void
 .end method
 
-.method public launchBoost()V
-    .locals 3
+.method public launchBoost(ILjava/lang/String;)V
+    .locals 4
+    .param p1, "pid"    # I
+    .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    const/4 v2, 0x2
+    const/4 v3, 0x2
 
-    .line 347
+    const/4 v2, 0x0
+
+    .line 337
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService$LocalService;->this$0:Lorg/cyanogenmod/platform/internal/PerformanceManagerService;
 
     monitor-enter v1
 
-    .line 348
+    .line 338
     :try_start_0
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService$LocalService;->this$0:Lorg/cyanogenmod/platform/internal/PerformanceManagerService;
 
@@ -127,7 +131,7 @@
 
     if-nez v0, :cond_0
 
-    .line 349
+    .line 339
     const-string/jumbo v0, "PerformanceManager"
 
     const-string/jumbo v2, "System is not ready, dropping launch boost request"
@@ -138,13 +142,13 @@
 
     monitor-exit v1
 
-    .line 350
+    .line 340
     return-void
 
     :cond_0
     monitor-exit v1
 
-    .line 354
+    .line 344
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService$LocalService;->this$0:Lorg/cyanogenmod/platform/internal/PerformanceManagerService;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->-get0(Lorg/cyanogenmod/platform/internal/PerformanceManagerService;)I
@@ -153,20 +157,20 @@
 
     if-eqz v0, :cond_1
 
-    .line 355
+    .line 345
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService$LocalService;->this$0:Lorg/cyanogenmod/platform/internal/PerformanceManagerService;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->-get0(Lorg/cyanogenmod/platform/internal/PerformanceManagerService;)I
 
     move-result v0
 
-    if-ne v0, v2, :cond_2
+    if-ne v0, v3, :cond_2
 
-    .line 356
+    .line 346
     :cond_1
     return-void
 
-    .line 347
+    .line 337
     :catchall_0
     move-exception v0
 
@@ -174,7 +178,7 @@
 
     throw v0
 
-    .line 358
+    .line 348
     :cond_2
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService$LocalService;->this$0:Lorg/cyanogenmod/platform/internal/PerformanceManagerService;
 
@@ -182,28 +186,12 @@
 
     move-result-object v0
 
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lorg/cyanogenmod/platform/internal/PerformanceManagerService$PerformanceManagerHandler;->removeMessages(I)V
-
-    .line 359
-    iget-object v0, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService$LocalService;->this$0:Lorg/cyanogenmod/platform/internal/PerformanceManagerService;
-
-    invoke-static {v0}, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->-get1(Lorg/cyanogenmod/platform/internal/PerformanceManagerService;)Lorg/cyanogenmod/platform/internal/PerformanceManagerService$PerformanceManagerHandler;
+    invoke-virtual {v0, v3, p1, v2, p2}, Lorg/cyanogenmod/platform/internal/PerformanceManagerService$PerformanceManagerHandler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Lorg/cyanogenmod/platform/internal/PerformanceManagerService$PerformanceManagerHandler;->removeMessages(I)V
+    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 360
-    iget-object v0, p0, Lorg/cyanogenmod/platform/internal/PerformanceManagerService$LocalService;->this$0:Lorg/cyanogenmod/platform/internal/PerformanceManagerService;
-
-    invoke-static {v0}, Lorg/cyanogenmod/platform/internal/PerformanceManagerService;->-get1(Lorg/cyanogenmod/platform/internal/PerformanceManagerService;)Lorg/cyanogenmod/platform/internal/PerformanceManagerService$PerformanceManagerHandler;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Lorg/cyanogenmod/platform/internal/PerformanceManagerService$PerformanceManagerHandler;->sendEmptyMessage(I)Z
-
-    .line 346
+    .line 336
     return-void
 .end method

@@ -44,7 +44,7 @@
     .locals 1
 
     .prologue
-    .line 164
+    .line 162
     new-instance v0, Lcyanogenmod/media/AudioSessionInfo$1;
 
     invoke-direct {v0}, Lcyanogenmod/media/AudioSessionInfo$1;-><init>()V
@@ -141,7 +141,13 @@
 
     iput v2, p0, Lcyanogenmod/media/AudioSessionInfo;->mUid:I
 
-    .line 91
+    .line 84
+    const/4 v2, 0x6
+
+    if-le v1, v2, :cond_0
+
+    .line 89
+    :cond_0
     invoke-virtual {v0}, Lcyanogenmod/os/Concierge$ParcelInfo;->complete()V
 
     .line 72
@@ -164,7 +170,7 @@
     .locals 1
 
     .prologue
-    .line 144
+    .line 142
     const/4 v0, 0x0
 
     return v0
@@ -179,7 +185,7 @@
 
     const/4 v2, 0x0
 
-    .line 128
+    .line 126
     if-eqz p1, :cond_1
 
     instance-of v3, p1, Lcyanogenmod/media/AudioSessionInfo;
@@ -188,54 +194,54 @@
 
     move-object v0, p1
 
-    .line 132
+    .line 130
     check-cast v0, Lcyanogenmod/media/AudioSessionInfo;
 
-    .line 133
+    .line 131
     .local v0, "other":Lcyanogenmod/media/AudioSessionInfo;
     if-eq p0, v0, :cond_0
 
-    .line 134
+    .line 132
     iget v3, p0, Lcyanogenmod/media/AudioSessionInfo;->mSessionId:I
 
     iget v4, v0, Lcyanogenmod/media/AudioSessionInfo;->mSessionId:I
 
     if-ne v3, v4, :cond_3
 
-    .line 135
+    .line 133
     iget v3, p0, Lcyanogenmod/media/AudioSessionInfo;->mStream:I
 
     iget v4, v0, Lcyanogenmod/media/AudioSessionInfo;->mStream:I
 
     if-ne v3, v4, :cond_3
 
-    .line 136
+    .line 134
     iget v3, p0, Lcyanogenmod/media/AudioSessionInfo;->mFlags:I
 
     iget v4, v0, Lcyanogenmod/media/AudioSessionInfo;->mFlags:I
 
     if-ne v3, v4, :cond_3
 
-    .line 137
+    .line 135
     iget v3, p0, Lcyanogenmod/media/AudioSessionInfo;->mChannelMask:I
 
     iget v4, v0, Lcyanogenmod/media/AudioSessionInfo;->mChannelMask:I
 
     if-ne v3, v4, :cond_3
 
-    .line 138
+    .line 136
     iget v3, p0, Lcyanogenmod/media/AudioSessionInfo;->mUid:I
 
     iget v4, v0, Lcyanogenmod/media/AudioSessionInfo;->mUid:I
 
     if-ne v3, v4, :cond_2
 
-    .line 133
+    .line 131
     :cond_0
     :goto_0
     return v1
 
-    .line 129
+    .line 127
     .end local v0    # "other":Lcyanogenmod/media/AudioSessionInfo;
     :cond_1
     return v2
@@ -244,13 +250,13 @@
     :cond_2
     move v1, v2
 
-    .line 138
+    .line 136
     goto :goto_0
 
     :cond_3
     move v1, v2
 
-    .line 134
+    .line 132
     goto :goto_0
 .end method
 
@@ -258,7 +264,7 @@
     .locals 1
 
     .prologue
-    .line 107
+    .line 105
     iget v0, p0, Lcyanogenmod/media/AudioSessionInfo;->mChannelMask:I
 
     return v0
@@ -268,7 +274,7 @@
     .locals 1
 
     .prologue
-    .line 103
+    .line 101
     iget v0, p0, Lcyanogenmod/media/AudioSessionInfo;->mFlags:I
 
     return v0
@@ -278,7 +284,7 @@
     .locals 1
 
     .prologue
-    .line 95
+    .line 93
     iget v0, p0, Lcyanogenmod/media/AudioSessionInfo;->mSessionId:I
 
     return v0
@@ -288,7 +294,7 @@
     .locals 1
 
     .prologue
-    .line 99
+    .line 97
     iget v0, p0, Lcyanogenmod/media/AudioSessionInfo;->mStream:I
 
     return v0
@@ -298,7 +304,7 @@
     .locals 1
 
     .prologue
-    .line 111
+    .line 109
     iget v0, p0, Lcyanogenmod/media/AudioSessionInfo;->mUid:I
 
     return v0
@@ -308,7 +314,7 @@
     .locals 3
 
     .prologue
-    .line 123
+    .line 121
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -374,15 +380,15 @@
     .locals 4
 
     .prologue
-    .line 117
+    .line 115
     const-string/jumbo v0, "audioSessionInfo[sessionId=%d, stream=%d, flags=%d, channelMask=%d, uid=%d"
 
-    .line 116
+    .line 114
     const/4 v1, 0x5
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    .line 118
+    .line 116
     iget v2, p0, Lcyanogenmod/media/AudioSessionInfo;->mSessionId:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -433,7 +439,7 @@
 
     aput-object v2, v1, v3
 
-    .line 116
+    .line 114
     invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -447,40 +453,40 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 151
+    .line 149
     invoke-static {p1}, Lcyanogenmod/os/Concierge;->prepareParcel(Landroid/os/Parcel;)Lcyanogenmod/os/Concierge$ParcelInfo;
 
     move-result-object v0
 
-    .line 154
+    .line 152
     .local v0, "parcelInfo":Lcyanogenmod/os/Concierge$ParcelInfo;
     iget v1, p0, Lcyanogenmod/media/AudioSessionInfo;->mSessionId:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 155
+    .line 153
     iget v1, p0, Lcyanogenmod/media/AudioSessionInfo;->mStream:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 156
+    .line 154
     iget v1, p0, Lcyanogenmod/media/AudioSessionInfo;->mFlags:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 157
+    .line 155
     iget v1, p0, Lcyanogenmod/media/AudioSessionInfo;->mChannelMask:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 158
+    .line 156
     iget v1, p0, Lcyanogenmod/media/AudioSessionInfo;->mUid:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 160
+    .line 158
     invoke-virtual {v0}, Lcyanogenmod/os/Concierge$ParcelInfo;->complete()V
 
-    .line 149
+    .line 147
     return-void
 .end method

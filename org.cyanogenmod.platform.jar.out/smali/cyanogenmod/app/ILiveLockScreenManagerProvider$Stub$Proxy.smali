@@ -27,13 +27,13 @@
     .param p1, "remote"    # Landroid/os/IBinder;
 
     .prologue
-    .line 147
+    .line 203
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 149
+    .line 205
     iput-object p1, p0, Lcyanogenmod/app/ILiveLockScreenManagerProvider$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    .line 147
+    .line 203
     return-void
 .end method
 
@@ -43,7 +43,7 @@
     .locals 1
 
     .prologue
-    .line 153
+    .line 209
     iget-object v0, p0, Lcyanogenmod/app/ILiveLockScreenManagerProvider$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object v0
@@ -61,34 +61,34 @@
     .end annotation
 
     .prologue
-    .line 193
+    .line 249
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 194
+    .line 250
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 196
+    .line 252
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v2, "cyanogenmod.app.ILiveLockScreenManagerProvider"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 197
+    .line 253
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 198
+    .line 254
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 199
+    .line 255
     invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 200
+    .line 256
     iget-object v2, p0, Lcyanogenmod/app/ILiveLockScreenManagerProvider$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v3, 0x2
@@ -97,31 +97,31 @@
 
     invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 201
+    .line 257
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 204
+    .line 260
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 205
+    .line 261
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 191
+    .line 247
     return-void
 
-    .line 203
+    .line 259
     :catchall_0
     move-exception v2
 
-    .line 204
+    .line 260
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 205
+    .line 261
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 203
+    .line 259
     throw v2
 .end method
 
@@ -139,51 +139,51 @@
     .end annotation
 
     .prologue
-    .line 164
+    .line 220
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 165
+    .line 221
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 167
+    .line 223
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v2, "cyanogenmod.app.ILiveLockScreenManagerProvider"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 168
+    .line 224
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 169
+    .line 225
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 170
+    .line 226
     if-eqz p3, :cond_0
 
-    .line 171
+    .line 227
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 172
+    .line 228
     const/4 v2, 0x0
 
     invoke-virtual {p3, v0, v2}, Lcyanogenmod/app/LiveLockScreenInfo;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 177
+    .line 233
     :goto_0
     invoke-virtual {v0, p4}, Landroid/os/Parcel;->writeIntArray([I)V
 
-    .line 178
+    .line 234
     invoke-virtual {v0, p5}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 179
+    .line 235
     iget-object v2, p0, Lcyanogenmod/app/ILiveLockScreenManagerProvider$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v3, 0x1
@@ -192,24 +192,24 @@
 
     invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 180
+    .line 236
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 181
+    .line 237
     invoke-virtual {v1, p4}, Landroid/os/Parcel;->readIntArray([I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 184
+    .line 240
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 185
+    .line 241
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 162
+    .line 218
     return-void
 
-    .line 175
+    .line 231
     :cond_0
     const/4 v2, 0x0
 
@@ -220,17 +220,17 @@
 
     goto :goto_0
 
-    .line 183
+    .line 239
     :catchall_0
     move-exception v2
 
-    .line 184
+    .line 240
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 185
+    .line 241
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 183
+    .line 239
     throw v2
 .end method
 
@@ -243,25 +243,25 @@
     .end annotation
 
     .prologue
-    .line 213
+    .line 269
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 214
+    .line 270
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 217
+    .line 273
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v3, "cyanogenmod.app.ILiveLockScreenManagerProvider"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 218
+    .line 274
     iget-object v3, p0, Lcyanogenmod/app/ILiveLockScreenManagerProvider$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v4, 0x3
@@ -270,17 +270,17 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 219
+    .line 275
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 220
+    .line 276
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 221
+    .line 277
     sget-object v3, Lcyanogenmod/app/LiveLockScreenInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v3, v1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -291,35 +291,35 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 228
+    .line 284
     :goto_0
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 229
+    .line 285
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 231
+    .line 287
     return-object v2
 
-    .line 224
+    .line 280
     :cond_0
     const/4 v2, 0x0
 
     .local v2, "_result":Lcyanogenmod/app/LiveLockScreenInfo;
     goto :goto_0
 
-    .line 227
+    .line 283
     .end local v2    # "_result":Lcyanogenmod/app/LiveLockScreenInfo;
     :catchall_0
     move-exception v3
 
-    .line 228
+    .line 284
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 229
+    .line 285
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 227
+    .line 283
     throw v3
 .end method
 
@@ -327,7 +327,7 @@
     .locals 1
 
     .prologue
-    .line 157
+    .line 213
     const-string/jumbo v0, "cyanogenmod.app.ILiveLockScreenManagerProvider"
 
     return-object v0
@@ -342,25 +342,25 @@
     .end annotation
 
     .prologue
-    .line 259
+    .line 315
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 260
+    .line 316
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 263
+    .line 319
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v3, "cyanogenmod.app.ILiveLockScreenManagerProvider"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 264
+    .line 320
     iget-object v3, p0, Lcyanogenmod/app/ILiveLockScreenManagerProvider$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v4, 0x5
@@ -369,10 +369,10 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 265
+    .line 321
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 266
+    .line 322
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -383,18 +383,18 @@
 
     const/4 v2, 0x1
 
-    .line 269
+    .line 325
     .local v2, "_result":Z
     :goto_0
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 270
+    .line 326
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 272
+    .line 328
     return v2
 
-    .line 266
+    .line 322
     .end local v2    # "_result":Z
     :cond_0
     const/4 v2, 0x0
@@ -402,18 +402,18 @@
     .restart local v2    # "_result":Z
     goto :goto_0
 
-    .line 268
+    .line 324
     .end local v2    # "_result":Z
     :catchall_0
     move-exception v3
 
-    .line 269
+    .line 325
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 270
+    .line 326
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 268
+    .line 324
     throw v3
 .end method
 
@@ -429,25 +429,25 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 280
+    .line 336
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 281
+    .line 337
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 284
+    .line 340
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v4, "cyanogenmod.app.ILiveLockScreenManagerProvider"
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 285
+    .line 341
     if-eqz p1, :cond_0
 
     invoke-interface {p1}, Lcyanogenmod/app/ILiveLockScreenChangeListener;->asBinder()Landroid/os/IBinder;
@@ -457,7 +457,7 @@
     :cond_0
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 286
+    .line 342
     iget-object v3, p0, Lcyanogenmod/app/ILiveLockScreenManagerProvider$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v4, 0x6
@@ -466,10 +466,10 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 287
+    .line 343
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 288
+    .line 344
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -480,18 +480,18 @@
 
     const/4 v2, 0x1
 
-    .line 291
+    .line 347
     .local v2, "_result":Z
     :goto_0
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 292
+    .line 348
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 294
+    .line 350
     return v2
 
-    .line 288
+    .line 344
     .end local v2    # "_result":Z
     :cond_1
     const/4 v2, 0x0
@@ -499,18 +499,18 @@
     .restart local v2    # "_result":Z
     goto :goto_0
 
-    .line 290
+    .line 346
     .end local v2    # "_result":Z
     :catchall_0
     move-exception v3
 
-    .line 291
+    .line 347
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 292
+    .line 348
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 290
+    .line 346
     throw v3
 .end method
 
@@ -526,25 +526,25 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 301
+    .line 357
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 302
+    .line 358
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 305
+    .line 361
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v4, "cyanogenmod.app.ILiveLockScreenManagerProvider"
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 306
+    .line 362
     if-eqz p1, :cond_0
 
     invoke-interface {p1}, Lcyanogenmod/app/ILiveLockScreenChangeListener;->asBinder()Landroid/os/IBinder;
@@ -554,7 +554,7 @@
     :cond_0
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 307
+    .line 363
     iget-object v3, p0, Lcyanogenmod/app/ILiveLockScreenManagerProvider$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v4, 0x7
@@ -563,10 +563,10 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 308
+    .line 364
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 309
+    .line 365
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -577,18 +577,18 @@
 
     const/4 v2, 0x1
 
-    .line 312
+    .line 368
     .local v2, "_result":Z
     :goto_0
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 313
+    .line 369
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 315
+    .line 371
     return v2
 
-    .line 309
+    .line 365
     .end local v2    # "_result":Z
     :cond_1
     const/4 v2, 0x0
@@ -596,18 +596,18 @@
     .restart local v2    # "_result":Z
     goto :goto_0
 
-    .line 311
+    .line 367
     .end local v2    # "_result":Z
     :catchall_0
     move-exception v3
 
-    .line 312
+    .line 368
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 313
+    .line 369
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 311
+    .line 367
     throw v3
 .end method
 
@@ -621,32 +621,32 @@
     .end annotation
 
     .prologue
-    .line 238
+    .line 294
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 240
+    .line 296
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v1, "cyanogenmod.app.ILiveLockScreenManagerProvider"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 241
+    .line 297
     if-eqz p1, :cond_0
 
-    .line 242
+    .line 298
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 243
+    .line 299
     const/4 v1, 0x0
 
     invoke-virtual {p1, v0, v1}, Lcyanogenmod/app/LiveLockScreenInfo;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 248
+    .line 304
     :goto_0
     iget-object v1, p0, Lcyanogenmod/app/ILiveLockScreenManagerProvider$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
@@ -660,13 +660,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 251
+    .line 307
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 236
+    .line 292
     return-void
 
-    .line 246
+    .line 302
     :cond_0
     const/4 v1, 0x0
 
@@ -677,13 +677,13 @@
 
     goto :goto_0
 
-    .line 250
+    .line 306
     :catchall_0
     move-exception v1
 
-    .line 251
+    .line 307
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 250
+    .line 306
     throw v1
 .end method

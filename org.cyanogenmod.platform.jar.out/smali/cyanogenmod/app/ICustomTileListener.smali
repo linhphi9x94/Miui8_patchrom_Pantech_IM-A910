@@ -9,6 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcyanogenmod/app/ICustomTileListener$NoOp;,
         Lcyanogenmod/app/ICustomTileListener$Stub;
     }
 .end annotation

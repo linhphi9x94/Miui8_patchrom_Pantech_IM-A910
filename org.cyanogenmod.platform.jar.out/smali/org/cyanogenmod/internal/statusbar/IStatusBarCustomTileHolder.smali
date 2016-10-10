@@ -9,6 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lorg/cyanogenmod/internal/statusbar/IStatusBarCustomTileHolder$NoOp;,
         Lorg/cyanogenmod/internal/statusbar/IStatusBarCustomTileHolder$Stub;
     }
 .end annotation

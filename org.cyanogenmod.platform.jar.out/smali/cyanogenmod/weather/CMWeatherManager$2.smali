@@ -24,7 +24,7 @@
     .param p1, "this$0"    # Lcyanogenmod/weather/CMWeatherManager;
 
     .prologue
-    .line 319
+    .line 332
     iput-object p1, p0, Lcyanogenmod/weather/CMWeatherManager$2;->this$0:Lcyanogenmod/weather/CMWeatherManager;
 
     invoke-direct {p0}, Lcyanogenmod/weather/IRequestInfoListener$Stub;-><init>()V
@@ -51,7 +51,7 @@
     .end annotation
 
     .prologue
-    .line 341
+    .line 354
     .local p3, "weatherLocations":Ljava/util/List;, "Ljava/util/List<Lcyanogenmod/weather/WeatherLocation;>;"
     iget-object v1, p0, Lcyanogenmod/weather/CMWeatherManager$2;->this$0:Lcyanogenmod/weather/CMWeatherManager;
 
@@ -65,11 +65,11 @@
 
     check-cast v0, Lcyanogenmod/weather/CMWeatherManager$LookupCityRequestListener;
 
-    .line 342
+    .line 355
     .local v0, "listener":Lcyanogenmod/weather/CMWeatherManager$LookupCityRequestListener;
     if-eqz v0, :cond_0
 
-    .line 343
+    .line 356
     iget-object v1, p0, Lcyanogenmod/weather/CMWeatherManager$2;->this$0:Lcyanogenmod/weather/CMWeatherManager;
 
     invoke-static {v1}, Lcyanogenmod/weather/CMWeatherManager;->-get0(Lcyanogenmod/weather/CMWeatherManager;)Landroid/os/Handler;
@@ -82,7 +82,7 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 338
+    .line 351
     :cond_0
     return-void
 .end method
@@ -94,7 +94,7 @@
     .param p3, "weatherInfo"    # Lcyanogenmod/weather/WeatherInfo;
 
     .prologue
-    .line 325
+    .line 338
     iget-object v1, p0, Lcyanogenmod/weather/CMWeatherManager$2;->this$0:Lcyanogenmod/weather/CMWeatherManager;
 
     invoke-static {v1}, Lcyanogenmod/weather/CMWeatherManager;->-get3(Lcyanogenmod/weather/CMWeatherManager;)Ljava/util/Map;
@@ -107,11 +107,11 @@
 
     check-cast v0, Lcyanogenmod/weather/CMWeatherManager$WeatherUpdateRequestListener;
 
-    .line 326
+    .line 339
     .local v0, "listener":Lcyanogenmod/weather/CMWeatherManager$WeatherUpdateRequestListener;
     if-eqz v0, :cond_0
 
-    .line 327
+    .line 340
     iget-object v1, p0, Lcyanogenmod/weather/CMWeatherManager$2;->this$0:Lcyanogenmod/weather/CMWeatherManager;
 
     invoke-static {v1}, Lcyanogenmod/weather/CMWeatherManager;->-get0(Lcyanogenmod/weather/CMWeatherManager;)Landroid/os/Handler;
@@ -124,7 +124,7 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 323
+    .line 336
     :cond_0
     return-void
 .end method

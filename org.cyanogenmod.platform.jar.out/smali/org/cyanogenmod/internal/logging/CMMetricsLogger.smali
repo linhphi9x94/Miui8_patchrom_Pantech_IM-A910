@@ -84,6 +84,8 @@
 
 .field public static final TILE_SYNC:I = -0x7fffffdb
 
+.field public static final TILE_THEMES:I = -0x7fffffd4
+
 .field public static final TILE_USB_TETHER:I = -0x7fffffda
 
 .field public static final TILE_VOLUME:I = -0x7fffffd9

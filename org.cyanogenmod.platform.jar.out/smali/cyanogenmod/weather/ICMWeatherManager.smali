@@ -9,6 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcyanogenmod/weather/ICMWeatherManager$NoOp;,
         Lcyanogenmod/weather/ICMWeatherManager$Stub;
     }
 .end annotation

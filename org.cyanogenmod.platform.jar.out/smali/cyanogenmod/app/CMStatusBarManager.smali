@@ -46,7 +46,7 @@
 
     .line 62
     .local v0, "appContext":Landroid/content/Context;
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     .line 63
     iput-object v0, p0, Lcyanogenmod/app/CMStatusBarManager;->mContext:Landroid/content/Context;
@@ -72,31 +72,29 @@
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_0
 
     .line 70
     sget-object v1, Lcyanogenmod/app/CMStatusBarManager;->sService:Lcyanogenmod/app/ICMStatusBarManager;
 
-    if-nez v1, :cond_1
+    if-nez v1, :cond_0
 
     .line 71
-    new-instance v1, Ljava/lang/RuntimeException;
+    const-string/jumbo v1, "CMStatusBarManager"
 
     const-string/jumbo v2, "Unable to get CMStatusBarService. The service either crashed, was not started, or the interface has been called to early in SystemServer init"
 
-    invoke-direct {v1, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-static {v1, v2}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    throw v1
+    .line 60
+    :cond_0
+    return-void
 
     .line 65
-    :cond_0
+    :cond_1
     iput-object p1, p0, Lcyanogenmod/app/CMStatusBarManager;->mContext:Landroid/content/Context;
 
     goto :goto_0
-
-    .line 60
-    :cond_1
-    return-void
 .end method
 
 .method public static getInstance(Landroid/content/Context;)Lcyanogenmod/app/CMStatusBarManager;

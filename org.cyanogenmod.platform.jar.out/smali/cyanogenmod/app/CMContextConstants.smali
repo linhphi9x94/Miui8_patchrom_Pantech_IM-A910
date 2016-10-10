@@ -20,6 +20,8 @@
 
 .field public static final CM_ICON_CACHE_SERVICE:Ljava/lang/String; = "cmiconcache"
 
+.field public static final CM_LIVEDISPLAY_SERVICE:Ljava/lang/String; = "cmlivedisplay"
+
 .field public static final CM_LIVE_LOCK_SCREEN_SERVICE:Ljava/lang/String; = "cmlivelockscreen"
 
 .field public static final CM_PARTNER_INTERFACE:Ljava/lang/String; = "cmpartnerinterface"
