@@ -51,10 +51,8 @@ include $(PORT_BUILD)/porting.mk
 #updater := $(ZIP_DIR)/META-INF/com/google/android/updater-script
 #pre_install_data_packages := $(TMP_DIR)/pre_install_apk_pkgname.txt
 local-pre-zip-misc:
-	#@echo Update boot.img
-	#cp -rf other/boot.img $(ZIP_DIR)/boot.img
-	#cp -rf other/system $(ZIP_DIR)/
-	rm -rf $(ZIP_DIR)/system/vendor/bundled-app
+	@echo copy files
+	cp -a -rf other/system/* $(ZIP_DIR)/system/
 
 	@echo goodbye! miui prebuilt binaries!
 	rm -rf $(ZIP_DIR)/system/bin/app_process32_vendor
