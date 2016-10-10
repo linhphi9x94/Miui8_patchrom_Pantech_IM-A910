@@ -28,7 +28,6 @@ private-phone-apps := \
 private-phone-priv-apps := \
 	AudioFX \
 	BackupRestoreConfirmation \
-	Snap \
 	CellBroadcastReceiver \
 	CMSettingsProvider \
 	CMAudioService \
@@ -38,7 +37,6 @@ private-phone-priv-apps := \
 	InputDevices \
 	ProxyHandler \
 	qcrilmsgtunnel \
-	Screencast \
 	SharedStorageBackup \
 	Shell \
 	Tag \
