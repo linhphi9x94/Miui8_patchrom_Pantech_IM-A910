@@ -22,12 +22,14 @@ private-phone-apps := \
 	shutdownlistener \
 	Stk \
 	telresources \
+	ThemeManager \
 	TimeService \
 	WAPPushManager
 
 private-phone-priv-apps := \
 	AudioFX \
 	BackupRestoreConfirmation \
+	CarrierConfig \
 	CellBroadcastReceiver \
 	CMSettingsProvider \
 	CMAudioService \
@@ -37,6 +39,7 @@ private-phone-priv-apps := \
 	InputDevices \
 	ProxyHandler \
 	qcrilmsgtunnel \
+	StatementService \
 	SharedStorageBackup \
 	Shell \
 	Tag \

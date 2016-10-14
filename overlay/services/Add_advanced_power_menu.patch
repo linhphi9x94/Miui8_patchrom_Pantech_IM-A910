@@ -1,0 +1,116 @@
+From d50daec2f45215cb361240383a976c7fd2190c21 Mon Sep 17 00:00:00 2001
+From: garyyiu2015 <garyyiu2015@gmail.com>
+Date: Fri, 7 Oct 2016 23:25:50 +0800
+Subject: [PATCH] Add_advanced_power_menu
+
+---
+ .../server/policy/MiuiGlobalActions$1.smali        | 64 +++++++++++++++++++++-
+ .../android/server/policy/MiuiGlobalActions.smali  | 10 ++++
+ 2 files changed, 72 insertions(+), 2 deletions(-)
+
+--- a/services/smali/com/android/server/policy/MiuiGlobalActions$1.smali
++++ b/services/smali/com/android/server/policy/MiuiGlobalActions$1.smali
+@@ -114,13 +114,73 @@
+     goto :goto_0
+ 
+     :cond_3
++    const-string v0, "recovery"
++
++    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
++
++    move-result v0
++
++    if-eqz v0, :cond_gary_0
++
++    iget-object v0, p0, Lcom/android/server/policy/MiuiGlobalActions$1;->this$0:Lcom/android/server/policy/MiuiGlobalActions;
++
++    # getter for: Lcom/android/server/policy/MiuiGlobalActions;->mContext:Landroid/content/Context;
++    invoke-static {v0}, Lcom/android/server/policy/MiuiGlobalActions;->access$RebootMenu(Lcom/android/server/policy/MiuiGlobalActions;)Landroid/content/Context;
++
++    move-result-object v0
++
++    const-string v1, "power"
++
++    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
++
++    move-result-object v0
++
++    check-cast v0, Landroid/os/PowerManager;
++
++    const-string v1, "recovery"
++
++    invoke-virtual {v0, v1}, Landroid/os/PowerManager;->reboot(Ljava/lang/String;)V
++
++    goto :goto_0
++
++    :cond_gary_0
++    const-string v0, "bootloader"
++
++    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
++
++    move-result v0
++
++    if-eqz v0, :cond_gary_1
++
++    iget-object v0, p0, Lcom/android/server/policy/MiuiGlobalActions$1;->this$0:Lcom/android/server/policy/MiuiGlobalActions;
++
++    # getter for: Lcom/android/server/policy/MiuiGlobalActions;->mContext:Landroid/content/Context;
++    invoke-static {v0}, Lcom/android/server/policy/MiuiGlobalActions;->access$RebootMenu(Lcom/android/server/policy/MiuiGlobalActions;)Landroid/content/Context;
++
++    move-result-object v0
++
++    const-string v1, "power"
++
++    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
++
++    move-result-object v0
++
++    check-cast v0, Landroid/os/PowerManager;
++
++    const-string v1, "bootloader"
++
++    invoke-virtual {v0, v1}, Landroid/os/PowerManager;->reboot(Ljava/lang/String;)V
++
++    goto :goto_0
++
++    :cond_gary_1
+     const-string v0, "shutdown"
+ 
+     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+ 
+     move-result v0
+ 
+-    if-eqz v0, :cond_4
++    if-eqz v0, :cond_gary_2
+ 
+     new-instance v0, Lcom/android/server/policy/MiuiGlobalActions$1$1;
+ 
+@@ -132,7 +192,7 @@
+ 
+     goto :goto_0
+ 
+-    :cond_4
++    :cond_gary_2
+     const-string v0, "dismiss"
+ 
+     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+--- a/services/smali/com/android/server/policy/MiuiGlobalActions.smali
++++ b/services/smali/com/android/server/policy/MiuiGlobalActions.smali
+@@ -836,3 +836,13 @@
+ 
+     goto/16 :goto_0
+ .end method
++
++.method static synthetic access$RebootMenu(Lcom/android/server/policy/MiuiGlobalActions;)Landroid/content/Context;
++    .locals 1
++    .param p0, "x0"    # Lcom/android/server/policy/MiuiGlobalActions;
++
++    .prologue
++    iget-object v0, p0, Lcom/android/server/policy/MiuiGlobalActions;->mContext:Landroid/content/Context;
++
++    return-object v0
++.end method
+-- 
+2.7.4
+

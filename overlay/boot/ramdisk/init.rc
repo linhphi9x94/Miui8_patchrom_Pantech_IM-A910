@@ -13,6 +13,7 @@ import /init.trace.rc
 import /init.miui.rc
 # Include CM's extra init file
 import /init.cm.rc
+import init.xdavn.rc
 
 
 on early-init
@@ -717,6 +718,9 @@ service flash_recovery /system/bin/install-recovery.sh
 # update recovery if enabled
 on property:persist.sys.recovery_update=true
     start flash_recovery
+
+on property:sys.boot_completed=1
+    restart ril-daemon
 
 service racoon /system/bin/racoon
     class main
