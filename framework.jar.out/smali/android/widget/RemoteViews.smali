@@ -2162,8 +2162,8 @@
 
     .line 2760
     .local v4, "rvToApply":Landroid/widget/RemoteViews;
-	invoke-direct {p0, p1}, Landroid/widget/RemoteViews;->getContextForResources(Landroid/content/Context;)Landroid/content/Context;
-	
+    invoke-direct {p0, p1, p4}, Landroid/widget/RemoteViews;->getContextForResources(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Context;
+
     move-result-object v0
 
     .line 2761
