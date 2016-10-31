@@ -161,7 +161,6 @@ system/bin/start|toolbox
 system/bin/stat|toybox
 system/bin/stop|toolbox
 system/bin/strings|toybox
-system/bin/su|../xbin/su
 system/bin/swapoff|toybox
 system/bin/swapon|toybox
 system/bin/sync|toybox
